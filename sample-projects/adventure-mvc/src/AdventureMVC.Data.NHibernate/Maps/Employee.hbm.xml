@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+                  default-lazy="true"
+                  namespace="AdventureMVC.Core.Model"
+                  assembly="AdventureMVC.Core" >
+
+  
+  <class name="Employee" table="Person.Contact">
+    <id name="ContactID" type="Int32">
+      <generator class="identity"/>
+    </id>
+    <property name="FirstName" type="String" />
+    <property name="LastName" type="String" />
+    <property name="EmailAddress" type="String" />
+    <property name="Phone" type="String"/>
+  
+  
+  <join table="HumanResources.Employee">
+    <key column="EmployeeID" />
+    <property name="EmployeeID" type="Int32" />
+    <property name="Title" type="String" not-null="true"/>
+    <property name="BirthDate" type="DateTime"  not-null="true"/>
+    <property name="VacationHours" type="Int32"  not-null="true"/>
+  </join>
+  </class>
+</hibernate-mapping>
