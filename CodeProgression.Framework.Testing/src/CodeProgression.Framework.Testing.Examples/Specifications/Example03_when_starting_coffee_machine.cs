@@ -6,32 +6,29 @@ using StructureMap.AutoMocking;
 
 namespace CodeProgression.Framework.Testing.Examples.Specifications
 {
-    [Subject("with rhino automocker base")]
-    public class Example03_when_starting_coffee_machine : with_ram_dispenser
+    [Subject(typeof(CoffeeMachine), "using RhinoAutoMocker base")]
+    public class Example03_when_preparing_coffee_grounds : with_rhinoautomocker
     {
-        Establish context = () => Hopper.Expect(x => x.IsEmpty()).Return(true);
+        Establish context = () => Hopper.Expect(x => x.HasBeans()).Return(true);
 
-        Because of = () => CoffeeDispenser.ClassUnderTest.Brew(12);
+        Because of = () => CoffeeMachine.ClassUnderTest.PrepareCoffeeGrounds(12);
 
-        It should_check_if_hopper_is_empty = () => Hopper.VerifyAllExpectations();
+        It should_check_if_hopper_has_beans = () => Hopper.VerifyAllExpectations();
         It should_grind_coffee = () => Grinder.AssertWasCalled(x => x.Grind(12));
-
     }
 
     [Subject("with RhinoAutoMocker<T>")]
-    public class with_ram_dispenser
+    public class with_rhinoautomocker
     {
-
         protected static IGrinder Grinder;
         protected static IHopper Hopper;
-        protected static RhinoAutoMocker<CoffeeMachine> CoffeeDispenser;
+        protected static RhinoAutoMocker<CoffeeMachine> CoffeeMachine;
 
         Establish context = () =>
         {
-
-            CoffeeDispenser = new RhinoAutoMocker<CoffeeMachine>();
-            Grinder = CoffeeDispenser.Get<IGrinder>();
-            Hopper = CoffeeDispenser.Get<IHopper>();
+            CoffeeMachine = new RhinoAutoMocker<CoffeeMachine>();
+            Grinder = CoffeeMachine.Get<IGrinder>();
+            Hopper = CoffeeMachine.Get<IHopper>();
         };
     }
 }

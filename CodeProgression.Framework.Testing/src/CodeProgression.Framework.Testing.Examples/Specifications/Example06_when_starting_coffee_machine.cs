@@ -6,32 +6,27 @@ using It=Machine.Specifications.It;
 
 namespace CodeProgression.Framework.Testing.Examples.Specifications
 {
-    [Subject("with coffee dispenser base (moq container)")]
-    public class Example06_when_starting_coffee_machine : with_moq_coffee_machine
+    [Subject(typeof(CoffeeMachine), "using moq base")]
+    public class Example06_when_preparing_coffee_grounds : with_moq_coffee_machine
     {
-        Establish context = () => Hopper.Setup(x=>x.IsEmpty()).Returns(true);
+        Establish context = () => Hopper.Setup(x=>x.HasBeans()).Returns(true);
 
-        Because of = () => ClassUnderTest.Brew(12);
+        Because of = () => ClassUnderTest.PrepareCoffeeGrounds(12);
 
-        It should_check_if_hopper_is_empty = () => Hopper.Verify();
+        It should_check_if_hopper_has_beans = () => Hopper.Verify();
         It should_grind_coffee = () => Grinder.Verify(x=>x.Grind(12));
-
     }
 
+    [Subject("using SpecificationFor<CoffeeMachine>(AutoMockType.Moq)")]
     public class with_moq_coffee_machine : SpecificationFor<CoffeeMachine>
     {
-        public with_moq_coffee_machine() : base(AutoMockType.Moq)
-        {
-        }
-
-
         protected static Mock<IGrinder> Grinder;
         protected static Mock<IHopper> Hopper;
 
-        Establish context = () =>
+        public with_moq_coffee_machine() : base(AutoMockType.Moq)
         {
-            Grinder = Mock.Get(Factory.Get<IGrinder>());
-            Hopper = Mock.Get(Factory.Get<IHopper>());
-        };
+            Grinder = Mock.Get(AutoMocker.Get<IGrinder>());
+            Hopper = Mock.Get(AutoMocker.Get<IHopper>());
+        }
     }
 }
