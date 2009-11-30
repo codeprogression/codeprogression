@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeProgression.Framework.Testing", "CodeProgression.Framework.Testing\CodeProgression.Framework.Testing.csproj", "{625AB9C3-FC99-4BB9-B436-1AD428CE7608}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeProgression.Framework.Examples", "CodeProgression.Framework.Testing.Examples\CodeProgression.Framework.Examples.csproj", "{55F73DD3-F785-44DF-A153-18A67F4B8C68}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{625AB9C3-FC99-4BB9-B436-1AD428CE7608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625AB9C3-FC99-4BB9-B436-1AD428CE7608}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625AB9C3-FC99-4BB9-B436-1AD428CE7608}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625AB9C3-FC99-4BB9-B436-1AD428CE7608}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F73DD3-F785-44DF-A153-18A67F4B8C68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F73DD3-F785-44DF-A153-18A67F4B8C68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F73DD3-F785-44DF-A153-18A67F4B8C68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F73DD3-F785-44DF-A153-18A67F4B8C68}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
