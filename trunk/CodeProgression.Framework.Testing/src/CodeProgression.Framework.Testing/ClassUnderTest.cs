@@ -135,7 +135,5 @@ namespace CodeProgression.Framework.Testing
         {
             return _serviceLocator.PartialMock<T>();
         }
-
-
     }
 }

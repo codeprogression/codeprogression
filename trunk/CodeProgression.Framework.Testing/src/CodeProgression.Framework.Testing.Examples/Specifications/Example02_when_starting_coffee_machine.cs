@@ -6,24 +6,24 @@ using StructureMap.AutoMocking;
 
 namespace CodeProgression.Framework.Testing.Examples.Specifications
 {
-    [Subject("with RhinoAutoMocker<CoffeeMachine>")]
-    public class Example02_when_starting_coffee_machine
+    [Subject(typeof(CoffeeMachine), "using RhinoAutoMocker<CoffeeMachine>")]
+    public class Example02_when_preparing_coffee_grounds
     {
         Establish context = () =>
             {
-                CoffeeDispenser = new RhinoAutoMocker<CoffeeMachine>();
-                Grinder = CoffeeDispenser.Get<IGrinder>();
-                Hopper = CoffeeDispenser.Get<IHopper>();
-                Hopper.Expect(x => x.IsEmpty()).Return(true);
+                CoffeeMachine = new RhinoAutoMocker<CoffeeMachine>();
+                Grinder = CoffeeMachine.Get<IGrinder>();
+                Hopper = CoffeeMachine.Get<IHopper>();
+                Hopper.Expect(x => x.HasBeans()).Return(true);
             };
 
-        Because of = () => CoffeeDispenser.ClassUnderTest.Brew(12);
+        Because of = () => CoffeeMachine.ClassUnderTest.PrepareCoffeeGrounds(12);
 
-        It should_check_if_hopper_is_empty = () => Hopper.VerifyAllExpectations();
+        It should_check_if_hopper_has_beans = () => Hopper.VerifyAllExpectations();
         It should_grind_coffee = () => Grinder.AssertWasCalled(x => x.Grind(12));
 
         static IGrinder Grinder;
         static IHopper Hopper;
-        static RhinoAutoMocker<CoffeeMachine> CoffeeDispenser;
+        static RhinoAutoMocker<CoffeeMachine> CoffeeMachine;
     }
 }

@@ -13,11 +13,11 @@ namespace CodeProgression.Framework.Testing.Examples.Domain
             _hopper = hopper;
         }
 
-        public void Brew(int capacityInCups)
+        public void PrepareCoffeeGrounds(int cupsToBrew)
         {
-            if (_hopper.IsEmpty())
+            if (_hopper.HasBeans())
             {
-                _grinder.Grind(capacityInCups);
+                _grinder.Grind(cupsToBrew);
             }
         }
     }
