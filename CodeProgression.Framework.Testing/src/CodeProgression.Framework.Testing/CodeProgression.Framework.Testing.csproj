@@ -12,6 +12,8 @@
     <AssemblyName>CodeProgression.Framework.Testing</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>CodeProgression.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -64,6 +66,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpecificationFor.cs" />
     <Compile Include="TestFactoryFor.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CodeProgression.snk" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
