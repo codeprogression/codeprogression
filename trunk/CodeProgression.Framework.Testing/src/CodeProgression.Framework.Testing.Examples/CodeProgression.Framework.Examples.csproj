@@ -69,6 +69,7 @@
     <Compile Include="Domain\CoffeeMachine.cs" />
     <Compile Include="Abstractions\IGrinder.cs" />
     <Compile Include="Abstractions\IHopper.cs" />
+    <Compile Include="Regression\when_injecting_a_stub.cs" />
     <Compile Include="Specifications\Example01_when_starting_coffee_machine.cs" />
     <Compile Include="Specifications\Example02_when_starting_coffee_machine.cs" />
     <Compile Include="Specifications\Example03_when_starting_coffee_machine.cs" />
