@@ -1,0 +1,315 @@
+/* -------------------------------------------------------------- 
+
+reset.css
+* Resets default browser CSS.
+
+Based on work by Eric Meyer:
+* meyerweb.com/eric/thoughts/2007/05/01/reset-reloaded/
+
+-------------------------------------------------------------- */
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, code,
+del, dfn, em, img, q, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-weight: inherit;
+    font-style: inherit;
+    font-size: 100%;
+    font-family: inherit;
+    vertical-align: baseline;
+}
+
+
+body { line-height: 1.5; background: #fff; margin:1.5em 0; }
+
+/* Tables still need 'cellspacing="0"' in the markup. */
+table { border-collapse: separate; border-spacing: 0; }
+caption, th, td { /* text-align: left; */ font-weight:400; }
+
+/* Remove possible quote marks (") from <q>, <blockquote>. */
+blockquote:before, blockquote:after, q:before, q:after { content: ""; }
+blockquote, q { quotes: "" ""; }
+
+a img { border: none; }
+
+
+/* -------------------------------------------------------------- 
+
+typography.css
+* Sets up some sensible default typography.
+
+Based on work by:
+* Nathan Borror     [playgroundblues.com]
+* Jeff Croft        [jeffcroft.com]
+* Christian Metts   [mintchaos.com]
+* Wilson Miner      [wilsonminer.com]
+* Richard Rutter    [clagnut.com]
+
+Read more about using a baseline here:
+* alistapart.com/articles/settingtypeontheweb
+
+-------------------------------------------------------------- */
+
+/* This is where you set your desired font size. The line-heights 
+and vertical margins are automatically calculated from this. 
+The percentage is of 16px (0.75 * 16px = 12px). */
+
+body { font-size: 90%; }
+
+
+/* Default fonts and colors. 
+If you prefer serif fonts, remove the font-family 
+on the headings, and apply this one to the body:
+font: 1em Georgia, "lucida bright", "times new roman", serif; */
+
+body { 
+    color: #222; 
+    font-family: "Lucida Grande",Tahoma,Arial,Verdana,sans-serif;
+}
+h1,h2,h3,h4,h5,h6 { 
+    color: #111; 
+    font-family: "Palatino Linotype", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+/* Headings
+-------------------------------------------------------------- */
+
+h1,h2,h3,h4,h5,h6 { font-weight: normal; }
+
+h1 { font-size: 3em; line-height: 1.25em; margin-bottom: 0.5em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1.25em; margin-bottom: 1em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1.25em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1.5em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+
+/* Text elements
+-------------------------------------------------------------- */
+
+p           { margin: 0 0 1.5em; }
+p.last      { margin-bottom: 0; }
+p img       { /* float: left; margin: 1.5em 1.5em 1.5em 0; */ padding: 0; }
+p img.top   { margin-top: 0; } /* Use this if the image is at the top of the <p>. */
+img         { margin: 0 0 1.5em; }
+
+ul, ol      { margin:0 1.5em 1.5em 1.5em; }
+dl          { margin: 0 0 1.5em 0; }
+dl dt       { font-weight: bold;}
+dd          { margin-left: 1.5em;}
+
+abbr, 
+acronym     { border-bottom: 1px dotted #666; }
+address     { margin-top: 1.5em; font-style: italic; }
+del         { color:#666; }
+
+blockquote  { margin: 1.5em; color: #666; font-style: italic; }
+strong      { font-weight: bold; }
+em,dfn      { font-style: italic; /* background: #ffc; */}
+dfn         { font-weight: bold; }
+pre,code    { margin: 1.5em 0; white-space: pre; }
+pre,code,tt { font: 1em 'andale mono', 'monotype.com', 'lucida console', monospace; line-height: 1.5; } 
+tt          { display: block; margin: 1.5em 0; line-height: 1.5; }
+
+
+/* Tables
+-------------------------------------------------------------- */
+
+table   { margin-bottom: 1.4em; }
+th      { /*border-bottom: 2px solid #ccc; */ font-weight: bold; }
+td      { /* border-bottom: 1px solid #ddd; */}
+th,td   { padding: 4px 10px 4px 0; }
+tfoot   { font-style: italic; }
+caption { background: #ffc; }
+
+/* Use this if you use span-x classes on th/td. */
+table .last { padding-right: 0; } 
+
+
+/* Some default classes
+-------------------------------------------------------------- */
+
+.small      { font-size: .8em; margin-bottom: 1.875em; line-height: 1.875em; }
+.large      { font-size: 1.2em; line-height: 2.5em; margin-bottom: 1.25em; }
+.quiet      { color: #666; }
+
+.hide       { display: none; }
+.highlight  { background:#ff0; }
+.added      { color:#060; }
+.removed    { color:#900; }
+
+.top        { margin-top:0; padding-top:0; }
+.bottom     { margin-bottom:0; padding-bottom:0; }
+
+/* -------------------------------------------------------------- 
+
+Customization layer for DocBook
+Written by Nithin Philips
+ Looks good typeset in Palatino
+
+-------------------------------------------------------------- */
+
+body {
+    background-color: white;
+    color: black;
+    
+    margin: auto;
+    padding: 24px;
+    width: auto;
+    
+    /* Without border, pages look weird in HTML Help viewer */
+    border-width: 1px;
+    border-style: inset;
+    border-color: rgb(212,229,200);
+
+    text-align: left;
+    font-weight: normal;
+}
+
+/* Make links not underlined. 
+   Do not set any color here because docbook puts <a> tags 
+   everywhere to anchor things and this color will override everything.
+   Use a[href], if you want to set color (must be using a good browser)
+*/
+ul, ol          { margin-left: 3em; }
+p               { margin: 0 15px 6px 15px; }
+acronym         { border-bottom: 1px dashed #00cc00; cursor: help; }
+a               { text-decoration: none; }
+a:visited       { color: blue; }
+span.italic     { font-style: italic; }
+span.emphasis   { font-weight: bold; font-style: italic; }
+/* sub              { vertical-align: -50%; } */
+hr              { border-style: solid; border-color: gray; }
+
+/* Inline Images. For Figures, see .mediaobject
+-------------------------------------------------------------- */
+p img       { margin: 0; padding: 0; border: 0; vertical-align: text-top; }
+
+h1 { text-align: center; background-color: #7EA0A9; color: black; }
+h2 { font-size: 2em; margin-bottom: 0.75em; background-color: #7EA0A9; color: black; margin: 15px 0 15px 0; padding: 8px 15px 8px 15px; }
+h3 { margin-top: 1em; padding-left: 15px; }
+h4 { margin-top: 1.25em; padding-left: 15px; }
+h5 { margin-top: 1.5em; padding-left: 15px; }
+
+/* the following formats refer to the docbook tags of the same name */
+/* for more information, see the docbook reference at               */
+/* http://www.docbook.org/tdg/en/html/docbook.html                  */
+.copyright, .mediaobject        { text-align: center; }
+.caption                        { text-align: left; }
+.calloutlist, .figure, .table   { margin: 15px 30px 15px 30px; }
+.itemizedlist, .variablelist    { margin: 15px 30px 15px 15px; }
+.blockquote                     { margin-bottom: 30px; }
+.epigraph                       { margin-bottom: 30px; }
+
+
+.figure { margin: 5px 5px 5px 5px; padding: 0; border: 0; text-align: center; }
+.figure p, .table p, .example p { font-size: 100%; }
+
+.navheader th, .navheader td, .navfooter th, .navfooter td          { font-size: 11px; }
+
+.toc,   .list-of-figures,   .list-of-tables,   .list-of-examples        { margin: 15px 30px 15px 15px; }
+.toc p, .list-of-figures p, .list-of-tables p, .list-of-examples p      { margin-bottom: 1em; }
+.toc b, .list-of-figures b, .list-of-tables b, .list-of-examples b, p b { font-weight: bold; }
+
+.toc>p, .list-of-figures>p, .list-of-tables>p, .list-of-examples>p      { margin-left: 0; }
+
+.calloutlist dt {
+    float:left;
+    clear:left;
+    display:inline;
+}
+
+.calloutlist dd {
+    display:inline;
+}
+
+.calloutlist img {
+    margin: 0;
+}
+
+/* admonition headings */
+div.note,    div.important,    div.warning,    div.caution,    div.tip      { padding: 0px 15px 0px 0px; }
+div.note th, div.important th, div.warning th, div.caution th, div.tip th   {
+    text-decoration: underline;
+    text-align: left;
+    border: none;
+}
+
+.note td,  .important td,  .warning td,  .caution td,  .tip td  { border: none; }
+.note p,   .important p,   .warning p,   .caution p,   .tip p   { margin: 0; }
+.note img, .important img, .warning img, .caution img, .tip img { margin: 0px 15px 0px 15px; vertical-align: text-top; }
+
+table {
+    /* border: thin solid orange; */
+    border-spacing: 0pt;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+td {
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+th {
+    /* border: thin solid orange; */
+    padding-left: 1px;
+    padding-right: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.revhistory table, .informaltable table { border-collapse: collapse; table-layout: auto; }
+
+.guimenu, .guisubmenu, .guibutton, .guimenuitem { font-weight: bold; }
+
+.guimenuitem    { text-decoration: underline; }
+.guibutton      { border: 1px outset gray; padding: 0px 10px 0px 10px; background-color: gray; color: white;}
+
+
+img, .mediaobject { margin: 10px 0px 10px 0px; }
+/* TOC links, starting with the second one are bold, this fixes that */
+dl dt a { font-weight: normal;}
+
+.revhistory table{
+    border-width: 1px;
+    border-style: solid;
+    width: 100%;
+}
+
+.revhistory table td{
+    border-collapse: collapse;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.programlisting {
+    margin-left: 15px;
+    background-color: #E2E2DE;
+    border-left: 4px solid black;
+    padding: 3px;
+}
+
+.keycap {
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:5px;
+    -moz-border-radius-topleft:5px;
+    -moz-border-radius-topright:5px;
+    background-color:#DFDFDF;
+    border:2px outset #AFAFAF;
+    margin:0pt;
+    padding:0px 5px;
+}
+
+
+@media print{
+    body { 
+        font-family: "Palatino Linotype", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        border: none;
+    }
+}

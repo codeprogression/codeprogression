@@ -1,0 +1,407 @@
+$Id: CHANGES 113 2006-11-12 23:51:48Z spikiermonkey $
+
+For a complete list of changes visit 
+  http://flashcardmaster.svn.sourceforge.net/viewvc/flashcardmaster/trunk/?view=log
+
+Revision: 56
+Author: spikiermonkey
+Date: 8:11:06 PM, Sunday, October 08, 2006
+Message:
+ * Build process is now more streamlined.
+   * All build options are stored in Build.ini
+   * AssemblyInfo.cs is auto-generated.
+
+Revision: 55
+Author: spikiermonkey
+Date: 12:52:47 PM, Sunday, October 08, 2006
+Message:
+ * Added a change log.
+ * Installer now installs README, COPYING and CHANGES
+ * Added copyright banner to add source files.
+
+
+Revision: 54
+Author: spikiermonkey
+Date: 1:25:28 AM, Sunday, October 08, 2006
+Message:
+ * Added some comments to drivers.
+ * Updated installer to include CSV parser library.
+
+Revision: 53
+Author: spikiermonkey
+Date: 12:57:11 AM, Sunday, October 08, 2006
+Message:
+ * Patterns can now be generated from a template (not used!)
+
+Revision: 52
+Author: spikiermonkey
+Date: 1:35:57 PM, Saturday, October 07, 2006
+Message:
+ * Couldn't spell WYSIWYG
+
+Revision: 51
+Author: spikiermonkey
+Date: 8:40:16 PM, Friday, October 06, 2006
+Message:
+ * Build file updated.
+
+Revision: 50
+Author: spikiermonkey
+Date: 8:34:50 PM, Friday, October 06, 2006
+Message:
+ * Updated README
+ * Added Translators credit in about dialog.
+
+Revision: 49
+Author: spikiermonkey
+Date: 7:11:47 PM, Friday, October 06, 2006
+Message:
+ * Update Contributors list.
+
+Revision: 48
+Author: spikiermonkey
+Date: 6:29:39 PM, Friday, October 06, 2006
+Message:
+ * Program starts in language-neutral mode.
+
+Revision: 47
+Author: spikiermonkey
+Date: 5:04:27 PM, Friday, October 06, 2006
+Message:
+ * Almost everything is i18n-ized.
+
+Revision: 46
+Author: spikiermonkey
+Date: 2:30:48 PM, Friday, October 06, 2006
+Message:
+ * If a field's rendering style is 'None', it no longer is rendered.
+ * File operations are now handled by AbstractDriver classes.
+   * XmlDriver reads and writes XML files.
+   * CardDriver reads and writes the binary (.card) files.
+   * CsvDriver reads and writes csv files.
+ * Thanks to AbstractDriver, any type of file can be used transparently (well, sorta...)
+   * CsvDriver cannot save CardElementStyle information.
+
+Revision: 45
+Author: spikiermonkey
+Date: 7:27:41 PM, Thursday, October 05, 2006
+Message:
+ * Static property should be in CardStyle, not CardElement.
+ * XmlDriver can import (but the exported format has changed).
+ * Keywords for XMLDriver are now in XmlKeywords.
+
+Revision: 44
+Author: spikiermonkey
+Date: 10:21:36 PM, Wednesday, October 04, 2006
+Message:
+ * Regression: Card was not painted properly when printed because the Print routine used the old converter.
+
+
+Revision: 43
+Author: spikiermonkey
+Date: 10:14:38 PM, Wednesday, October 04, 2006
+Message:
+ * Updated website for release 0.7.8.1
+
+Revision: 42
+Author: spikiermonkey
+Date: 9:46:42 PM, Wednesday, October 04, 2006
+Message:
+ * Added another sample.
+
+Revision: 41
+Author: spikiermonkey
+Date: 9:44:12 PM, Wednesday, October 04, 2006
+Message:
+ * Version bumped to 0.7.8.1.
+
+Revision: 40
+Author: spikiermonkey
+Date: 9:03:36 PM, Wednesday, October 04, 2006
+Message:
+ * Drag drop in CardDesigner actually works.
+
+
+Revision: 39
+Author: spikiermonkey
+Date: 8:15:10 PM, Wednesday, October 04, 2006
+Message:
+ * Two elements with the same Position is now rendered by the same TextGroupPainter.
+   * Elements with same Position are now rendered as top-down blocks.
+ * Field list in ManualEntry now uses DragAndDropListView, allowing users to reorder items.
+   * TODO: actually reorder elements.
+
+
+Revision: 38
+Author: spikiermonkey
+Date: 10:45:58 PM, Tuesday, October 03, 2006
+Message:
+ * UI Behavior: When Keys are used to change selected item in ManualEntry, the textbox is now selected and has focus.
+ * Added another sample.
+
+
+Revision: 37
+Author: spikiermonkey
+Date: 7:47:30 PM, Tuesday, October 03, 2006
+Message:
+ * ManualEntry now uses CardPanel.
+ * CardPanel now allow a 'Manual' mode, where the painter can be manually set.
+ * CustomPanel is no longer needed. (Deleted)
+
+
+Revision: 36
+Author: spikiermonkey
+Date: 7:25:58 PM, Tuesday, October 03, 2006
+Message:
+ * Added an icon for testToolStripMenuItem.
+
+Revision: 35
+Author: spikiermonkey
+Date: 7:17:17 PM, Tuesday, October 03, 2006
+Message:
+ * Export format is now implied by the extension chosen by the user when saving the file.
+ * ActivityHistory now, when a new item is added, if it is dupe, brings it to the top (actually bottom!).
+   * Result is that, top most item in recent files is ''the'' recent item.
+ * Updated the sample files.
+
+Revision: 34
+Author: spikiermonkey
+Date: 8:45:00 PM, Monday, October 02, 2006
+Message:
+ * Version bumped to 0.7.7.1.
+
+Revision: 33
+Author: spikiermonkey
+Date: 8:22:52 PM, Monday, October 02, 2006
+Message:
+ * Cut works.
+ * MultipleChoiceTest closes at the end of the test.
+ * When ReviewCards is shown, MainWindow is hidden.
+ 
+Revision: 32
+Author: spikiermonkey
+Date: 7:31:08 PM, Monday, October 02, 2006
+Message:
+ * Copy/Paste works. (Not cut)
+ * Added an import option (currently works for .card files)
+ * Added a Self-Test (Multiple choice style).
+   * Supported by Quiz model.
+
+Revision: 31
+Author: spikiermonkey
+Date: 3:15:20 PM, Monday, October 02, 2006
+Message:
+ * Reviewer is shown as non modal (take 2!)
+ * Reviewer now tries better to correct the 'drifting' panel syndrome.
+   * Although, it is not fool proof.
+
+Revision: 29
+Author: spikiermonkey
+Date: 4:45:33 PM, Sunday, October 01, 2006
+Message:
+ * Bumped version to 0.7.6.1
+
+
+Revision: 28
+Author: spikiermonkey
+Date: 4:38:24 PM, Sunday, October 01, 2006
+Message:
+ * Format() method in ManualEntry did not use the correct range when selecting entire text.
+ * Replaced Panel in CardDesigner with CardPanel.
+ * Column title in MainWindow is now escaped of wiki markup.
+ * BugFix: TextPainter with Elements.Count=0 threw an unnecessary exception in Paint().
+
+Revision: 27
+Author: spikiermonkey
+Date: 4:21:10 PM, Sunday, October 01, 2006
+Message:
+  * Updated build file to reflect recent renames.
+  
+Revision: 26
+Author: spikiermonkey
+Date: 4:20:13 PM, Sunday, October 01, 2006
+Message:
+ * renamed TextLinePainter.cs to TextPainter.cs
+ 
+Revision: 25
+Author: spikiermonkey
+Date: 4:19:19 PM, Sunday, October 01, 2006
+Message:
+ * renamed TextPainter.cs to TextGroupPainter.cs.
+
+Revision: 24
+Author: spikiermonkey
+Date: 4:17:23 PM, Sunday, October 01, 2006
+Message:
+ * Replaced the Panel in Reviewer wit CardPanel.
+ * Bugfix: empty 'NoCardMessage' caused an exception in CardPanel.
+ * TextGroupPainter can now be Disposed.
+
+
+Revision: 23
+Author: spikiermonkey
+Date: 3:59:36 PM, Sunday, October 01, 2006
+Message:
+ * Bugfix: When opening recent files, CheckCurrent() was not called.
+ * WikiTextParser now handles line breaks much better.
+   * Line breaks are now replaced by an element with TextStyle.LineBreak style.
+   * Also, styles across line breaks are now preserved.
+ * Added a new CardPanel, which encapsulates all rendering of Card objects.
+   * Not yet used.
+ * Many changes in TextGroupPainter and TextPainter.
+   * Line breaks in one text blob are handled by the TextRenderer, (TextFormatFlags are set accordingly for alignment).
+   * Overhanging glyphs are no longer clipped.
+   * Text Padding is now '0', so the rendered text looks as intended.
+   * TextGroupPainter now exposes many properties.
+ * Added a BackgroundPainter.
+   * BackgroundPainter provides multiple styles of backgrounds that can be rendered.
+
+Revision: 21
+Author: spikiermonkey
+Date: 12:49:37 AM, Saturday, September 30, 2006
+Message:
+ * Update website for release 0.7.5.1
+
+Revision: 20
+Author: spikiermonkey
+Date: 12:28:41 AM, Saturday, September 30, 2006
+Message:
+ * Version bumped to 0.7.5.1
+
+Revision: 19
+Author: spikiermonkey
+Date: 12:27:30 AM, Saturday, September 30, 2006
+Message:
+ * Added XML export method.
+
+Revision: 18
+Author: spikiermonkey
+Date: 8:00:58 PM, Friday, September 29, 2006
+Message:
+ * Improved UI behavior.
+   * In ManualEntry: [Ctrl + Up/Down] selects up or down in the cards list.
+   * In ManualEntry: [Alt + Up/Down] selects up or down in the fields list.
+   * In ManualEntry, when a new card is created, it is selected and the content of edit textbox is selected also.
+
+Revision: 17
+Author: spikiermonkey
+Date: 5:46:37 PM, Thursday, September 28, 2006
+Message:
+ * modified   Flash Card Master.csproj
+ * deleted    Install
+ * deleted    Install/gpl.txt
+ * deleted    Install/Installer.nsi
+ * added      Installer
+ 
+Revision: 16
+Author: spikiermonkey
+Date: 12:03:09 AM, Thursday, September 28, 2006
+Message:
+ * Updated a warning message in CardDesigner.
+ * Added Website (based on Singapore Uploader Website)
+
+Revision: 15
+Author: spikiermonkey
+Date: 11:27:46 PM, Wednesday, September 27, 2006
+Message:
+ * BatchEntry is now shown in a non-modal mode.
+   * Successful parsing is now handled through events.
+
+Revision: 14
+Author: spikiermonkey
+Date: 11:16:12 PM, Wednesday, September 27, 2006
+Message:
+ * Reviewer is now shown in a non-modal mode.
+ * Changes (Not Learned, Need Review, Learned) made in Reviewer are reflected in MainWindow live.
+
+
+Revision: 12
+Author: spikiermonkey
+Date: 3:56:09 PM, Wednesday, September 27, 2006
+Message:
+ * Added icons to all dialogs.
+ * Added a sample deck.
+
+
+Revision: 11
+Author: spikiermonkey
+Date: 3:10:20 PM, Wednesday, September 27, 2006
+Message:
+ * Installer was improved.
+   * Samples can now be optionally installed.
+
+Revision: 10
+Author: spikiermonkey
+Date: 2:39:31 PM, Wednesday, September 27, 2006
+Message:
+ * Added a new about dialog.
+ * Added i18n resource.
+
+Revision: 9
+Author: spikiermonkey
+Date: 2:05:43 PM, Wednesday, September 27, 2006
+Message:
+ * Added command-line argument support for opening files.
+ * Added option to Associate filetypes with the app.
+
+
+Revision: 8
+Author: spikiermonkey
+Date: 12:13:04 AM, Wednesday, September 27, 2006
+Message:
+ * Printing works, sort of.
+ * BugFix: TextPainter did not obey offset of the DestRectangle.
+
+
+Revision: 7
+Author: spikiermonkey
+Date: 9:23:43 PM, Monday, September 25, 2006
+Message:
+ * Added 'Remove' ability to CardDesigner.
+ * Enabled 'RecentFiles' feature in MainWindow.
+ * Added 'Remove' ability to ManualEntry.
+ * 'Animate' option in Reviewer is now persisted in Settings.
+ * CardElements' order is now predictable.
+
+Revision: 6
+Author: spikiermonkey
+Date: 10:43:06 PM, Friday, September 22, 2006
+Message:
+ * Version bumped
+ * Installer fixed.
+
+
+Revision: 5
+Author: spikiermonkey
+Date: 10:24:04 PM, Friday, September 22, 2006
+Message:
+ * Fixed namespaces.
+ * Some classes were moved to separate files.
+ * Added more icons.
+ * Fixed Request #1563029.
+ * Fixed Request #1563021.
+ * Fixed Request #1563019.
+ * Rendering of card panel are flicker free and are properly rendered on resize.
+ * Preferences now work.
+
+Revision: 3
+Author: spikiermonkey
+Date: 6:13:22 PM, Wednesday, September 20, 2006
+Message:
+ * Version updated
+
+
+Revision: 2
+Author: spikiermonkey
+Date: 6:10:07 PM, Wednesday, September 20, 2006
+Message:
+ * Added a Preferences dialog. (Not yet wired)
+ * Exceptions when loading files are now caught.
+
+
+Revision: 1
+Author: spikiermonkey
+Date: 5:33:38 PM, Wednesday, September 20, 2006
+Message:
+ * Initial checkin of rewrite.
+ * All of old code was discarded.

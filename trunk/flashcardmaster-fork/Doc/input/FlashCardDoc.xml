@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE book
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+    <!ENTITY fcm "Flash Card Master">
+  ]
+>
+
+<book>
+  <bookinfo>
+    <title>Flash Card Master Manual</title>
+
+    <!-- <pubdate><?dbtimestamp format="Y B d"?></pubdate> -->
+
+    <copyright>
+      <year><?dbtimestamp format="Y"?></year>
+      <holder>Nithin Philips</holder>
+    </copyright>
+
+    <legalnotice>
+      <para>Permission is granted to copy, distribute and/or modify this document under the terms of the GNU Free Documentation License, Version 1.2 or any later version published by the Free Software Foundation; with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.</para>
+      <para>A copy of the license is available at &lt;<ulink url="http://www.gnu.org/licenses/fdl.html">http://www.gnu.org/licenses/fdl.html</ulink>&gt;.</para>
+      <para>Flash Card Master is licensed under <link linkend="GnuGpl">GNU GPL v3</link></para>
+    </legalnotice>
+
+    <revhistory>
+      <revision>
+        <revnumber>1.0</revnumber>
+        <date>2008 January 12</date>
+        <author>
+          <personname>
+            <firstname>Nithin</firstname>
+            <surname>Philips</surname>
+          </personname>
+          <email>spikiermonkey@users.sourceforge.net</email>
+        </author>
+        <revremark>Initial publication</revremark>
+      </revision>
+    </revhistory>
+  </bookinfo>
+
+  <xi:include href="Preface.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+
+  <xi:include href="Cha.Introduction.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Cha.MainWindow.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Cha.DesigningCards.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Cha.EditingCards.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Cha.UsingCards.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Cha.TipsAndTricks.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  
+  <xi:include href="Apx.LocalizingFlashCardMaster.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Apx.SupportedFileTypes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Apx.BuildingSource.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+  <xi:include href="Apx.GPL-3.0.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</book>

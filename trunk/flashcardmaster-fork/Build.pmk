@@ -1,0 +1,23 @@
+; This file contains configuration for a custom package builder
+; This file is not necessary to build the solution.
+[Project]
+Title=Flash Card Master
+Version=1.0.0.0
+
+[AssemblyInfo]
+Description=Program to Create, Edit and Print flash cards
+Company=Nithin Philips
+Product=Flash Card Master
+Copyright=(C) 2003-2008 Nithin Philips
+AssemblyInfoFile=Properties\AssemblyInfo.cs
+BuildIncrement=100
+RevisionIncrement=10
+
+[Package]
+BinPath=bin\Release
+IgnoreList=".pdb;.vshost.exe;.xml;fr\FlashCardMaster.resources.dll"
+IncludeList="Resources\Help.chm>Help.chm"
+
+[Environment]
+DotNETPath=C:\Windows\Microsoft.NET\Framework\v3.5
+SVNPath=C:\Program Files\Subversion

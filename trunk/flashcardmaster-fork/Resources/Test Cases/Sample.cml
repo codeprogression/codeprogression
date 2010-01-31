@@ -1,0 +1,635 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CardDeck xsi:noNamespaceSchemaLocation="http://flashcardmaster.sourceforge.net/cardml/1.0/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Fields>
+    <Field index="0" name="Chapter" type="Other" side="Both" position="Top, Right" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+    <Field index="1" name="Word" type="Key" side="Front" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(200,241,113,65)" />
+    <Field index="2" name="Meaning" type="Answer" side="Back" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(200,214,239,31)" />
+    <Field index="3" name="Derivatives" type="Other" side="Back" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+  </Fields>
+  <Cards>
+    <Card learned="Learned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">quoniam,</Style> conj.</CardField>
+      <CardField name="Meaning"><Style type="italic">since, insasmuch as</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">cupiditas, cupiditatis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">desire, longing, passion, cupidity, avaride</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">dico, dicere, dixi, dictum</Style></CardField>
+      <CardField name="Meaning"><Style type="italic">to say, tell, speak; name, call</Style><br />      </CardField>
+      <CardField name="Derivatives">(dictate, dictum, dictionary, ditto, indict, edict, verdict)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">capio, capere, cepi, captum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to take, capture, seize, get</Style><br />      </CardField>
+      <CardField name="Derivatives">(capable, capsule, captor)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">senectus, senectutis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">old age</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">cum</Style> prep + abl</CardField>
+      <CardField name="Meaning"><Style type="italic">with</Style><br />      </CardField>
+      <CardField name="Derivatives">as prefix: <Style type="bold">com-, con-, cor-, col-, co-</Style><br />meaning: <Style type="italic">with, together, completely</Style><br />(complete, connect, collaborate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">natura, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">nature</Style><br />      </CardField>
+      <CardField name="Derivatives">(natural, supernatural)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">invenio, invenire, -veni, -ventum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to come upon, find</Style><br />      </CardField>
+      <CardField name="Derivatives">(invent, inventory)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">amicitia, -ae</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">friendship</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">facio, facere, feci, factum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to make, do, accomplish</Style><br />      </CardField>
+      <CardField name="Derivatives">(facile, fact, faction, faculty, fashion, feat)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">fugio, fugere, fugi, fugiturum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to flee, hurry away; go into exile; avoid, shun</Style><br />      </CardField>
+      <CardField name="Derivatives">(fugitive, fugue, centrifugal, refuge)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">hora, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">hour; time</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">via, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">way, road, street</Style><br />      </CardField>
+      <CardField name="Derivatives">(via, viaduct, deviate, obvious, pervious, impervious, previous)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">vivo, vivere, vixi, victum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to live</Style><br />      </CardField>
+      <CardField name="Derivatives">(convivial, revive, survive, vivacity, vittle, vivisection)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">beatus, -a, -um</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">happy, fortunate, blessed</Style><br />      </CardField>
+      <CardField name="Derivatives">(beatific, beatify, beatitude, Beatrice)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">audio, audire, audivi, auditum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to hear, listen to</Style><br />      </CardField>
+      <CardField name="Derivatives">(audible, audit, audition, auditory)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">venio, venire, veni, ventum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to come</Style><br />      </CardField>
+      <CardField name="Derivatives">(advent, adventure, covenant, event, intervene, parvenu)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">voluptas, voluptatis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">pleasure</Style><br />      </CardField>
+      <CardField name="Derivatives">(voluptuary, voluptuous)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">timor, timoris,</Style> m.</CardField>
+      <CardField name="Meaning"><Style type="italic">fear</Style><br />      </CardField>
+      <CardField name="Derivatives">(timorous)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">X</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">veritas, veritatis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">truth</Style><br />      </CardField>
+      <CardField name="Derivatives">(verify, verity, veritable)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">etiam,</Style> adv.</CardField>
+      <CardField name="Meaning"><Style type="italic">even</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">idem, eadem, idem</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">the same</Style><br />      </CardField>
+      <CardField name="Derivatives">(id, identical, identity, identify)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">is, ea, id</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">this, that; he, she, it</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">amicus, -a, -um</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">friendly</Style><br />      </CardField>
+      <CardField name="Derivatives">(amicable, amiable, amiably)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">mitto, mittere, misi, missum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to send, let go</Style><br />      </CardField>
+      <CardField name="Derivatives">(admit, commit, emit, omit, promise, submit, demise)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">intellego, intellegere, intellegexi, intellectum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to understand</Style><br />      </CardField>
+      <CardField name="Derivatives">(intelligent, intellegentsia, intellect, intellectual)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">neque, nec, conj.</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">and not, nor</Style><br />      </CardField>
+      <CardField name="Derivatives"><Style type="bold">neque...neque</Style> or <Style type="bold">nec...nec</Style>: <Style type="italic">neither...nor</Style></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">nemo, nullius, nemini, neminiem, nullo</Style> or <Style type="bold">nulla</Style> m. or f.</CardField>
+      <CardField name="Meaning"><Style type="italic">no one, nobody</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">sentio, sentire, sensi, sensum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">to feel, perceive, think, experience</Style><br />      </CardField>
+      <CardField name="Derivatives">(assent, consent, dissent, sentimental, scent)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">bene,</Style> adv. of <Style type="italic">bonus</Style></CardField>
+      <CardField name="Meaning"><Style type="italic">well, satisfactorily, quite</Style><br />      </CardField>
+      <CardField name="Derivatives">(benediction, benefit, benevolent)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">consul, consulis,</Style> m.</CardField>
+      <CardField name="Meaning"><Style type="italic">consul</Style><br />      </CardField>
+      <CardField name="Derivatives">(consular, consulate, consulship)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">caput, caputis,</Style> n.</CardField>
+      <CardField name="Meaning"><Style type="italic">head; leader; beginning; life; heading; chapter</Style><br />      </CardField>
+      <CardField name="Derivatives">(cape = headland, capital, capitol, captain, chief, chef, cadet, cad, achieve, decapitate, precipice, occiput, kerchief)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">carus, -a, -um</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">dear</Style><br />      </CardField>
+      <CardField name="Derivatives">(caress, charity, charitable, cherish)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">tu, tui</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">you</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">autem</Style> postpositive conj.</CardField>
+      <CardField name="Meaning"><Style type="italic">however; morover</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">quod</Style> conj.</CardField>
+      <CardField name="Meaning"><Style type="italic">because</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XI</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">ego, mei</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">I</Style><br />      </CardField>
+      <CardField name="Derivatives">(ego, egoism, egotism, egotistical)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">medicus, -i</Style>, m.<br /><Style type="bold">medica, -ae</Style>, f.</CardField>
+      <CardField name="Meaning"><Style type="italic">doctor, physician</Style><br />      </CardField>
+      <CardField name="Derivatives">(medic, medical, medicate, medicine, medicinal)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">mater, matris</Style>, f.</CardField>
+      <CardField name="Meaning"><Style type="italic">mother</Style><br />      </CardField>
+      <CardField name="Derivatives">(maternal, maternity, matrimony, matricide, matrix, matron)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">cadeo, cadere, cecidi, casurum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to fall</Style><br />      </CardField>
+      <CardField name="Derivatives">(cadence, case, casual, cascade, chance, accident, incident, decay, decidious)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">Caesar, Caesaris</Style>, m.</CardField>
+      <CardField name="Meaning"><Style type="italic">Casesar</Style><br />      </CardField>
+      <CardField name="Derivatives">(Caesarian, Caesarism, kaisar, czar, tsar)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">annus, -i</Style>, m.</CardField>
+      <CardField name="Meaning"><Style type="italic">year</Style><br />      </CardField>
+      <CardField name="Derivatives">(annals, anniversary, annuity, annual, centennial)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">diu</Style>, adv.</CardField>
+      <CardField name="Meaning"><Style type="italic">long, for a long time</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">Asia, -ae</Style>, f.</CardField>
+      <CardField name="Meaning"><Style type="italic">Asia</Style><br />      </CardField>
+      <CardField name="Derivatives">commonly referring to Asia Minor</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">creo, -ere</Style> (1)</CardField>
+      <CardField name="Meaning"><Style type="italic">to create</Style><br />      </CardField>
+      <CardField name="Derivatives">(creation, creativity, creature, procreate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">principium, -ii</Style>, n.</CardField>
+      <CardField name="Meaning"><Style type="italic">beginning</Style><br />      </CardField>
+      <CardField name="Derivatives">(principal, principle)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">pro</Style>, prep. + abl.</CardField>
+      <CardField name="Meaning"><Style type="italic">in front of, before, on behalf of, for the sake of, in return for, instead of, for, as</Style><br />      </CardField>
+      <CardField name="Derivatives">also as prefix (pros and cons, pro- as a prefix)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">nuper</Style>, adv.</CardField>
+      <CardField name="Meaning"><Style type="italic">recently</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">pater, patris</Style>, m.</CardField>
+      <CardField name="Meaning"><Style type="italic">father</Style><br />      </CardField>
+      <CardField name="Derivatives">(paternal, paternity, patrician, patrimony)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">patientia, -ae</Style>, f.</CardField>
+      <CardField name="Meaning"><Style type="italic">suffering, patience, endurance</Style><br />      </CardField>
+      <CardField name="Derivatives">(patient, impatient)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">admitto, -mittere, -misi, -missum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to lose, let go</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">adulescens, adulescentis</Style>, m. <Style type="italic">and</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">young man</Style> or <Style type="italic">woman</Style></CardField>
+      <CardField name="Derivatives">(adolescent, adolescence, adult)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">acerbus, -a, -um</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">harsh, bitter, grievous</Style><br />      </CardField>
+      <CardField name="Derivatives">(acerbity, exacerbate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">doctus, -a, -um</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">taught, learned, skilled</Style><br />      </CardField>
+      <CardField name="Derivatives">(doctor, doctorate, doctrine, indoctrinate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">suus, -a, -um,</Style> reflexive possessive adj. of 3<Style type="super">rd</Style> person</CardField>
+      <CardField name="Meaning"><Style type="italic">his own, her own, its own, their own</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">ante,</Style> prep + acc</CardField>
+      <CardField name="Meaning"><Style type="italic">before</Style> (in place or time), <Style type="italic">in front of</Style>;<br />adv: <Style type="italic">before, previously</Style></CardField>
+      <CardField name="Derivatives">(antebellum, antedate, ante-room, anterior, antediluvian, A.M = ante meridiem, advance, advantage)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">per,</Style> prep + acc</CardField>
+      <CardField name="Meaning"><Style type="italic">through;</Style> with reflexive pronoun <Style type="italic">by</Style></CardField>
+      <CardField name="Derivatives"><Style type="bold">-per</Style>: <Style type="italic">through, through and through = thoroughly, completely, very</Style><br />(perchance, perfect, perspire, percolate, percussion, pellucid)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">sto, stare, steti, statum</Style> (1)</CardField>
+      <CardField name="Meaning"><Style type="italic">to stand, stand still</Style> or <Style type="italic">firm</Style></CardField>
+      <CardField name="Derivatives">(stable, state, station, statue, stature, statue, instant, stay)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">quisque, quidque</Style><br />(gen. <Style type="bold">cuiusque; </Style>dat. <Style type="bold">cuique)</Style></CardField>
+      <CardField name="Meaning"><Style type="italic">each one, each person</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">signum, -i</Style>, n.</CardField>
+      <CardField name="Meaning"><Style type="italic">sign, signal, indication, seal</Style><br />      </CardField>
+      <CardField name="Derivatives">(assign, consign, countersign, design, ensign, insignia, resign, seal, signet)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">divitae, -arum</Style>, f. pl.</CardField>
+      <CardField name="Meaning"><Style type="italic">riches, wealth</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">sui,</Style> reflexive pron. of 3<Style type="super">rd</Style> person</CardField>
+      <CardField name="Meaning"><Style type="italic">himself, herself, itself, themselves</Style><br />      </CardField>
+      <CardField name="Derivatives">(suicide, sui generis, per se)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">diligo, diligere, dilexi, dilectum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to esteem, love</Style><br />      </CardField>
+      <CardField name="Derivatives">(diligent, diligence)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">ipse, ipsa, ipsum,</Style> intensive pron.</CardField>
+      <CardField name="Meaning"><Style type="italic">myself, yourself, himself, herself, itself,</Style> etc.<br /><Style type="italic">the very, the actual</Style></CardField>
+      <CardField name="Derivatives">(ipso facto, solipsistic)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">nam,</Style> conj.</CardField>
+      <CardField name="Meaning"><Style type="italic">for</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">alo, alere, alui, altum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to nourish, support, sustain, increase, cherish</Style><br />      </CardField>
+      <CardField name="Derivatives">(alible, aliment, alimentary, alimony, coalesce, adolescence)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">iungo, iungere, iunxi, iunctum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to join</Style><br />      </CardField>
+      <CardField name="Derivatives">(join, joint, junction, juncture, enjoin, injuction, subjunctive)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">olim,</Style> adv.</CardField>
+      <CardField name="Meaning"><Style type="italic">at that time, once, formerly; in the future</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">fortunatus, -a, -um</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">lucky, fortunate, happy</Style><br />      </CardField>
+      <CardField name="Derivatives">(unfortunate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIII</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">factum, -i</Style>, n,</CardField>
+      <CardField name="Meaning"><Style type="italic">deed, act, achievement</Style><br />      </CardField>
+      <CardField name="Derivatives">(fact, faction, feat)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">trans,</Style> prep. + acc.</CardField>
+      <CardField name="Meaning"><Style type="italic">across</Style><br />      </CardField>
+      <CardField name="Derivatives">prefix: (transport, transmit)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">a</Style> (before consonants), <Style type="bold">ab</Style> (before vowels or consonants), prep. + abl.</CardField>
+      <CardField name="Meaning"><Style type="italic">away from, from; by</Style> (personal agent)</CardField>
+      <CardField name="Derivatives">compounds: (aberration, abject, abrasive, absolve, abstract, abundant, abuse)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">mare, maris,</Style> n.</CardField>
+      <CardField name="Meaning"><Style type="italic">sea</Style><br />      </CardField>
+      <CardField name="Derivatives">(marine, mariner, marinate, maritime, cormorant, rosemary, mere = Eng. cog. "small lake")</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">teneo, tenere, tenui, tentum</Style> (2)</CardField>
+      <CardField name="Meaning"><Style type="italic">to hold, keep, possess; restrain</Style><br />      </CardField>
+      <CardField name="Derivatives"><Style type="bold">-tineo, -ere, -tinui, -tentum</Style> =&gt; <Style type="bold">contineo</Style><br />(tenable, tenacious, tenant, tenet, tenure, tentacle, tenor, continue, content)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">vito, vitare, vitavi, vitatum</Style> (1)</CardField>
+      <CardField name="Meaning"><Style type="italic">to avoid, shun</Style><br />      </CardField>
+      <CardField name="Derivatives">(inevitable)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">auris, auris,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">ear</Style><br />      </CardField>
+      <CardField name="Derivatives">(aural, auricle, auricular, auriform)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">vis, vis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">force, power, violence</Style><br />      </CardField>
+      <CardField name="Derivatives">(vim, violent, violate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">turba, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">uproar, disturbance, mob, crowd, multitude</Style><br />      </CardField>
+      <CardField name="Derivatives">(turbid, turbulent, turbine, turbo, disturb, perturb, imperturbable, trouble)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">urbs, urbis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">city</Style><br />      </CardField>
+      <CardField name="Derivatives">(urban, urbane, urbanity, suburb, suburban)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">ars, artis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">art, skill</Style><br />      </CardField>
+      <CardField name="Derivatives">(artifact, artifice, artless, artist, inert, inertia)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">ius, iuris,</Style> n.</CardField>
+      <CardField name="Meaning"><Style type="italic">right, justice, law</Style><br />      </CardField>
+      <CardField name="Derivatives">(jurisdiction, jurisprudence, juridical, jurist, juror, jury, just, injury)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">animal, animalis,</Style> n.</CardField>
+      <CardField name="Meaning"><Style type="italic">a living creature, animal</Style><br />      </CardField>
+      <CardField name="Derivatives">(animate, animation)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">curro, currere, cucurri, cursum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to run, rush, move quickly</Style><br />      </CardField>
+      <CardField name="Derivatives">(current, cursive, cursory, course, coarse, discursive, incur, occur, recur)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">nubes, nubis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">cloud</Style><br />      </CardField>
+      <CardField name="Derivatives">(nubilous)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">pars, partis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">part, share; direction</Style><br />      </CardField>
+      <CardField name="Derivatives">(party, partial, partake, participate, partisan, partition, apart, apartment, depart, repartee)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">os, oris,</Style> n.</CardField>
+      <CardField name="Meaning"><Style type="italic">mouth, face</Style><br />      </CardField>
+      <CardField name="Derivatives">(oral, orfice)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">muto, mutare, mutavi, mutatum</Style> (1)</CardField>
+      <CardField name="Meaning"><Style type="italic">to change, alter; exchange</Style><br />      </CardField>
+      <CardField name="Derivatives">(mutable, immutable, mutual, commute, permutation, transmutation, molt)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">civis, civis,</Style> <Style type="italic">m.</Style> and <Style type="italic">f.</Style></CardField>
+      <CardField name="Meaning"><Style type="italic">citizen</Style><br />      </CardField>
+      <CardField name="Derivatives">(civil, civilian, civility, civilize, civic)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">aqua, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">water</Style><br />      </CardField>
+      <CardField name="Derivatives">(aquatic, aquarium, sewer, ewer)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">appello, appellare, appellavi, appellatum</Style> (1)</CardField>
+      <CardField name="Meaning"><Style type="italic">to speak to, address (as), call, name</Style><br />      </CardField>
+      <CardField name="Derivatives">(appellation, appellative, appeal, appellant, appellate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">Roma, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">Rome</Style><br />      </CardField>
+      <CardField name="Derivatives">(romance, romantic, romanticism)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XIV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">mors, mortis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">death</Style><br />      </CardField>
+      <CardField name="Derivatives">(mortal, immortal, mortify, mortgage; murder = Eng. cog.)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">mille,</Style> indecl. adj.</CardField>
+      <CardField name="Meaning"><Style type="italic">thousand</Style><br />      </CardField>
+      <CardField name="Derivatives">(millenium, millenial, mile, millipede)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">memoria, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">memory, recollection</Style><br />      </CardField>
+      <CardField name="Derivatives">(memoir, memorial, memorize, memorandum, commemorate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">itaque,</Style> adv.</CardField>
+      <CardField name="Meaning"><Style type="italic">and so, therefore</Style><br />      </CardField>
+      <CardField name="Derivatives"></CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">timeo, timere, timui</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to fear, be afraid of, be afraid</Style><br />      </CardField>
+      <CardField name="Derivatives">(timid, timorous, intimidate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">tempestas, tempestatis,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">period of time, season; weather, storm</Style><br />      </CardField>
+      <CardField name="Derivatives">(tempest, tempestuous)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">miser, misera, miserum</Style><br />      </CardField>
+      <CardField name="Meaning"><Style type="italic">wretched, miserable, unfortunate</Style><br />      </CardField>
+      <CardField name="Derivatives">(misery, Miserere, commiserate)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">exspecto, -are, -avi, -atum</Style> (1)</CardField>
+      <CardField name="Meaning"><Style type="italic">to look for, expect, await</Style><br />      </CardField>
+      <CardField name="Derivatives">(expectancy, expectation)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">commito, -mittere, -misi, -missum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to entrust, commit</Style><br />      </CardField>
+      <CardField name="Derivatives">(committe, commission, commissary, commitment, noncom)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">centum,</Style> indecl. adj.</CardField>
+      <CardField name="Meaning"><Style type="italic">a hundred</Style><br />      </CardField>
+      <CardField name="Derivatives">(cent, century, centipede, centurion, centennial)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">Italia, -ae,</Style> f.</CardField>
+      <CardField name="Meaning"><Style type="italic">Italy</Style><br />      </CardField>
+      <CardField name="Derivatives">(italics, italicize)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">inter,</Style> prep. + acc.</CardField>
+      <CardField name="Meaning"><Style type="italic">between, among</Style><br />      </CardField>
+      <CardField name="Derivatives">(intern, internal; prefix: interact, intercept, interdict)</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Chapter"><Style type="bold">XV</Style><br />      </CardField>
+      <CardField name="Word"><Style type="bold">iaco, iacere, ieci, iactum</Style> (3)</CardField>
+      <CardField name="Meaning"><Style type="italic">to throw, hurl</Style><br />      </CardField>
+      <CardField name="Derivatives">This is a compound verb with the suffix (<Style type="bold">-icio, -icere, -ieci, -iectum</Style>)<br />=&gt; <Style type="bold">eicio, eicere, eieci, eiectum</Style>:<Style type="italic"> to throw out, drive out</Style><br />(abject, adjective, conjecture, dejected, eject, inject, subject, reject, trajectory)</CardField>
+    </Card>
+  </Cards>
+</CardDeck>

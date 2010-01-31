@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://flashcardmaster.sourceforge.net/cardml/1.0/schema" xmlns="http://flashcardmaster.sourceforge.net/cardml/1.0/schema">
+  <xs:element name="CardDeck">
+    <xs:annotation>
+      <xs:documentation>A card deck.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="Fields"/>
+        <xs:element ref="Cards"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <!--  Elements............................................................................ -->
+  <xs:element name="Fields">
+    <xs:annotation>
+      <xs:documentation>A collection of fields.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="Field"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Field">
+    <xs:annotation>
+      <xs:documentation>Defines the appearance of a card field.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:attributeGroup ref="att.Field.index"/>
+      <xs:attributeGroup ref="att.Field.name"/>
+      <xs:attributeGroup ref="att.Field.type"/>
+      <xs:attributeGroup ref="att.Field.side"/>
+      <xs:attributeGroup ref="att.Field.position"/>
+      <xs:attribute name="forecolor">
+        <xs:annotation>
+          <xs:documentation>Foreground color of the field. Format: [a]rgb([0-255],[0-255],[0-255],[0-255]).</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+      <xs:attribute name="backcolor">
+        <xs:annotation>
+          <xs:documentation>Background color of the field. Format: [a]rgb([0-255],[0-255],[0-255],[0-255]).</xs:documentation>
+        </xs:annotation>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Cards">
+    <xs:annotation>
+      <xs:documentation>A collection of cards.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="Card"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="Card">
+    <xs:annotation>
+      <xs:documentation>A card.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="CardField"/>
+      </xs:sequence>
+      <xs:attributeGroup ref="att.Card.name"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CardField">
+    <xs:annotation>
+      <xs:documentation>A card field.</xs:documentation>
+    </xs:annotation>
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="Style"/>
+        <xs:element ref="br"/>
+      </xs:choice>
+      <xs:attributeGroup ref="att.CardField.name"/>
+    </xs:complexType>
+  </xs:element>
+  <!-- ..................................................................................... -->
+  <!--  Field Attributes.................................................................... -->
+  <xs:attributeGroup name="att.Field.index">
+    <xs:attribute name="index" use="required" type="xs:integer">
+      <xs:annotation>
+        <xs:documentation>An integer, 0 or greater, representing the ID of the field. Must be unique and increment by one.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.Field.name">
+    <xs:attribute name="name" use="required" type="xs:ID">
+      <xs:annotation>
+        <xs:documentation>Name of a field, must be unique.</xs:documentation>
+      </xs:annotation>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.Field.type">
+    <xs:attribute name="type" use="required">
+      <xs:annotation>
+        <xs:documentation>Type of a field.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="Key"/>
+          <xs:enumeration value="Answer"/>
+          <xs:enumeration value="Other"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.Field.side">
+    <xs:attribute name="side" use="required">
+      <xs:annotation>
+        <xs:documentation>The side on which the field is shown.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="Front"/>
+          <xs:enumeration value="Back"/>
+          <xs:enumeration value="Both"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <xs:attributeGroup name="att.Field.position">
+    <xs:attribute name="position" use="required">
+      <xs:annotation>
+        <xs:documentation>The relative position of the field on the card.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="None"/>
+          <xs:enumeration value="Top, Left"/>
+          <xs:enumeration value="Top, HorizontalCenter"/>
+          <xs:enumeration value="Top, Right"/>
+          <xs:enumeration value="Left, VerticalCenter"/>
+          <xs:enumeration value="Center"/>
+          <xs:enumeration value="Right, VerticalCenter"/>
+          <xs:enumeration value="Bottom, Left"/>
+          <xs:enumeration value="Bottom, HorizontalCenter"/>
+          <xs:enumeration value="Bottom, Right"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- ..................................................................................... -->
+  <!--  Card Attributes..................................................................... -->
+  <xs:attributeGroup name="att.Card.name">
+    <xs:attribute name="learned" use="required">
+      <xs:annotation>
+        <xs:documentation>The learned status of the card.</xs:documentation>
+      </xs:annotation>
+      <xs:simpleType>
+        <xs:restriction base="xs:token">
+          <xs:enumeration value="Learned"/>
+          <xs:enumeration value="NotLearned"/>
+          <xs:enumeration value="MaybeLearned"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:attributeGroup>
+  <!-- ..................................................................................... -->
+  <!--  CardField Attributes................................................................ -->
+  <xs:attributeGroup name="att.CardField.name">
+    <xs:annotation>
+      <xs:documentation>The field associated with this card field.</xs:documentation>
+    </xs:annotation>
+    <xs:attribute name="name" use="required" type="xs:IDREF"/>
+  </xs:attributeGroup>
+  <!-- ..................................................................................... -->
+  <!--  Text Styles......................................................................... -->
+  <xs:element name="Style">
+    <xs:complexType mixed="true">
+      <xs:attribute name="type" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:token">
+            <xs:enumeration value="regular"/>
+            <xs:enumeration value="italic"/>
+            <xs:enumeration value="bold"/>
+            <xs:enumeration value="bolditalic"/>
+            <xs:enumeration value="underline"/>
+            <xs:enumeration value="monospace"/>
+            <xs:enumeration value="strikethru"/>
+            <xs:enumeration value="super"/>
+            <xs:enumeration value="sub"/>
+            <xs:enumeration value="linebreak"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="br">
+    <xs:complexType/>
+  </xs:element>
+  <!-- ..................................................................................... -->
+</xs:schema>

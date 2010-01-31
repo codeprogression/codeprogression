@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuBatchAdd" xml:space="preserve">
+    <value>&amp;Batch Add</value>
+  </data>
+  <data name="FileNotSupportedMessage" xml:space="preserve">
+    <value>No handlers are implemented for type {0}.
+Unable to create handler for '{1}'</value>
+  </data>
+  <data name="fSaveChangesQuestion" xml:space="preserve">
+    <value>There are unsaved changes made to '{0}'. Save now?</value>
+  </data>
+  <data name="WriteOnlyFormatWarning" xml:space="preserve">
+    <value>You can only save to this format, it cannot be opened. A copy will be saved to {0}.</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="MenuUnCheckAll" xml:space="preserve">
+    <value>Unchec&amp;k All</value>
+  </data>
+  <data name="ReviewerAnimateTT" xml:space="preserve">
+    <value>Animate Card Flip and Switch</value>
+  </data>
+  <data name="NewDesign" xml:space="preserve">
+    <value>New Design</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="BatchEditInstruction" xml:space="preserve">
+    <value>Enter as: {0}</value>
+  </data>
+  <data name="CorruptCsvFileMessage" xml:space="preserve">
+    <value>The csv file might be corrupt or invalid</value>
+  </data>
+  <data name="Reviewer" xml:space="preserve">
+    <value>Reviewer</value>
+  </data>
+  <data name="Animate" xml:space="preserve">
+    <value>Animate</value>
+  </data>
+  <data name="MenuHelp" xml:space="preserve">
+    <value>&amp;Help</value>
+  </data>
+  <data name="MenuCut" xml:space="preserve">
+    <value>Cu&amp;t</value>
+  </data>
+  <data name="ReviewerNoCards" xml:space="preserve">
+    <value>Reviewer - No Cards</value>
+  </data>
+  <data name="MenuCopy" xml:space="preserve">
+    <value>&amp;Copy</value>
+  </data>
+  <data name="MenuOpen" xml:space="preserve">
+    <value>&amp;Open...</value>
+  </data>
+  <data name="Translators" xml:space="preserve">
+    <value>Translators</value>
+  </data>
+  <data name="MenuCheckAll" xml:space="preserve">
+    <value>Chec&amp;k All</value>
+  </data>
+  <data name="KeepStylesInHtmlMessage" xml:space="preserve">
+    <value>Keep text styles when exporting to HTML.</value>
+  </data>
+  <data name="CorruptFileMessage" xml:space="preserve">
+    <value>The file might be corrupt or invalid</value>
+  </data>
+  <data name="MenuReview" xml:space="preserve">
+    <value>Re&amp;view</value>
+  </data>
+  <data name="MenuExit" xml:space="preserve">
+    <value>E&amp;xit</value>
+  </data>
+  <data name="FieldMismatchMessage" xml:space="preserve">
+    <value>The number of fields do not match. Read help for more information</value>
+  </data>
+  <data name="Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="TestResults" xml:space="preserve">
+    <value>Test Results</value>
+  </data>
+  <data name="ReviewerNeedsReviewTT" xml:space="preserve">
+    <value>Needs Review</value>
+  </data>
+  <data name="Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="MenuFile" xml:space="preserve">
+    <value>&amp;File</value>
+  </data>
+  <data name="AndShowBackSideFor" xml:space="preserve">
+    <value>and show back side for</value>
+  </data>
+  <data name="FileNotExistMessage" xml:space="preserve">
+    <value>The file does not exist</value>
+  </data>
+  <data name="SearchOptions" xml:space="preserve">
+    <value>Search Options</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="MutipleChoiceTest" xml:space="preserve">
+    <value>Multiple Choice Test</value>
+  </data>
+  <data name="NewDeck" xml:space="preserve">
+    <value>New Deck</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="MenuDelete" xml:space="preserve">
+    <value>Dele&amp;te</value>
+  </data>
+  <data name="ReviewerPreviousCardTT" xml:space="preserve">
+    <value>Previous Card</value>
+  </data>
+  <data name="PrintPreview" xml:space="preserve">
+    <value>Print Previe&amp;w</value>
+  </data>
+  <data name="Show" xml:space="preserve">
+    <value>Show:</value>
+  </data>
+  <data name="LineBreakHint" xml:space="preserve">
+    <value>Use [Ctrl] + [Enter] to enter a line break.</value>
+  </data>
+  <data name="MenuPrint" xml:space="preserve">
+    <value>&amp;Print...</value>
+  </data>
+  <data name="MenuTakeTest" xml:space="preserve">
+    <value>Take Te&amp;st</value>
+  </data>
+  <data name="MenuTools" xml:space="preserve">
+    <value>&amp;Tools</value>
+  </data>
+  <data name="ReviewNoCardsMessage" xml:space="preserve">
+    <value>'''No Cards To Review'''</value>
+  </data>
+  <data name="ReviewerToggleTT" xml:space="preserve">
+    <value>Toggle Timer</value>
+  </data>
+  <data name="SaveAs" xml:space="preserve">
+    <value>Save As</value>
+  </data>
+  <data name="MissingStyleInfoMessage" xml:space="preserve">
+    <value>This file format is does not have any card design information associated with it.
+Use 'Designer' to design the card.</value>
+  </data>
+  <data name="License" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="ReviewDelays" xml:space="preserve">
+    <value>Review Delays:</value>
+  </data>
+  <data name="Review" xml:space="preserve">
+    <value>Review</value>
+  </data>
+  <data name="ReviewerLearnedTT" xml:space="preserve">
+    <value>Learned</value>
+  </data>
+  <data name="Key" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="AllFields" xml:space="preserve">
+    <value>All Fields</value>
+  </data>
+  <data name="AssociateFiletypes" xml:space="preserve">
+    <value>Associate Filetypes</value>
+  </data>
+  <data name="FileNotSupportedMessageHint" xml:space="preserve">
+    <value>{0}
+
+This error might be caused by incorrect file extension.</value>
+  </data>
+  <data name="fUnableToOpenMessage" xml:space="preserve">
+    <value>Unable to open '{0}'.
+{1}.</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="PrinterCannotDuplex" xml:space="preserve">
+    <value>The printer you selected cannot duplex. Do you want to manually duplex?</value>
+  </data>
+  <data name="Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="General" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="fDataLossWarning" xml:space="preserve">
+    <value>Some data will be lost when saved to {0} format. To preserve the data, save in a different format.</value>
+  </data>
+  <data name="VersionFormat" xml:space="preserve">
+    <value>{0} v{1}
+Written by Nithin Philips &lt;spikiermonkey@users.sourceforge.net&gt;.
+
+Copyright (C) 2003-2008 Nithin Philips.
+This is free software; There is NO warranty
+not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Read COPYING in application directory or visit http://www.gnu.org/copyleft/gpl.html for more info.</value>
+  </data>
+  <data name="fMainWindowTitle" xml:space="preserve">
+    <value>{0} - [{1}]</value>
+  </data>
+  <data name="DesignCard" xml:space="preserve">
+    <value>Design Card</value>
+  </data>
+  <data name="Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="Locale" xml:space="preserve">
+    <value>Locale</value>
+  </data>
+  <data name="fReviewer" xml:space="preserve">
+    <value>Review - {0} of {1} - {2}</value>
+  </data>
+  <data name="MenuEdit" xml:space="preserve">
+    <value>&amp;Edit</value>
+  </data>
+  <data name="Ready" xml:space="preserve">
+    <value>Ready</value>
+  </data>
+  <data name="NoCardToPrintMessage" xml:space="preserve">
+    <value>There are no cards to print</value>
+  </data>
+  <data name="Shuffled" xml:space="preserve">
+    <value>Shuffled</value>
+  </data>
+  <data name="DesignerDataLossWarning" xml:space="preserve">
+    <value>This action may cause loss of data.
+It is recomended that you make a backup copy before proceeding.
+Continue with Delete?</value>
+  </data>
+  <data name="MenuSaveAs" xml:space="preserve">
+    <value>Save &amp;As...</value>
+  </data>
+  <data name="GenericOpenErrorMessage" xml:space="preserve">
+    <value> ({0})
+  Details:{1}</value>
+  </data>
+  <data name="Fields" xml:space="preserve">
+    <value>Fields</value>
+  </data>
+  <data name="ShowFrontSideFor" xml:space="preserve">
+    <value>Show front side for</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="QuizMinCardMessage" xml:space="preserve">
+    <value>There must be at least 4 cards in order to run the quiz.</value>
+  </data>
+  <data name="fTestResults" xml:space="preserve">
+    <value>You scored {0} out of {1} ({2:#.#}%)</value>
+  </data>
+  <data name="Font" xml:space="preserve">
+    <value>Font</value>
+  </data>
+  <data name="New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="Normal" xml:space="preserve">
+    <value>Normal</value>
+  </data>
+  <data name="ContributorsFormat" xml:space="preserve">
+    <value>{0} v{1}
+
+This program is made possible by the following contributors:
+     Magic Control Library 1.7.4.0:  Phil Wright &lt;http://www.dotnetmagic.com/&gt;
+     Tango Icon Project &lt;http://tango.freedesktop.org/&gt;
+     Drag Drop ListView: Matt Hawley &lt;http://www.codeproject.com/cs/miscctrl/DragAndDropListView.asp&gt;
+     CSV Reader 3.1.2: Sébastien Lorion &lt;http://www.codeproject.com/cs/database/CsvReader.asp&gt;</value>
+  </data>
+  <data name="ReviewCardsShuffled" xml:space="preserve">
+    <value>Review Cards - Shuffled</value>
+  </data>
+  <data name="MenuDesign" xml:space="preserve">
+    <value>Desi&amp;gn</value>
+  </data>
+  <data name="MenuSelectAll" xml:space="preserve">
+    <value>Select &amp;All</value>
+  </data>
+  <data name="EndTestQuestion" xml:space="preserve">
+    <value>Are you sure you want to end the test?</value>
+  </data>
+  <data name="BatchEntry" xml:space="preserve">
+    <value>Batch Entry</value>
+  </data>
+  <data name="MenuRecentFiles" xml:space="preserve">
+    <value>&amp;Recent Files</value>
+  </data>
+  <data name="HtmlExport" xml:space="preserve">
+    <value>HTML Export</value>
+  </data>
+  <data name="fBatchEditInstructionField" xml:space="preserve">
+    <value>&lt;{0}&gt;</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>Answer</value>
+  </data>
+  <data name="MenuNew" xml:space="preserve">
+    <value>&amp;New</value>
+  </data>
+  <data name="RegularExpression" xml:space="preserve">
+    <value>Regular Expression</value>
+  </data>
+  <data name="Contributors" xml:space="preserve">
+    <value>Contributors</value>
+  </data>
+  <data name="CSVSeperatorHint" xml:space="preserve">
+    <value>CSV seperator is used by the batch editor to sperate fields and also by 'Export as CSV' method.</value>
+  </data>
+  <data name="QuizDeckInvalid" xml:space="preserve">
+    <value>The current deck does not have the 'Key' and 'Answer' fields defined. You can correct this by editing the deck using Card Designer.</value>
+  </data>
+  <data name="Front" xml:space="preserve">
+    <value>Front</value>
+  </data>
+  <data name="CSVSeperator" xml:space="preserve">
+    <value>CSV Seperator</value>
+  </data>
+  <data name="SecondsL" xml:space="preserve">
+    <value>seconds</value>
+  </data>
+  <data name="InvalidPrinterError" xml:space="preserve">
+    <value>It appears that you do not have a printer installed. You need to install a printer before using this feature.</value>
+  </data>
+  <data name="BatchEditMismatchException" xml:space="preserve">
+    <value>Field count does not match.</value>
+  </data>
+  <data name="ReviewerNotLearnedTT" xml:space="preserve">
+    <value>Not Learned</value>
+  </data>
+  <data name="MenuPaste" xml:space="preserve">
+    <value>&amp;Paste</value>
+  </data>
+  <data name="EditCards" xml:space="preserve">
+    <value>Edit Cards</value>
+  </data>
+  <data name="MenuPreferences" xml:space="preserve">
+    <value>Pre&amp;ferences</value>
+  </data>
+  <data name="Preferences" xml:space="preserve">
+    <value>Preferences</value>
+  </data>
+  <data name="Untitled" xml:space="preserve">
+    <value>Untitled</value>
+  </data>
+  <data name="UnsupportedFormat" xml:space="preserve">
+    <value>Files of type {0} is not supported. Try a supported file type.</value>
+  </data>
+  <data name="ReviewerNextCardTT" xml:space="preserve">
+    <value>Next Card</value>
+  </data>
+  <data name="Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="DeSerializationFailedMessage" xml:space="preserve">
+    <value>The file could not be read. It might be corrupt or invalid</value>
+  </data>
+  <data name="Cards" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="Sides" xml:space="preserve">
+    <value>Sides</value>
+  </data>
+  <data name="MenuPageSetup" xml:space="preserve">
+    <value>Pa&amp;ge Setup...</value>
+  </data>
+  <data name="MenuOpenAsDesign" xml:space="preserve">
+    <value>Open As &amp;Design...</value>
+  </data>
+  <data name="ReviewerFlipCardTT" xml:space="preserve">
+    <value>Flip Card</value>
+  </data>
+  <data name="Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="EditMultipleItems" xml:space="preserve">
+    <value>[Edit Multiple Items]</value>
+  </data>
+  <data name="MenuAbout" xml:space="preserve">
+    <value>&amp;About</value>
+  </data>
+  <data name="SaveNowQuestion" xml:space="preserve">
+    <value>Do you want to save now?</value>
+  </data>
+  <data name="EditorNoCardsMessage" xml:space="preserve">
+    <value>Click '''+''' to add a new card.</value>
+  </data>
+  <data name="AboutLicense" xml:space="preserve">
+    <value>This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation,Inc.,59 Temple Place - Suite 330,Boston,MA 02111-1307, USA.</value>
+  </data>
+  <data name="MenuSaveDesignAs" xml:space="preserve">
+    <value>Save &amp;Design As...</value>
+  </data>
+  <data name="MenuSave" xml:space="preserve">
+    <value>&amp;Save</value>
+  </data>
+  <data name="AboutTranslators" xml:space="preserve">
+    <value>Translators:
+       Turkish - Çigdem Çavus
+       Spanish - Gabriel Reyes</value>
+  </data>
+  <data name="BottomCenter" xml:space="preserve">
+    <value>Bottom Center</value>
+  </data>
+  <data name="TopLeft" xml:space="preserve">
+    <value>Top Left</value>
+  </data>
+  <data name="CenterLeft" xml:space="preserve">
+    <value>Center Left</value>
+  </data>
+  <data name="Center" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="TopCenter" xml:space="preserve">
+    <value>Top Center</value>
+  </data>
+  <data name="CenterRight" xml:space="preserve">
+    <value>Center Right</value>
+  </data>
+  <data name="BottomLeft" xml:space="preserve">
+    <value>Bottom Left</value>
+  </data>
+  <data name="TopRight" xml:space="preserve">
+    <value>Top Right</value>
+  </data>
+  <data name="Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="BottomRight" xml:space="preserve">
+    <value>Bottom Right</value>
+  </data>
+  <data name="FieldNameNotUnique" xml:space="preserve">
+    <value>Field names must be unique. Another field by this name already exist.</value>
+  </data>
+  <data name="OpenBackupQuestion" xml:space="preserve">
+    <value>A backup of '{0}' exists that is more recent. Do you want to open the backup?</value>
+  </data>
+  <data name="PrintFont" xml:space="preserve">
+    <value>Print Font:</value>
+  </data>
+  <data name="Advanced" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Delay" xml:space="preserve">
+    <value>Delay:</value>
+  </data>
+  <data name="EnableBackupOption" xml:space="preserve">
+    <value>Automatically save backups of open files.</value>
+  </data>
+  <data name="FieldNameEmptyError" xml:space="preserve">
+    <value>This field cannot be empty.</value>
+  </data>
+  <data name="HqTextLayoutOption" xml:space="preserve">
+    <value>High quality text layout (Slow).</value>
+  </data>
+  <data name="ManualDuplexOption" xml:space="preserve">
+    <value>Manually duplex when printing (Allows you to print on both sides of the page).</value>
+  </data>
+  <data name="NeedKeyAnswer" xml:space="preserve">
+    <value>The current deck does not have the 'Key' or the 'Answer' fields, which are needed to save as {0}. Please save in a different format or modify the deck using the Card Designer.</value>
+  </data>
+  <data name="PasteFieldMismatchPlural" xml:space="preserve">
+    <value>The cards you are trying to paste have more fields than the current deck. Add {0} more fields using the designer and try again.</value>
+  </data>
+  <data name="PasteFieldMismatchSingular" xml:space="preserve">
+    <value>The cards you are trying to paste have more field than the current deck. Add {0} more field using the designer and try again.</value>
+  </data>
+  <data name="FieldNameContainsSpace" xml:space="preserve">
+    <value>Field name cannot contain the space character.</value>
+  </data>
+  <data name="MultipleAnswerTypeError" xml:space="preserve">
+    <value>Both "{0}" and "{1}" fields are marked as 'Answer'. Only one field should be 'Answer'. This may cause problems later. Do you want to correct this?</value>
+  </data>
+  <data name="MultipleKeyTypeError" xml:space="preserve">
+    <value>Both "{0}" and "{1}" fields are marked as 'Key'. Only one field should be 'Key'. This may cause problems later. Do you want to correct this?</value>
+  </data>
+</root>

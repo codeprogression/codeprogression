@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE CardDeck PUBLIC "-//FCM//CARDML V1.0" "http://flashcardmaster.sourceforge.net/cardml/1.0/cml.xsd">
+<CardDeck>
+  <Fields>
+    <Field index="0" name="Key" type="Other" side="Front" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+    <Field index="1" name="Answer" type="Answer" side="Back" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+  </Fields>
+  <Cards>
+    <Card learned="NotLearned">
+      <!-- The name cannot be empty -->
+      <CardField name=""></CardField>
+      <CardField name="Answer">Answer</CardField>
+    </Card>
+  </Cards>
+</CardDeck>

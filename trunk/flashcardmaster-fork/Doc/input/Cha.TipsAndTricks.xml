@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE chapter
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+>
+<chapter id="TipsAndTricks">
+    <title>Tips and Tricks</title>
+    <sect1 id="ChangingTheColorOfFields">
+        <title>Changing the color of fields</title>
+        <note>
+            <para>While you can still follow the steps here, in Flash card Master 1.0 you can change the colors in the <link linkend="CardDesigner">Card Designer</link> dialog. The only limitation of the UI is that you cannot set the transparency (alpha) of the colors.</para>
+        </note>
+        <para>If you save a deck as a <link linkend="cmlFileType">CML</link> file, you can manually edit the file using a Text Editor and modify the Field element. <programlisting><![CDATA[<Field 
+    index="0" 
+    name="Chapter" 
+    type="Other" 
+    side="Both"
+    position="Top, Right"
+    forecolor="argb(255,0,0,0)"
+    backcolor="argb(0,255,255,255)" 
+/>]]></programlisting></para>
+        <para>
+            <code>forecolor</code> specifies the color of the text and <code>backcolor</code> specifies the color of the text background. There are two ways to specify the color. One is <code>rgb([0-255], [0-255], [0-255])</code> and the other is <code>argb([0-255],[0-255],[0-255],[0-255])</code>, which specifies an alpha channel value as well.</para>
+        <para>For example <code>forecolor="argb(255,0,0,0)"</code> and <code>backcolor="argb(200,241,113,65)"</code> will produce the following output. </para>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/FieldColor.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Flash Card Master main window.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <tip>
+            <para>Once you have made your changes in CML, you can save to CARD or XHTML formats and the color information will be preserved.</para>
+        </tip>
+    </sect1>
+    <sect1 id="MergingFilesWithDifferentNumberOfFields">
+        <title>Merging files with different number of fields</title>
+        <para>If you have two different files with different number of fields (for example fileA with {Question, Answer} and fileB with {Chapter, Question, Answer}) you can merge them easily.</para>
+        <para>First, open the file with least number of fields (fileA), then using the Card Designer add fields (Chapter) to match the second file (fileB). Make sure the order of the fields are the same in both files. You can now import the second file (fileB) using <menuchoice>
+                <guimenu>File</guimenu>
+                <guimenuitem>Import</guimenuitem>
+            </menuchoice>.</para>
+    </sect1>
+</chapter>

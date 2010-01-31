@@ -1,0 +1,49 @@
+$Id: README 180 2008-05-30 00:08:02Z spikiermonkey $
+
+Flash Card Master is free software distributed under GNU GPL.
+(c) 2003-2008 Nithin Philips
+
+	Flash Card Master is a flash card program. Flash Card Master allows
+users to design, edit and print flash cards. Notable features include 
+various data input methods, wikitext formatting in text fields, and 
+facilites to review materials.
+
+Features:
+    * Easy to print to real flashcards.
+    * Wiki text support in text fields.
+    * Ability to design the layout of flash cards (WYSWYG).
+    * Export to CSV, XML.
+    * Import from CSV (thru, Batch Input).
+    * Multiple review methods (Normal, Shuffled, Manual or Timed)
+    * 3-tier Leitner system support.
+    * Self testing (Multiple Choice).
+
+Translations:
+    * English
+    * Spanish
+    * Turkish
+    * Malayalam
+    
+Tips:
+    * Merging files with different number of fields.
+       First, Open the source file and use the editor to add fields to 
+       match the target file, you can also reorder fields by dragging
+       and dropping them (in Card Designer). Then, use the import method 
+       as ususal.
+    * You can transform flash card data into any text-based format 
+      (csv, text) by using XSLTs. When file is saved with .html extension, FCM
+      uses the xsl stylesheet file located at:
+      "C:\Documents And Settings\<user>\Application Data\Nithin Philips
+        \Flash Card Master\<version>\Style.xslt"
+      The stylesheet included in FCM is only written to the file when required 
+      and only if it does not exist. You can also edit the default
+      stylesheet to suit your needs (add a banner etc.)
+      see Documentation for the DTD and Schema of the XML to process.
+    * You can set the foreground or background color of any field 
+      by manually editing the .cml files (Note: you cannot edit .card files,
+      as they are binary). On elements called 'Field', there are attributes
+      named 'forecolor' and 'backcolor', you can set their values. Format for
+      entering color is "argb(<alpha>,<red>,<green>,<blue>)", each channel 
+      can values ranging from 0 to 255, inclusive. For example, for a green
+      color you enter "argb(255,155,216,30)". Alpha values control the 
+      translucency of the color.

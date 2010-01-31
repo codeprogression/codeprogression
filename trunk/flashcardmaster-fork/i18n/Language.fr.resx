@@ -1,0 +1,433 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 1.3
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">1.3</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1">this is my long string</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        [base64 mime encoded serialized .NET Framework object]
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        [base64 mime encoded string representing a byte array form of the .NET Framework object]
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used forserialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuBatchAdd">
+    <value>Le groupe s'ajoutent </value>
+  </data>
+  <data name="FileNotSupportedMessage">
+    <value>Aucun traiteur n&amp;#39;est mis en application pour le type {0}. \ nUnable pour créer le traiteur pour « {1} » </value>
+  </data>
+  <data name="fSaveChangesQuestion">
+    <value>Il y a les changements unsaved faits « {0} ». Économiser maintenant ? </value>
+  </data>
+  <data name="Save">
+    <value>Économiser </value>
+  </data>
+  <data name="MenuUnCheckAll">
+    <value>Uncheck tout </value>
+  </data>
+  <data name="ReviewerAnimateTT">
+    <value>Chiquenaude et commutateur animés de carte </value>
+  </data>
+  <data name="NewDesign">
+    <value>Nouvelle conception </value>
+  </data>
+  <data name="Cancel">
+    <value>Annulation </value>
+  </data>
+  <data name="BatchEditInstruction">
+    <value>Entrer comme : {0} </value>
+  </data>
+  <data name="CorruptCsvFileMessage">
+    <value>Le dossier de csv pourrait être corrompu ou invalide </value>
+  </data>
+  <data name="Reviewer">
+    <value>Critique </value>
+  </data>
+  <data name="Animate">
+    <value>Animé </value>
+  </data>
+  <data name="MenuHelp">
+    <value>Aide </value>
+  </data>
+  <data name="MenuCut">
+    <value>Coupe </value>
+  </data>
+  <data name="ReviewerNoCards">
+    <value>Critique - aucunes cartes </value>
+  </data>
+  <data name="MenuCopy">
+    <value>Copy </value>
+  </data>
+  <data name="MenuOpen">
+    <value>Ouvert… </value>
+  </data>
+  <data name="Translators">
+    <value>Traducteurs </value>
+  </data>
+  <data name="MenuCheckAll">
+    <value>Vérifier tous </value>
+  </data>
+  <data name="CorruptFileMessage">
+    <value>Le dossier pourrait être corrompu ou invalide </value>
+  </data>
+  <data name="MenuReview">
+    <value>Revue </value>
+  </data>
+  <data name="MenuExit">
+    <value>Sortie </value>
+  </data>
+  <data name="FieldMismatchMessage">
+    <value>Le nombre de champs pas match. Aide lue pour plus d&amp;#39;information </value>
+  </data>
+  <data name="TestResults">
+    <value>Résultats d&amp;#39;essai </value>
+  </data>
+  <data name="ReviewerNeedsReviewTT">
+    <value>Revue des besoins </value>
+  </data>
+  <data name="Position">
+    <value>Position </value>
+  </data>
+  <data name="MenuFile">
+    <value>Dossier </value>
+  </data>
+  <data name="FileNotExistMessage">
+    <value>Le dossier n'existe pas </value>
+  </data>
+  <data name="Close">
+    <value>Fin </value>
+  </data>
+  <data name="Properties">
+    <value>Propriétés </value>
+  </data>
+  <data name="MutipleChoiceTest">
+    <value>Essai de choix de Mutiple </value>
+  </data>
+  <data name="NewDeck">
+    <value>Nouvelle plate-forme </value>
+  </data>
+  <data name="Open">
+    <value>Ouvert </value>
+  </data>
+  <data name="MenuDelete">
+    <value>Effacement </value>
+  </data>
+  <data name="ReviewerPreviousCardTT">
+    <value>Carte précédente </value>
+  </data>
+  <data name="Show">
+    <value>Exposition : </value>
+  </data>
+  <data name="LineBreakHint">
+    <value>Utilisation [Ctrl] [entrer] d&amp;#39;écrire une ligne coupure. </value>
+  </data>
+  <data name="MenuPrint">
+    <value>Copie… </value>
+  </data>
+  <data name="MenuTakeTest">
+    <value>Essai de prise </value>
+  </data>
+  <data name="MenuTools">
+    <value>Outils </value>
+  </data>
+  <data name="ReviewNoCardsMessage">
+    <value>'''Aucune carte pour passer en revue le'''</value>
+  </data>
+  <data name="ReviewerToggleTT">
+    <value>Temporisateur à bascule </value>
+  </data>
+  <data name="SaveAs">
+    <value>Économiser As </value>
+  </data>
+  <data name="MissingStyleInfoMessage">
+    <value>Ce format de dossier est n&amp;#39;a pas n&amp;#39;importe quelle information de conception de carte liée à lui. \ nUse « concepteur » pour concevoir la carte. </value>
+  </data>
+  <data name="License">
+    <value>Permis </value>
+  </data>
+  <data name="ReviewDelays">
+    <value>La revue retarde : </value>
+  </data>
+  <data name="Review">
+    <value>Revue </value>
+  </data>
+  <data name="ReviewerLearnedTT">
+    <value>Instruit </value>
+  </data>
+  <data name="Key">
+    <value>Clef </value>
+  </data>
+  <data name="AssociateFiletypes">
+    <value>Associé Filetypes </value>
+  </data>
+  <data name="FileNotSupportedMessageHint">
+    <value>{0} \ erreur de n \ nThis pourrait être provoquée par prolongation de dossier incorrecte. </value>
+  </data>
+  <data name="fUnableToOpenMessage">
+    <value>Incapable de ouvrir « {0} ». \ n {1}. </value>
+  </data>
+  <data name="Type">
+    <value>Type </value>
+  </data>
+  <data name="Back">
+    <value>Dos </value>
+  </data>
+  <data name="General">
+    <value>Généralités </value>
+  </data>
+  <data name="fDataLossWarning">
+    <value>Quelques données seront perdues quand économisé {à 0} formats </value>
+  </data>
+  <data name="VersionFormat">
+    <value>{0} v {1}  Écrit par Nithin Philips &amp;lt;spikiermonkey@users.sourceforge.net&amp;gt;.    Copyright (c) Nithin 2003-2008 Philips.  C&amp;#39;est logiciel libre ; Il n&amp;#39;y a AUCUNE garantie  pas même pour la VALEUR MARCHANDE ou la FORME PHYSIQUE POUR UN BUT PARTICULIER.    Lire COPIER dans l&amp;#39;annuaire d&amp;#39;application ou visiter http://www.gnu.org/copyleft/gpl.html pour plus d&amp;#39;information. </value>
+  </data>
+  <data name="fMainWindowTitle">
+    <value>{0} - [{1}] </value>
+  </data>
+  <data name="DesignCard">
+    <value>Carte de conception </value>
+  </data>
+  <data name="Version">
+    <value>Version </value>
+  </data>
+  <data name="fReviewer">
+    <value>Revue - {0} de {1} - {2} </value>
+  </data>
+  <data name="MenuEdit">
+    <value>Éditer </value>
+  </data>
+  <data name="Ready">
+    <value>Prêt </value>
+  </data>
+  <data name="NoCardToPrintMessage">
+    <value>Il n&amp;#39;y a aucune carte à imprimer </value>
+  </data>
+  <data name="Shuffled">
+    <value>Brouillé </value>
+  </data>
+  <data name="DesignerDataLossWarning">
+    <value>Cette action peut causer la perte de données. \ lente est reccomended que vous tirez une copie de sauvegarde avant la marche à suivre. \ nContinue ? </value>
+  </data>
+  <data name="MenuSaveAs">
+    <value>Économiser comme… </value>
+  </data>
+  <data name="GenericOpenErrorMessage">
+    <value>({0}) \ n détaille : {1} </value>
+  </data>
+  <data name="Fields">
+    <value>Champs </value>
+  </data>
+  <data name="OK">
+    <value>OK </value>
+  </data>
+  <data name="QuizMinCardMessage">
+    <value>Il doit y avoir au moins 4 cartes dedans pour courir le jeu. </value>
+  </data>
+  <data name="fTestResults">
+    <value>You scored {0} out of {1} ({2:#.#}%)</value>
+  </data>
+  <data name="New">
+    <value>Nouveau </value>
+  </data>
+  <data name="Normal">
+    <value>Normal </value>
+  </data>
+  <data name="ContributorsFormat">
+    <value>{0} v {1}    Ce programme est rendu possible par les contribuants suivants :       Bibliothèque magique 1.7.4.0 de commande :  Projet &amp;lt; http://tango.freedesktop.org/ &amp;gt; d&amp;#39;icône de Phil Wright &amp;lt; http://www.dotnetmagic.com/ &amp;gt; Tango </value>
+  </data>
+  <data name="ReviewCardsShuffled">
+    <value>Cartes de revue - battues </value>
+  </data>
+  <data name="MenuDesign">
+    <value>Conception </value>
+  </data>
+  <data name="MenuSelectAll">
+    <value>Choisir tous </value>
+  </data>
+  <data name="EndTestQuestion">
+    <value>Êtes-vous sûr vous voulez-vous finir l&amp;#39;essai ? </value>
+  </data>
+  <data name="BatchEntry">
+    <value>Entrée en lots </value>
+  </data>
+  <data name="MenuRecentFiles">
+    <value>Dossiers récents </value>
+  </data>
+  <data name="fBatchEditInstructionField">
+    <value>&amp;lt;&amp;gt; </value>
+  </data>
+  <data name="Answer">
+    <value>Réponse </value>
+  </data>
+  <data name="MenuNew">
+    <value>Nouveau </value>
+  </data>
+  <data name="Contributors">
+    <value>Contribuants </value>
+  </data>
+  <data name="CSVSeperatorHint">
+    <value>Le seperator de CSV est employé par le rédacteur en lots aux champs de sperate et également par « exportation la méthode comme CSV ». </value>
+  </data>
+  <data name="Front">
+    <value>Avant </value>
+  </data>
+  <data name="CSVSeperator">
+    <value>CSV Seperator </value>
+  </data>
+  <data name="SecondsL">
+    <value>secondes </value>
+  </data>
+  <data name="BatchEditMismatchException">
+    <value>Le compte de champ pas match. </value>
+  </data>
+  <data name="ReviewerNotLearnedTT">
+    <value>Non instruit </value>
+  </data>
+  <data name="MenuPaste">
+    <value>Pâte </value>
+  </data>
+  <data name="EditCards">
+    <value>Éditer les cartes </value>
+  </data>
+  <data name="MenuPreferences">
+    <value>Préférences </value>
+  </data>
+  <data name="Preferences">
+    <value>Préférences </value>
+  </data>
+  <data name="Untitled">
+    <value>Untitled </value>
+  </data>
+  <data name="ReviewerNextCardTT">
+    <value>Prochaine carte </value>
+  </data>
+  <data name="Name">
+    <value>Nom </value>
+  </data>
+  <data name="DeSerializationFailedMessage">
+    <value>Le dossier n&amp;#39;a pas pu être lu. Ce pourrait être corrompu ou invalide </value>
+  </data>
+  <data name="Cards">
+    <value>Cartes </value>
+  </data>
+  <data name="Sides">
+    <value>Côtés </value>
+  </data>
+  <data name="MenuPageSetup">
+    <value>Page installée… </value>
+  </data>
+  <data name="ReviewerFlipCardTT">
+    <value>Carte d&amp;#39;instruction </value>
+  </data>
+  <data name="Import">
+    <value>Importation </value>
+  </data>
+  <data name="EditMultipleItems">
+    <value>[Éditer les articles multiples] </value>
+  </data>
+  <data name="MenuAbout">
+    <value>Au sujet de </value>
+  </data>
+  <data name="SaveNowQuestion">
+    <value>Voulez-vous sauver maintenant ? </value>
+  </data>
+  <data name="EditorNoCardsMessage">
+    <value>'''Cliquer le de pour ajouter une nouvelle carte.'''</value>
+  </data>
+  <data name="AboutLicense">
+    <value>Ce programme est logiciel libre ; vous pouvez le redistribuer et/ou le modifier en vertu du permis de grand public de GNU comme édité par la base libre de logiciel ; version 2 du permis, ou (à votre option) toute version postérieure.    Ce programme est distribué dans l&amp;#39;espoir qu&amp;#39;il sera utile, mais SANS N&amp;#39;IMPORTE QUELLE GARANTIE ; sans même la garantie implicite de la VALEUR MARCHANDE ou de la FORME PHYSIQUE POUR UN BUT PARTICULIER.  Voir le permis de grand public de GNU pour plus de détails.    Vous devriez avoir reçu une copie du permis de grand public de GNU avec ce programme ; sinon, écrire à Free Software Foundation, Inc., endroit de 59 temples - la suite 330, Boston, mA 02111-1307, Etats-Unis. </value>
+  </data>
+  <data name="MenuSaveDesignAs">
+    <value>Économiser la conception comme… </value>
+  </data>
+  <data name="MenuSave">
+    <value>Économiser </value>
+  </data>
+</root>

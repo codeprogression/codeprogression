@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE appendix
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+ >
+<appendix>
+  <title>Supported File Types</title>
+  <sect1 id="cmlFileType">
+    <title>Card Markup Language (.cml)</title>
+    <para>Card Markup Language is an XML based file format. This format is fully supported by &fcm;.</para>
+    <para>If you would like to manually edit the CML files, a document type definition has been written in RelaxNG, available at <ulink url="http://flashcardmaster.sourceforge.net/cardml/1.0/relaxng">http://flashcardmaster.sourceforge.net/cardml/1.0/relaxng</ulink>. If you prefer an XSD schema is also available at <ulink url="http://flashcardmaster.sourceforge.net/cardml/1.0/schema">http://flashcardmaster.sourceforge.net/cardml/1.0/schema</ulink>.</para>
+    <example>
+      <title>A sample CML file</title>
+      <programlisting><![CDATA[<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CardDeck xsi:noNamespaceSchemaLocation="http://flashcardmaster.sourceforge.net/cardml/1.0/schema" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Fields>
+        <Field index="0" name="Key" type="Key" side="Front" position="Center" />
+        <Field index="1" name="Answer" type="Answer" side="Back" position="Center" />
+    </Fields>
+    <Cards>
+        <Card learned="NotLearned">
+            <CardField name="Key">Key</CardField>
+            <CardField name="Answer">Answer</CardField>
+        </Card>
+    </Cards>
+</CardDeck>]]></programlisting>
+    </example>
+  </sect1>
+  <sect1>
+    <title>Card File (.card)</title>
+    <para>Card is binary file format. It is fully supported by &fcm;.</para>
+    <para>Card files are written using the .NET object serializer and will become incompatible if the object model is changed in the future. If you need to use files across incompatible versions, you will need to save the file as a <link linkend="cmlFileType">.cml</link> file.</para>
+  </sect1>
+  <sect1 id="csvFileFormat">
+    <title>Comma Separated Value (.csv)</title>
+    <para>&fcm; has limited support for csv files. They can be read from and written to, however any customizations of field appearance (like position, colors etc.) will be lost. Only names of the fields are saved.</para>
+    <para>CSV files can be useful if you prefer to edit or already have a flash card collection in Excel or another spreadsheet program. A sample CSV file is shown below. <programlistingco>
+        <areaspec>
+          <area coords="1,1" id="csv.example.header"/>
+          <area coords="2,1" id="csv.example.data"/>
+        </areaspec>
+        <programlisting>Chapter,Word,Meaning,Derivatives  [1]
+I,më,"me,myself",                 [2]
+I,quid,what,(quid pro quo)        [2]</programlisting>
+        <calloutlist>
+          <callout arearefs="csv.example.header">
+            <para>This is the header. The name of each field is required and is separated by a comma (or another character set in the preferences).</para>
+          </callout>
+          <callout arearefs="csv.example.data">
+            <para>These are the data. Commas inside double quotes are not counted as separators and are considered part of the data.</para>
+          </callout>
+        </calloutlist>
+      </programlistingco></para>
+  </sect1>
+  <sect1>
+    <title>XHTML</title>
+    <para>&fcm; can save data as an XHTML file, but cannot open it due to the inherent limitations of the format. Saving as XHTML will only make a copy of the opened file in XHTML.</para>
+    <para>The XHTML format is intended for presenting your cards. Using <ulink url="http://en.wikipedia.org/wiki/XSL_Transformations">XSLT</ulink>, you can customize the appearance of the XHTML file produced. To use a custom XSLT, save it as <filename>Style.xslt</filename> in the <filename>%APPDATA%\Nithin Philips\Flash Card Master\&lt;Version&gt;</filename> directory. On a typical system this is usually: <filename>C:\Documents and Settings\&lt;User&gt;\Application Data\Nithin Philips\Flash Card Master\&lt;Version&gt;</filename>.</para>
+    <warning>
+      <para>If your custom XSLT is malformed, the program may behave unexpectedly or crash. Be sure to test the style sheet (with an external tool or by making a dummy deck) before using it.</para>
+    </warning>
+    <para>Please also note that when saving as CML files, Flash Card Master will write color values in argb() format, however CSS only supports rgb() format. You will need to manually convert argb() to rgb() or transform it somehow. This is not an issue when you save as XHTML files, because Flash Card Master will make the necessary conversions. See <xref linkend="ChangingTheColorOfFields"/> for more details.</para>
+    <para>The default XSL stylesheet is available at <ulink url="http://flashcardmaster.sourceforge.net/cardml/1.0/transform">http://flashcardmaster.sourceforge.net/cardml/1.0/transform</ulink></para>
+  </sect1>
+  <sect1>
+    <title>LaTeX (.tex)</title>
+    <para>&fcm; can save to LaTeX format, but cannot open it. The .tex file itself is not very useful, but you can use <ulink url="http://miktex.org/">MikTeX</ulink> and <ulink url="http://www.toolscenter.org/">TeXnicCenter</ulink> to transform it to PS or PDF.</para>
+    <example>
+      <title>Sample TeX output</title>
+      <programlisting><![CDATA[\documentclass[12pt,letterpaper,oneside]{article}
+\usepackage{ulem}
+
+\title{Flash Card List}
+\author{Douglas Adams}
+\date{\today}
+
+\begin{document}
+\maketitle{}
+
+\begin{description}
+	\item[Answer to Life, the Universe, and Everything] 42
+
+\end{description}
+
+\end{document}]]></programlisting>
+    </example>
+  </sect1>
+  <sect1>
+    <title>Flashcard Pro (.xfs)</title>
+    <para>Flashcard Pro is an alternative flashcard program. It is available at &lt;<ulink url="http://www.donationcoder.com/Forums/bb/index.php?topic=4810.msg33933">http://www.donationcoder.com/Forums/bb/index.php?topic=4810.msg33933</ulink>&gt;. Flashcard Pro files can only handle a Key and a Value field, therefore any other information in your deck will be lost when saved to this format. Also, you must have fields designated Key and Answer (using <link linkend="CardDesigner">Card Designer</link>) before being able to save as this format.</para>
+  </sect1>
+  
+</appendix>

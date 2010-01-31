@@ -1,0 +1,38 @@
+<!ENTITY % LearnStaus "Learned | NotLearned | MaybeLearned">
+<!ENTITY % FieldType "Key | Answer | Other">
+<!ENTITY % FieldSide "Front | Back | Both" >
+<!-- <!ENTITY % FieldPosition "None | Top, Left | Top, HorizontalCenter | Top, Right | Left, VerticalCenter | Center | Right, VerticalCenter |  Bottom, Left | Bottom, HorizontalCenter | Bottom, Right" > -->
+
+<!ELEMENT CardDeck (Fields, Cards) >
+
+<!ELEMENT Fields (Field+) >
+<!ELEMENT Cards (Card+) >
+
+<!ELEMENT Field EMPTY>
+<!ATTLIST Field
+    index CDATA #REQUIRED
+    name ID #REQUIRED
+    type (%FieldType;) "Other"
+    side (%FieldSide;) #IMPLIED
+    position CDATA "Center" 
+    forecolor CDATA #IMPLIED 
+    backcolor CDATA #IMPLIED
+>
+
+<!-- 
+    forecolor and backcolor are restricted to "rgb([0-255], [0-255], [0-255])" OR 
+                                              "argb([0-255],[0-255],[0-255],[0-255])"
+    Where, a = alpha (opacity), r = red, g = green, b = blue
+    
+    However, the rules are not enforced in thiDTD
+-->
+
+<!ELEMENT Card (CardField+) >
+<!ATTLIST Card
+   learned (%LearnStaus;) "NotLearned"
+>
+
+<!ELEMENT CardField (#PCDATA) >
+<!ATTLIST CardField
+   name IDREF #REQUIRED
+>

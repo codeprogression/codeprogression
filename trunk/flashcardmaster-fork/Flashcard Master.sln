@@ -1,0 +1,46 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Flashcard Master", "Flashcard Master.csproj", "{D9BC4951-8D07-4365-A6D5-D0F55013BA73}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MagicLibrary", "3rdParty\MagicLibrary\MagicLibrary.csproj", "{92F94EA0-9910-4895-B8A1-FED1543A9DA1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LumenWorks.Framework.IO", "3rdParty\LumenWorks.Framework.IO\LumenWorks.Framework.IO.csproj", "{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibFlashcard", "libFlashcard\LibFlashcard.csproj", "{96F0F86B-D0D1-4E97-9925-AB480DADC06B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		StrongMagic|Any CPU = StrongMagic|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9BC4951-8D07-4365-A6D5-D0F55013BA73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9BC4951-8D07-4365-A6D5-D0F55013BA73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9BC4951-8D07-4365-A6D5-D0F55013BA73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BC4951-8D07-4365-A6D5-D0F55013BA73}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9BC4951-8D07-4365-A6D5-D0F55013BA73}.StrongMagic|Any CPU.ActiveCfg = Release|Any CPU
+		{D9BC4951-8D07-4365-A6D5-D0F55013BA73}.StrongMagic|Any CPU.Build.0 = Release|Any CPU
+		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.StrongMagic|Any CPU.ActiveCfg = StrongMagic|Any CPU
+		{92F94EA0-9910-4895-B8A1-FED1543A9DA1}.StrongMagic|Any CPU.Build.0 = StrongMagic|Any CPU
+		{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}.StrongMagic|Any CPU.ActiveCfg = Release|Any CPU
+		{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}.StrongMagic|Any CPU.Build.0 = Release|Any CPU
+		{96F0F86B-D0D1-4E97-9925-AB480DADC06B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96F0F86B-D0D1-4E97-9925-AB480DADC06B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96F0F86B-D0D1-4E97-9925-AB480DADC06B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96F0F86B-D0D1-4E97-9925-AB480DADC06B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96F0F86B-D0D1-4E97-9925-AB480DADC06B}.StrongMagic|Any CPU.ActiveCfg = Release|Any CPU
+		{96F0F86B-D0D1-4E97-9925-AB480DADC06B}.StrongMagic|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

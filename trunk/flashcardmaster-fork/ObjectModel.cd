@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="LibFlashcard.Drivers.AbstractDriver" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Drivers\AbstractDriver.cs</FileName>
+      <HashCode>JARAAAQAAAAAAAIAEACCgAAAhCBgAEAAAAAKAAAIAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibFlashcard.Drivers.CardDriver" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Drivers\CardDriver.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibFlashcard.Drivers.CsvDriver" Collapsed="true">
+    <Position X="4" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Drivers\CsvDriver.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <InheritanceLine Type="LibFlashcard.Drivers.AbstractDriver" FixedToPoint="true">
+      <Path>
+        <Point X="3" Y="1.009" />
+        <Point X="3" Y="1.375" />
+        <Point X="4.75" Y="1.375" />
+        <Point X="4.75" Y="1.75" />
+      </Path>
+    </InheritanceLine>
+  </Class>
+  <Class Name="LibFlashcard.Drivers.XhtmlDriver" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Drivers\XhtmlDriver.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACBAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibFlashcard.Drivers.XmlDriver" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Drivers\XmlDriver.cs</FileName>
+      <HashCode>EAAAAAAAQAAAAUAAAAAAQAAAACBQAQAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibFlashcard.Model.CardComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Model\Card.cs</FileName>
+      <HashCode>AAAgBAAAAIQAAAAAAAAAAAAAAAAAAAAAAABAAAAAIAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibFlashcard.Model.Card" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\Card.cs</FileName>
+      <HashCode>ACoAAAAAAAAAAJAECAAQBEQAAAhAAAEAAAAAQAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Elements" />
+    </ShowAsCollectionAssociation>
+    <AssociationLine Name="Elements" Type="LibFlashcard.Model.CardElement" FixedToPoint="true">
+      <Path>
+        <Point X="11.812" Y="2.009" />
+        <Point X="11.812" Y="2.75" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.06" Y="0.222" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <Lollipop Position="0.1" Collapsed="true" />
+  </Class>
+  <Class Name="LibFlashcard.Model.CardDeck" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\CardDeck.cs</FileName>
+      <HashCode>AAgAIAAAAAAAAAAAAAhAAQAIAgAEEABABEEAAAAAAgA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Cards" />
+      <Property Name="Styles" />
+    </ShowAsCollectionAssociation>
+    <AssociationLine Name="Cards" Type="LibFlashcard.Model.Card">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.048" Y="0.285" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="Styles" Type="LibFlashcard.Model.CardElementStyle" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="8.5" Y="0.75" />
+        <Point X="7.5" Y="0.75" />
+        <Point X="7.5" Y="2" />
+      </Path>
+    </AssociationLine>
+  </Class>
+  <Class Name="LibFlashcard.Model.CardElement" BaseTypeListCollapsed="true">
+    <Position X="11" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\CardElement.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAAAEAAAIBAAACAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Style" />
+    </ShowAsAssociation>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <AssociationLine Name="Style" Type="LibFlashcard.Model.CardElementStyle" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="11" Y="3.25" />
+        <Point X="7.5" Y="3.25" />
+        <Point X="7.5" Y="2.509" />
+      </Path>
+    </AssociationLine>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="LibFlashcard.Model.CardElementStyle" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\CardElementStyle.cs</FileName>
+      <HashCode>AAAAAQAAAAEAgAAkAIAAIAQAAAAFAAAAAQEAAAABAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibFlashcard.Model.CardElementStyleSorter" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="7.5" Y="5.75" Width="2" />
+    <TypeIdentifier>
+      <FileName>Model\CardElementStyle.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibFlashcard.Model.Quiz" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\Quiz.cs</FileName>
+      <HashCode>ACAAAAAAAAAAABAAAAAAAAAAAAQAAAAEAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Questions" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="LibFlashcard.Model.MultipleChoiceQuiz" Collapsed="true">
+    <Position X="0.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\Quiz.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibFlashcard.Model.QuizQuestion">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>Model\QuizQuestion.cs</FileName>
+      <HashCode>AAAAAAAAAAAEAAAABAAAAAAAgAQAAAAEAAAgAAAQoAA=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+  </Class>
+</ClassDiagram>

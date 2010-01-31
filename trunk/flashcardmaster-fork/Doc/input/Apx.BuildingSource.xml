@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE appendix
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+    <!ENTITY fcm "Flash Card Master">
+  ]
+>  
+<appendix>
+  <title>Building Source</title>
+  <formalpara>
+    <title>With Visual Studio 2008</title>
+    <para>Simply open <filename>Flash Card Master.sln</filename> in Visual Studio and build.</para>
+  </formalpara>
+  
+  <formalpara>
+    <title>With Visual Studio Express 2008</title>
+    <para>Simply open <filename>Flash Card Master.sln</filename> in Visual Studio and build. You can download it from &lt;<ulink url="http://www.microsoft.com/express/vcsharp/">http://www.microsoft.com/express/vcsharp/</ulink>&gt;</para>
+  </formalpara>
+  
+
+  <formalpara>
+    <title>Manual Build</title>
+    <para>
+      <orderedlist>
+        <listitem>
+          <para>You may need .NET Framework 3.5 SDK. <ulink url="http://www.microsoft.com/downloads/details.aspx?FamilyId=E6E1C3DF-A74F-4207-8586-711EBE331CDC&amp;displaylang=en">Get it</ulink> from Microsoft website.</para>
+        </listitem>
+        <listitem>
+          <para>Execute <filename>Build-Release.bat</filename> file in the source root directory. MSBuild tool is used to perform the build.</para>
+        </listitem>
+      </orderedlist>
+    </para>
+  </formalpara>
+</appendix>
