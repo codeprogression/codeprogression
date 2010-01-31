@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE preface PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+          "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [
+    <!ENTITY % global.entities SYSTEM "../../../system/custom-xsl/global-entities.xml">
+    %global.entities;
+
+    <!ENTITY % entities SYSTEM "../custom-cfg/local-entities.xml">
+    %entities;
+  ]
+>
+
+<preface id="Preface">
+    <title>Preface</title>
+    <sect1 id="FlashCardMasterLicenseAgreement">
+        <title>Flash Card Master License</title>
+        <para>Flash Card Master program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 3 of the License, or (at your option) any later version.</para>
+        <para>Flash Card Master program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.</para>
+        <para>You should have received a copy of the GNU General Public License along with this program; if not, write to the Free Software Foundation,Inc.,59 Temple Place - Suite 330,Boston,MA 02111-1307, USA.</para>
+        <para>Full text available in <xref linkend="GnuGpl" />.</para>
+    </sect1>
+    <sect1 id="Credits">
+        <title>Credits</title>
+        <sect2 id="translationCredits">
+            <title>Translation</title>
+            <para>The following people helped translate Flash Card Master into various languages:</para>
+            <itemizedlist>
+                <listitem><para>Malayalam - Nithin Philips <email>spikiermonkey@user.sourceforge.net</email></para></listitem>
+                <listitem><para>Turkish - Çigdem Çavus <email>cavus_14@yahoo.com</email></para></listitem>
+                <listitem><para>Spanish - Gabriel Reyes <email>gareyes20@hotmail.com</email></para></listitem>
+            </itemizedlist>
+        </sect2>
+        
+        <sect2 id="componentsCredits">
+            <title>Components</title>
+            <para>The following people wrote components that made Flash Card Master possible:</para>
+            <itemizedlist>
+                <listitem><para>Magic Control Library 1.7.4.0:  Phil Wright &lt;<ulink url="http://www.dotnetmagic.com/">http://www.dotnetmagic.com/</ulink>&gt;</para></listitem>
+                <listitem><para>Tango Icon Project &lt;<ulink url="http://tango.freedesktop.org/">http://tango.freedesktop.org/</ulink>&gt;</para></listitem>
+                <listitem><para>Drag Drop ListView: Matt Hawley &lt;<ulink url="http://www.codeproject.com/cs/miscctrl/DragAndDropListView.asp">http://www.codeproject.com/cs/miscctrl/DragAndDropListView.asp</ulink>&gt;</para></listitem>
+                <listitem><para>CSV Reader 3.1.2: Sébastien Lorion &lt;<ulink url="http://www.codeproject.com/cs/database/CsvReader.asp">http://www.codeproject.com/cs/database/CsvReader.asp</ulink>&gt;.</para></listitem>
+                <listitem><para>Vista Controls: Marco Minerva &lt;<ulink url="http://www.codeplex.com/windowsformsaero">http://www.codeplex.com/windowsformsaero</ulink>&gt;.</para></listitem>
+            </itemizedlist>
+        </sect2>
+    </sect1>
+    <sect1 id="GettingMoreHelp">
+        <title>Getting More Help</title>
+        <para>If you have any questions about this document or Flash Card Master, you may contact me at <email>spikiermonkey@users.sourceforge.net</email>.</para>
+        <para>A mailing list is also available at <email>flashcardmaster-info@lists.sourceforge.net</email> . You can <ulink url="https://lists.sourceforge.net/lists/listinfo/flashcardmaster-info">subscribe</ulink> or <ulink url="http://sourceforge.net/mailarchive/forum.php?forum_name=flashcardmaster-info">browse archives</ulink>.</para>
+    </sect1>
+</preface>

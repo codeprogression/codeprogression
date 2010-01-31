@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<CardDeck xmlns:CardML="http://flashcardmaster.sourceforge.net/cardml/1.0/schema">
+  <Fields>
+    <Field index="0" name="Key" type="Key" side="Front" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+    <Field index="1" name="Answer" type="Answer" side="Back" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+  </Fields>
+  <Cards>
+    <Card learned="NotLearned">
+      <CardField name="Key"><Style type="bold">TAG DELIMITERS</Style></CardField>
+      <CardField name="Answer">&lt;this&gt;<br /> is a test<br />&lt;/this&gt;<br /><br />only a test.</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Key"><Style type="bold">ENTITY REFERENCE</Style></CardField>
+      <CardField name="Answer">&amp;this; is an entity reference.</CardField>
+    </Card>
+  </Cards>
+</CardDeck>

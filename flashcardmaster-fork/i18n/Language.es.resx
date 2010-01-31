@@ -1,0 +1,521 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 1.3
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">1.3</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1">this is my long string</data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        [base64 mime encoded serialized .NET Framework object]
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        [base64 mime encoded string representing a byte array form of the .NET Framework object]
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used forserialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>1.3</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="MenuBatchAdd">
+    <value>&amp;Agregar por lote</value>
+  </data>
+  <data name="FileNotSupportedMessage">
+    <value>No hay metodos implementados para el tipo {0}.
+Imposible crear metodo '{1}'</value>
+  </data>
+  <data name="fSaveChangesQuestion">
+    <value>Existen cambios sin guardar en '{0}'. Guardar ahora?</value>
+  </data>
+  <data name="WriteOnlyFormatWarning">
+    <value>Usted solo podra guardar en este formato, no podra ser abierto. Una copia sera salvada en {0}.</value>
+  </data>
+  <data name="Save">
+    <value>Guardar</value>
+  </data>
+  <data name="MenuUnCheckAll">
+    <value>Seleccionar&amp; Ninguno</value>
+  </data>
+  <data name="ReviewerAnimateTT">
+    <value>Animar cartas, Voltear y cambiar</value>
+  </data>
+  <data name="NewDesign">
+    <value>Nuevo Diseño</value>
+  </data>
+  <data name="Cancel">
+    <value>Cancelar</value>
+  </data>
+  <data name="BatchEditInstruction">
+    <value>Escribir como: {0}</value>
+  </data>
+  <data name="CorruptCsvFileMessage">
+    <value>El archivo CVS esta corrupto o no es valido</value>
+  </data>
+  <data name="Reviewer">
+    <value>Revisar</value>
+  </data>
+  <data name="Animate">
+    <value>Animar</value>
+  </data>
+  <data name="MenuHelp">
+    <value>&amp;Ayuda</value>
+  </data>
+  <data name="MenuCut">
+    <value>&amp; Cortar</value>
+  </data>
+  <data name="ReviewerNoCards">
+    <value>Revisar - sin cartas</value>
+  </data>
+  <data name="MenuCopy">
+    <value>&amp;Copiar</value>
+  </data>
+  <data name="MenuOpen">
+    <value>&amp;Abrir...</value>
+  </data>
+  <data name="Translators">
+    <value>Traductores</value>
+  </data>
+  <data name="MenuCheckAll">
+    <value>Selec&amp;cionar Todo</value>
+  </data>
+  <data name="KeepStylesInHtmlMessage">
+    <value>Mantener los estilos de texto al exportar a HTML.</value>
+  </data>
+  <data name="CorruptFileMessage">
+    <value>El archivo esta corrupto o no es valido</value>
+  </data>
+  <data name="MenuReview">
+    <value>Re&amp;visar</value>
+  </data>
+  <data name="MenuExit">
+    <value>sa&amp;lir</value>
+  </data>
+  <data name="FieldMismatchMessage">
+    <value>El numero de campos no corresponde. Lea la ayuda para mas informacion</value>
+  </data>
+  <data name="Clear">
+    <value>Limpiar</value>
+  </data>
+  <data name="TestResults">
+    <value>Resultados de la prueba</value>
+  </data>
+  <data name="ReviewerNeedsReviewTT">
+    <value>Necesita revision</value>
+  </data>
+  <data name="Position">
+    <value>Posicion</value>
+  </data>
+  <data name="MenuFile">
+    <value>&amp;Archivo</value>
+  </data>
+  <data name="AndShowBackSideFor">
+    <value>Y mostrar lado trasero para</value>
+  </data>
+  <data name="FileNotExistMessage">
+    <value>El archivo no existe</value>
+  </data>
+  <data name="SearchOptions">
+    <value>Opciones de busqueda</value>
+  </data>
+  <data name="Close">
+    <value>Cerrar</value>
+  </data>
+  <data name="Properties">
+    <value>Propiedades</value>
+  </data>
+  <data name="MutipleChoiceTest">
+    <value>Prueba de opcion multiple</value>
+  </data>
+  <data name="NewDeck">
+    <value>Nuevo Juego</value>
+  </data>
+  <data name="Open">
+    <value>Abrir</value>
+  </data>
+  <data name="MenuDelete">
+    <value>&amp;Borrar</value>
+  </data>
+  <data name="ReviewerPreviousCardTT">
+    <value>Carta anterior</value>
+  </data>
+  <data name="PrintPreview">
+    <value>Vista previa de &amp;impresion</value>
+  </data>
+  <data name="Show">
+    <value>Mostrar:</value>
+  </data>
+  <data name="LineBreakHint">
+    <value>Use [Ctrl] + [Enter] para agregar un salto de linea.</value>
+  </data>
+  <data name="MenuPrint">
+    <value>&amp;Imprimir...</value>
+  </data>
+  <data name="MenuTakeTest">
+    <value>Hecer prue&amp;ba</value>
+  </data>
+  <data name="MenuTools">
+    <value>&amp;Herramientas</value>
+  </data>
+  <data name="ReviewNoCardsMessage">
+    <value>'''No hay cartas que revisar'''</value>
+  </data>
+  <data name="ReviewerToggleTT">
+    <value>Parar el reloj</value>
+  </data>
+  <data name="SaveAs">
+    <value>Guardar como</value>
+  </data>
+  <data name="MissingStyleInfoMessage">
+    <value>El formato de este archivo, no esta asociado a nungun diseño de cartas.
+Use 'Diseño' para diseñar la carta..</value>
+  </data>
+  <data name="License">
+    <value>Licencia</value>
+  </data>
+  <data name="ReviewDelays">
+    <value>Ajuste de tiempo para la prueba:</value>
+  </data>
+  <data name="Review">
+    <value>Resumen</value>
+  </data>
+  <data name="ReviewerLearnedTT">
+    <value>Aprendida</value>
+  </data>
+  <data name="Key">
+    <value>Clave</value>
+  </data>
+  <data name="AllFields">
+    <value>Todos los campos</value>
+  </data>
+  <data name="AssociateFiletypes">
+    <value>Asociar archivos compatibles</value>
+  </data>
+  <data name="FileNotSupportedMessageHint">
+    <value>{0}
+
+Este error deve ser causado por una extencion incorrecta en el archivo.</value>
+  </data>
+  <data name="fUnableToOpenMessage">
+    <value>Imposible abrir '{0}'.
+{1}.</value>
+  </data>
+  <data name="Type">
+    <value>Tipo</value>
+  </data>
+  <data name="PrinterCannotDuplex">
+    <value>"La impresora seleccionada no puede invertir la cara de imprecion. Quiere hacerlo manualmente?</value>
+  </data>
+  <data name="Back">
+    <value>Atras</value>
+  </data>
+  <data name="General">
+    <value>General</value>
+  </data>
+  <data name="fDataLossWarning">
+    <value>Algunos datos se perderan cuando guarde con el Formato {0} </value>
+  </data>
+  <data name="VersionFormat">
+    <value>{0} v{1}
+Escrito por Nithin Philips &lt;spikiermonkey@users.sourceforge.net&gt;.
+
+Copyright (C) 2003-2008 Nithin Philips.
+Este programa es gratuito; pero SIN GARANTÍA ALGUNA; 
+ni siquiera la garantía implícita 
+MERCANTIL o de APTITUD PARA UN PROPÓSITO DETERMINADO.
+
+Lea COPYING en el directorio de la aplicacion, o visite http://www.gnu.org/copyleft/gpl.html para mas informacion.</value>
+  </data>
+  <data name="fMainWindowTitle">
+    <value>{0} - [{1}]</value>
+  </data>
+  <data name="DesignCard">
+    <value>Diseñar carta</value>
+  </data>
+  <data name="Version">
+    <value>Version</value>
+  </data>
+  <data name="Locale">
+    <value>Locales</value>
+  </data>
+  <data name="fReviewer">
+    <value>Revision - {0} de {1} - {2}</value>
+  </data>
+  <data name="MenuEdit">
+    <value>&amp;Editar</value>
+  </data>
+  <data name="Ready">
+    <value>Listo</value>
+  </data>
+  <data name="NoCardToPrintMessage">
+    <value>No hay cartas que imprimir</value>
+  </data>
+  <data name="Shuffled">
+    <value>Barajeado</value>
+  </data>
+  <data name="DesignerDataLossWarning">
+    <value>Esta accion puede provocar la perdida de datos. 
+es recomendable realizar un respaldo antes de proceder.
+Continue?</value>
+  </data>
+  <data name="MenuSaveAs">
+    <value>Guardar &amp;Como...</value>
+  </data>
+  <data name="GenericOpenErrorMessage">
+    <value> ({0})
+  Details:{1}</value>
+  </data>
+  <data name="Fields">
+    <value>Campos</value>
+  </data>
+  <data name="ShowFrontSideFor">
+    <value>Mostrar lado delantero para</value>
+  </data>
+  <data name="OK">
+    <value>Aceptar</value>
+  </data>
+  <data name="QuizMinCardMessage">
+    <value>Para hacer la prueba, se necesitan al menos cuatro cartas.</value>
+  </data>
+  <data name="fTestResults">
+    <value>Acertasto {0} de {1} ({2:#.#}%)</value>
+  </data>
+  <data name="Font">
+    <value>Font</value>
+  </data>
+  <data name="New">
+    <value>Nuevo</value>
+  </data>
+  <data name="Normal">
+    <value>Normal</value>
+  </data>
+  <data name="ContributorsFormat">
+    <value>{0} v{1}
+
+Este programa es posible gracias a los siguientes participantes:
+     Magic Control Library 1.7.4.0:  Phil Wright &lt;http://www.dotnetmagic.com/&gt;
+     Tango Icon Project &lt;http://tango.freedesktop.org/&gt;
+     Drag Drop ListView: Matt Hawley &lt;http://www.codeproject.com/cs/miscctrl/DragAndDropListView.asp&gt;
+     CSV Reader 3.1.2: Sébastien Lorion &lt;http://www.codeproject.com/cs/database/CsvReader.asp&gt;</value>
+  </data>
+  <data name="ReviewCardsShuffled">
+    <value>Revisar cartas - Mezcladas</value>
+  </data>
+  <data name="MenuDesign">
+    <value>Dise&amp;ñar</value>
+  </data>
+  <data name="MenuSelectAll">
+    <value>Seleccionar &amp;Todo</value>
+  </data>
+  <data name="EndTestQuestion">
+    <value>Esta seguro de querer terminar com la prueba?</value>
+  </data>
+  <data name="BatchEntry">
+    <value>Editor por lote</value>
+  </data>
+  <data name="MenuRecentFiles">
+    <value>&amp;Archivos recientes</value>
+  </data>
+  <data name="HtmlExport">
+    <value>Exportar como HTML </value>
+  </data>
+  <data name="fBatchEditInstructionField">
+    <value>&lt;{0}&gt;</value>
+  </data>
+  <data name="Answer">
+    <value>Respuesta</value>
+  </data>
+  <data name="MenuNew">
+    <value>&amp;Nuevo</value>
+  </data>
+  <data name="RegularExpression">
+    <value>Expresion Regular</value>
+  </data>
+  <data name="Contributors">
+    <value>Colaboradores</value>
+  </data>
+  <data name="CSVSeperatorHint">
+    <value>el separador CVS es usado por el editor por lotes para separar los campos, asi mismo es usado tambien por 'Exportar como CSV'</value>
+  </data>
+  <data name="QuizDeckInvalid">
+    <value>El grupo de cartas actual no contiene definidos los campos: 'Clave' ni 'Respuesta' . puede correjir esto editando el grpo de cartas con la herramienta de Diseño .</value>
+  </data>
+  <data name="Front">
+    <value>Frente</value>
+  </data>
+  <data name="CSVSeperator">
+    <value>Separador CSV</value>
+  </data>
+  <data name="SecondsL">
+    <value>Segundos</value>
+  </data>
+  <data name="InvalidPrinterError">
+    <value>Aparentemente usted no tiene una impresora instalada. Necesita instalar una impresora antes de utilizar esta funcion.</value>
+  </data>
+  <data name="BatchEditMismatchException">
+    <value>Los elementos en los campos no coinciden.</value>
+  </data>
+  <data name="ReviewerNotLearnedTT">
+    <value>No aprendida</value>
+  </data>
+  <data name="MenuPaste">
+    <value>&amp;Pegar</value>
+  </data>
+  <data name="EditCards">
+    <value>Editar cartas</value>
+  </data>
+  <data name="MenuPreferences">
+    <value>Pre&amp;ferencias</value>
+  </data>
+  <data name="Preferences">
+    <value>Preferencias</value>
+  </data>
+  <data name="Untitled">
+    <value>Sin titulo</value>
+  </data>
+  <data name="UnsupportedFormat">
+    <value>Archivos del tipo {0} no son compatibles. Intente un formato compatible.</value>
+  </data>
+  <data name="ReviewerNextCardTT">
+    <value>Siguiente carta</value>
+  </data>
+  <data name="Name">
+    <value>Nombre</value>
+  </data>
+  <data name="DeSerializationFailedMessage">
+    <value>Este arc hivo no puede ser leido. Deve de estar corrupto o ser invalido</value>
+  </data>
+  <data name="Cards">
+    <value>Cartas</value>
+  </data>
+  <data name="Sides">
+    <value>Lados</value>
+  </data>
+  <data name="MenuPageSetup">
+    <value>Con&amp;figurar Pagina...</value>
+  </data>
+  <data name="MenuOpenAsDesign">
+    <value>Abrir como &amp;Diseño...</value>
+  </data>
+  <data name="ReviewerFlipCardTT">
+    <value>Voltear carta</value>
+  </data>
+  <data name="Import">
+    <value>Importar</value>
+  </data>
+  <data name="EditMultipleItems">
+    <value>[Editar multiples elementos]</value>
+  </data>
+  <data name="MenuAbout">
+    <value>&amp;Acerca de...</value>
+  </data>
+  <data name="SaveNowQuestion">
+    <value>Quiere guardar ahora?</value>
+  </data>
+  <data name="EditorNoCardsMessage">
+    <value>Oprima '''+''' Para agregar una nueva carta.</value>
+  </data>
+  <data name="AboutLicense">
+    <value>Este programa es software libre: usted puede redistribuirlo y/o modificarlo 
+    bajo los términos de la Licencia Pública General GNU publicada 
+    por la Fundación para el Software Libre, ya sea la versión 2 
+    de la Licencia, o (a su elección) cualquier versión posterior.
+
+Este programa se distribuye con la esperanza de que sea útil, pero 
+    SIN GARANTÍA ALGUNA; ni siquiera la garantía implícita 
+    MERCANTIL o de APTITUD PARA UN PROPÓSITO DETERMINADO. 
+    Consulte los detalles de la Licencia Pública General GNU para obtener 
+    una información más detallada.
+Debería haber recibido una copia de la Licencia Pública General GNU 
+    junto a este programa; En caso contrario, escriba a "the Free Software Foundation,Inc.,59 Temple Place - Suite 330,Boston,MA 02111-1307, USA."</value>
+  </data>
+  <data name="MenuSaveDesignAs">
+    <value>Guardar &amp;Diseño como...</value>
+  </data>
+  <data name="MenuSave">
+    <value>&amp;Guardar</value>
+  </data>
+  <data name="AboutTranslators">
+    <value>Traductores:
+       Turco - Çigdem Çavus</value>
+  </data>
+</root>

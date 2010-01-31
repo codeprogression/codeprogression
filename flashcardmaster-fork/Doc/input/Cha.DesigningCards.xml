@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE chapter
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+>
+<chapter id="DesigningCards">
+    <title>Designing Cards</title>
+    <sect1 id="CardDesigner">
+        <title>Card Designer</title>
+        <para>Card Designer allows you to change the appearance of flash cards. You can access it using <menuchoice>
+                <guimenu>Tools</guimenu>
+                <guimenuitem>Design</guimenuitem>
+            </menuchoice></para>
+        <para>The ability to alter the appearance of cards is one of the key features of Flash Card Master. Each item on a card is called a field and you can control the relative placement and the side on which the field will appear. </para>
+        <para><inlinemediaobject><imageobject>
+            <imagedata fileref="resource/list-add.png"/>
+        </imageobject>
+            <textobject><phrase>Add button</phrase></textobject>
+        </inlinemediaobject> will add a new field to the deck and <inlinemediaobject><imageobject>
+            <imagedata fileref="resource/list-remove.png"/>
+        </imageobject>
+            <textobject><phrase>Remove button</phrase></textobject>
+        </inlinemediaobject> will delete an existing field.</para>
+        <para>The show radio buttons control the side that is shown. Choosing <command>Front</command> will show the front of the card, and <command>Back</command> will show the back.</para>
+        <para>You can click on a field shown in the list to edit its properties. You can set the <command>Name</command>, which is a unique word to identify the field. You can also choose the side on which the field will appear. If you check <command>Front</command>, the field will be shown on the front side of the card. usually question goes here. Likewise, <command>Back</command> will place the field on the back side of the card. Answers are usually placed on this side. You can also check both check boxes and the field will be shown on both sides. Checking neither will hide the field. </para>
+        <para>The <command>Position</command> property controls the placement of the field on the card. There are 9 possible values. </para>
+        <para>The <command>Type</command> property can be set to describe the contents of the field. Possible values are <userinput>Key</userinput>, <userinput>Answer</userinput> and <userinput>Other</userinput>. Key is the same as a question. The property is used by the quiz component to generate quizzes. Other components may use this value as well. It is recommended that you set this value. A card should only have one Key and one Answer. </para>
+        <figure>
+            <title>Design Cards Dialog</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/DesignCard.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <sect2>
+            <title>Keyboard Shortcuts</title>
+            <para>The following keyboard shortcuts are available in the Design Cards dialog.</para>
+            <variablelist>
+                <varlistentry>
+                    <term><keycap>CTRL</keycap> + <keycap>Q</keycap></term>
+                    <listitem>
+                        <para>Move the selected field up in the list.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term><keycap>Ctrl</keycap> + <keycap>A</keycap></term>
+                    <listitem>
+                        <para>Move the selected field down in the list.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>
+                        <keycap>Insert</keycap>
+                    </term>
+                    <listitem>
+                        <para>Add a new field to the deck.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>
+                        <keycap>Delete</keycap>
+                    </term>
+                    <listitem>
+                        <para>Deletes the selected field from the deck.</para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </sect2>
+    </sect1>
+</chapter>

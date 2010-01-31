@@ -1,0 +1,426 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D9BC4951-8D07-4365-A6D5-D0F55013BA73}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>FlashCardMaster</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>FlashCardMaster</RootNamespace>
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <Win32Resource>Resources\Icons\flashcardmaster-icons.RES</Win32Resource>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE;RELEASE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <Reference Include="VistaControls, Version=1.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>3rdParty\VistaControls\VistaControls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About\AboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About\AboutBox.Designer.cs">
+      <DependentUpon>AboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About\InformationPage.cs" />
+    <Compile Include="Dialogs\GlobalExceptionCatcher.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\GlobalExceptionCatcher.designer.cs">
+      <DependentUpon>GlobalExceptionCatcher.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MultipleChoiceTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MultipleChoiceTest.Designer.cs">
+      <DependentUpon>MultipleChoiceTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\TestReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\TestReview.Designer.cs">
+      <DependentUpon>TestReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="i18n\Language.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Language.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Painters\BackgroundPainter.cs" />
+    <Compile Include="Painters\FontProvider.cs" />
+    <Compile Include="Painters\TextGroupPainter.cs" />
+    <Compile Include="Painters\TextPainter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BatchEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\BatchEntry.Designer.cs">
+      <DependentUpon>BatchEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\CardDesigner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\CardDesigner.Designer.cs">
+      <DependentUpon>CardDesigner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\ManualEntry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\ManualEntry.Designer.cs">
+      <DependentUpon>ManualEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\Reviewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialogs\Reviewer.Designer.cs">
+      <DependentUpon>Reviewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs\PrinterFlipPrompt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="User\DictionarySerializer.cs" />
+    <Compile Include="User\Settings.cs" />
+    <Compile Include="Utilities\ActivityHistory.cs" />
+    <Compile Include="Utilities\CardDeckPrinter.cs" />
+    <Compile Include="Utilities\CardPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\DragAndDropListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utilities\FileAssociation.cs" />
+    <Compile Include="Utilities\PrinterBounds.cs" />
+    <Compile Include="Utilities\TestReviewItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utilities\TestReviewItem.Designer.cs">
+      <DependentUpon>TestReviewItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities\Utility.cs" />
+    <EmbeddedResource Include="Dialogs\BatchEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>BatchEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\CardDesigner.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CardDesigner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\GlobalExceptionCatcher.resx">
+      <DependentUpon>GlobalExceptionCatcher.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MainWindow.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\ManualEntry.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ManualEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\MultipleChoiceTest.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MultipleChoiceTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Preferences.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\Reviewer.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Reviewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\PrinterFlipPrompt.resx">
+      <DependentUpon>PrinterFlipPrompt.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialogs\TestReview.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i18n\Language.es.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i18n\Language.fr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i18n\Language.ml-IN.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i18n\Language.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Language.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="i18n\Language.tr.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <SubType>Designer</SubType>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities\TestReviewItem.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>TestReviewItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="CHANGES">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="ObjectModel.cd" />
+    <None Include="COPYING">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Installer\Installer.nsi" />
+    <None Include="README">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Installer\gpl.txt" />
+    <None Include="Resources\cml.xsd">
+      <SubType>
+      </SubType>
+    </None>
+    <None Include="Resources\Help.chm">
+    </None>
+    <None Include="Resources\Icons\App.png" />
+    <None Include="Resources\Icons\App.ico" />
+    <None Include="Resources\Icons\Type.Folder.ico" />
+    <None Include="Resources\Icons\Type.Card.ico" />
+    <None Include="Resources\Icons\Type.Cml.ico" />
+    <None Include="Resources\Images\preferences-desktop-locale.png" />
+    <None Include="Resources\Images\printer.png" />
+    <None Include="Resources\Samples\Wheelock-Chapter 10.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 7.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 8.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 9.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 1.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 11.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 12.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 13.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 14.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 15.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 16.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 17.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 18.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 19.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 2.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 20.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 21.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 22.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Samples\Wheelock-Chapter 23.card">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\Style.xslt" />
+    <None Include="Resources\Images\applications-office.png" />
+    <None Include="Resources\Images\emblem-unreadable.png" />
+    <None Include="Resources\Images\face-smile.png" />
+    <None Include="Resources\Images\face-plain.png" />
+    <None Include="Resources\Images\face-sad.png" />
+    <None Include="Resources\Images\preferences-system.png" />
+    <None Include="Resources\Images\edit-select-all.png" />
+    <None Include="Resources\Images\edit-paste.png" />
+    <None Include="Resources\Images\edit-find.png" />
+    <None Include="Resources\Images\edit-delete.png" />
+    <None Include="Resources\Images\edit-cut.png" />
+    <None Include="Resources\Images\edit-copy.png" />
+    <None Include="Resources\Images\format-text-underline.png" />
+    <None Include="Resources\Images\format-text-strikethrough.png" />
+    <None Include="Resources\Images\format-text-italic.png" />
+    <None Include="Resources\Images\format-text-bold.png" />
+    <None Include="Resources\Images\appointment-new.png" />
+    <None Include="Resources\Images\mail-send-receive.png" />
+    <None Include="Resources\Images\media-playback-start.png" />
+    <None Include="Resources\Images\x-office-presentation.png" />
+    <None Include="Resources\Images\utilities-terminal.png" />
+    <None Include="Resources\Images\system-file-manager.png" />
+    <None Include="Resources\Images\document-save-as.png" />
+    <None Include="Resources\Images\document-save.png" />
+    <None Include="Resources\Images\document-open.png" />
+    <None Include="Resources\Images\document-new.png" />
+    <None Include="Resources\Images\applications-development.png" />
+    <None Include="Resources\Images\list-remove.png" />
+    <None Include="Resources\Images\list-add.png" />
+    <None Include="Resources\Images\image-rotate-left.png" />
+    <None Include="Resources\Images\image-rotate-right.png" />
+    <None Include="Resources\Images\go-previous.png" />
+    <None Include="Resources\Images\go-next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="3rdParty\LumenWorks.Framework.IO\LumenWorks.Framework.IO.csproj">
+      <Project>{8EBD24FC-80F8-46F2-B0EF-F2065FE823C0}</Project>
+      <Name>LumenWorks.Framework.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="3rdParty\MagicLibrary\MagicLibrary.csproj">
+      <Project>{92F94EA0-9910-4895-B8A1-FED1543A9DA1}</Project>
+      <Name>MagicLibrary</Name>
+    </ProjectReference>
+    <ProjectReference Include="libFlashcard\LibFlashcard.csproj">
+      <Project>{96F0F86B-D0D1-4E97-9925-AB480DADC06B}</Project>
+      <Name>LibFlashcard</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\go-down.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\go-up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Images\system-search.png" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties Themed="TRUE" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!--
+  <Target Name="BeforeBuild" Inputs="packagemaker-script.rc" Outputs="packagemaker-script.res">
+    <Exec Command="&quot;C:\Program Files\Microsoft Visual Studio 8\VC\bin\rc.exe&quot; /r Resources\Icons\flashcardmaster-icons.rc" />
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE chapter
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+  >
+<chapter>
+    <title>Introduction</title>
+    <sect1>
+        <title>What Is Flash Card Master</title>
+        <para>Flash Card Master was written primarily to print flash cards, but over time has evolved into a full fledged application. Unlike other flash card applications, Flash Card Master is design centric. Less telling, more showing. Here's a flash card made in Flash Card Master:</para>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/CardFront.png" />
+                </imageobject>
+                <textobject>
+                    <phrase>Front of a flash card.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <para>Flash cards in Flash Card Master have a front and back side, here's the back of the same card:</para>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/CardBack.png" />
+                </imageobject>
+                <textobject>
+                    <phrase>Back of a flash card.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <para>Using Flash Card Master you will be able to have flash cards on screen and in print with same appearance. The features of Flash Card Master are explained in detail in this document. We hope you will enjoy using Flash Card Master.</para>
+    </sect1>
+    <sect1>
+        <title>Walkthrough</title>
+        <para>Flash Card Master is ready to go as soon as you start it, however if you would like to customize the appearance of your flash cards, this section will guide you through the steps to do so.</para>
+        <orderedlist>
+            <listitem>
+                <para>When you start Flash Card Master, the main window will look like this:</para>
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="resource/MainWindow.png" />
+                        </imageobject>
+                        <textobject>
+                            <phrase>Flash Card Master main window.</phrase>
+                        </textobject>
+                    </mediaobject>
+                </informalfigure>
+            </listitem>
+            <listitem>
+                <para>The default flash card deck, has two fields, <command>Key</command> and <command>Answer</command>. Let's rename the fields into something more sensible.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Click on <inlinegraphic fileref="resource/applications-development.png"/> button in the toolbar or <menuchoice>
+                                <guimenu>Tools</guimenu>
+                                <guimenuitem>Design</guimenuitem>
+                            </menuchoice>. This will open the Card Designer.</para>
+                        <informalfigure>
+                            <mediaobject>
+                                <imageobject>
+                                    <imagedata fileref="resource/DesignCard.png" />
+                                </imageobject>
+                                <textobject>
+                                    <phrase>The design card dialog.</phrase>
+                                </textobject>
+                            </mediaobject>
+                        </informalfigure>
+                    </listitem>
+                    <listitem>
+                        <para>Click on the <command>Key</command> field in the list at the top right.</para>
+                    </listitem>
+                    <listitem>
+                        <para>In the text box below, delete the text <emphasis role="italic">Key</emphasis> and type in <emphasis role="italic">Word</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para>We will rename the <emphasis role="italic">Answer</emphasis> field as well. Let call it <emphasis role="italic">Definition</emphasis>.</para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>Let's add an additional field.</para>
+                <orderedlist>
+                    <listitem>
+                        <para>Click on the <inlinegraphic fileref="resource/list-add.png"/> button to add a new field.</para>
+                    </listitem>
+                    <listitem>
+                        <para>Let's call the new field <emphasis role="italic">Chapter</emphasis>.</para>
+                    </listitem>
+                    <listitem>
+                        <para>For the <emphasis role="italic">Sides</emphasis>, we will check both <emphasis role="italic">Front</emphasis> and <emphasis role="italic">Back</emphasis>. We will <emphasis role="italic">Position</emphasis> the field at the <emphasis role="italic">Top Right</emphasis> of the card and leave the <emphasis role="italic">Type</emphasis> as <emphasis role="italic">Other</emphasis>.</para>
+                    </listitem>
+                </orderedlist>
+            </listitem>
+            <listitem>
+                <para>Let's also reorder the fields</para>
+                <para>You can rearrange fields by grabbing them using the mouse. As you move around, a line will indicate where the item will be placed. When you have reached the desired place, drop the item the put it there. Let's move the <emphasis role="italic">Chapter</emphasis> field you just created to the top of the list.</para>
+                <para>Your list should now look like this:</para>
+                
+                <informalfigure>
+                    <mediaobject>
+                        <imageobject>
+                            <imagedata fileref="resource/WalkthroughList.png" />
+                        </imageobject>
+                        <textobject>
+                            <phrase>Card field list after walkthough steps.</phrase>
+                        </textobject>
+                    </mediaobject>
+                </informalfigure>
+            </listitem>
+            <listitem>
+                <para>Click <guibutton>Close</guibutton> to close the dialog. You may be asked to save the file.</para>
+            </listitem>
+        </orderedlist>
+        <para>Yay, we're done. You have now created a flash card deck with three fields <emphasis role="italic">Chapter</emphasis>, <emphasis role="italic">Word</emphasis>, and <emphasis role="italic">Definition</emphasis>. The <emphasis role="italic">Chapter</emphasis> field will appear on the front and back sides of the card at the top right corner. The <emphasis role="italic">Word</emphasis> field will be visible on the front center and the <emphasis role="italic">Definition</emphasis> will be on the back center. You can add actual cards using the Edit Cards dialog (<inlinegraphic fileref="resource/system-file-manager.png"/> button or <menuchoice><guimenu>Tools</guimenu><guimenuitem>Edit</guimenuitem></menuchoice> menu.)</para>
+        <para>I've added a card. Here's the front:</para>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/WalkthroughFront.png" />
+                </imageobject>
+                <textobject>
+                    <phrase>Front of a card created in walkthough steps.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <para>and the back:</para>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/WalkthroughBack.png" />
+                </imageobject>
+                <textobject>
+                    <phrase>Back of a card created in walkthough steps.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+    </sect1>
+</chapter>

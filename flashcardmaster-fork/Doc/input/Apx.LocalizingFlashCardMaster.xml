@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE appendix
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+>
+  
+<appendix>
+    <title>Localizing Flash Card Master</title>
+
+    <orderedlist>
+        <title>Steps to Localize &fcm;</title>
+        <listitem>
+            <para>Download <ulink url="http://flashcardmaster.svn.sourceforge.net/viewvc/flashcardmaster/trunk/i18n/Language.resx">Language.resx</ulink> (Contains all the strings that can be localized.)</para>
+        </listitem>
+        <listitem>
+            <para>Download and install <ulink url="http://www.everylittlething.net/GlobalResource/">Global Resource Editor</ulink> (Allows you to edit the .resx file.)</para>
+        </listitem>
+        <listitem>
+            <para>Open 'Global Resource Editor' and click on <menuchoice>
+                    <guimenu>Language</guimenu>
+                    <guimenuitem>New Language</guimenuitem>
+                </menuchoice>. Menu and from the list choose your language.</para>
+        </listitem>
+        <listitem>
+            <para>You can now add localized strings to the new column.</para>
+        </listitem>
+        <listitem>
+            <para>Save the file by clicking <menuchoice>
+                    <guimenu>File</guimenu>
+                    <guimenuitem>Save Resource Set As...</guimenuitem>
+                </menuchoice>. When prompted to enter a file name use <filename>Language.resx</filename>. Separate .resx files for all your languages will be created. Spanish localization, for example, will be in <filename>Language.es.resx</filename></para>
+        </listitem>
+        <listitem>
+            <para>If you have Visual Studio 2005 Check out source from sourceforge SVN and you can compile the .resx file into a DLL and test it out.</para>
+            <para>If you don't have Visual Studio see <ulink url="http://www.codeproject.com/dotnet/Localization.asp">http://www.codeproject.com/dotnet/Localization.asp</ulink>. You may need to install .NET framework SDK before following the instructions there.</para>
+        </listitem>
+        <listitem>
+            <para>When you are done, E-mail the completed .resx to <email>spikiermonkey@users.sourceforge.net</email> Be sure to include the name and email address (if at all) you want to be shown in the credits.</para>
+        </listitem>
+    </orderedlist>
+
+    <tip>
+        <para>Run &fcm; while you are translating so that you can see the context in which the text appears.</para>
+    </tip>
+
+    <itemizedlist>
+        <title>More Info</title>
+        <listitem>
+            <para>.NET Framework documentation on CultureInfo <ulink url="http://msdn2.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx">http://msdn2.microsoft.com/en-us/library/system.globalization.cultureinfo.aspx</ulink></para>
+        </listitem>
+    </itemizedlist>
+    <para>If you have any questions or need help, contact the developer at <email>spikiermonkey@users.sourceforge.net</email></para>
+</appendix>

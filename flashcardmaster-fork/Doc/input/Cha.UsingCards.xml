@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE chapter
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+>
+<chapter id="UsingCards">
+    <title>Using Cards</title>
+    <sect1 id="TheReviewer">
+        <title>The Reviewer</title>
+        <para>This is perhaps the most critical and most used feature of Flash Card Master. You can access it using <menuchoice>
+                <guimenu>Tools</guimenu>
+                <guimenu>Review</guimenu>
+                <guimenuitem>Normal</guimenuitem>
+            </menuchoice> or <menuchoice>
+                <guimenu>Tools</guimenu>
+                <guimenu>Review</guimenu>
+                <guimenuitem>Shuffled</guimenuitem>
+            </menuchoice>. <command>Normal</command> will show the cards in order whereas the <command>shuffled</command> will show them in a random order.</para>
+        <figure>
+            <title>Review Cards Dialog </title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/CardReviewer.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>You can use the Left and Right arrow buttons to move between card. The flip button will flip a card. </para>
+        <para>The smiley faces allows you to keep track of the cards you have learned. Clicking the Smiling face (<inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/face-smile.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Smiling face</phrase>
+                </textobject>
+            </inlinemediaobject>) will mark the card as learned and that card will not be shown when you run the reviewer the next time. The plain face (<inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/face-plain.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Plain face</phrase>
+                </textobject>
+            </inlinemediaobject>) represents a card that you have learned by may require more review. The sad face (<inlinemediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/face-sad.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Sad face</phrase>
+                </textobject>
+            </inlinemediaobject>, default) will mark the card as not learned.</para>
+        <para>Checking the <command>Animate</command> checkbox will animate transitions. Uncheck this if you find it annoying.</para>
+        <para>If you want to review cards without having to manually click through each one, you can turn on the timer. You can control the timer delays in the Preferences dialog.</para>
+        <sect2>
+            <title>Keyboard Shortcuts</title>
+            <para>The following keyboard shortcuts are available in the Review Cards dialog.</para>
+            <variablelist>
+                <varlistentry>
+                    <term><keycap>Left</keycap> or <keycap>Right</keycap></term>
+                    <listitem>
+                        <para>Move to the next or previous card.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term><keycap>Up</keycap> or <keycap>Down</keycap></term>
+                    <listitem>
+                        <para>Flip the card.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>
+                        <keycap>Shift</keycap>
+                    </term>
+                    <listitem>
+                        <para>Flips the card, if Front is visible. Advances to the next card, if Back is visible.</para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </sect2>
+    </sect1>
+    <sect1 id="TakingTests">
+        <title>Taking Tests</title>
+        <para>Flash Card Master currently offer one type of test. A Multiple choice test. You start it using <menuchoice>
+            <guimenu>Tools</guimenu>
+            <guimenu>Take Test</guimenu>
+        </menuchoice>.</para>
+        <figure>
+            <title>Multiple Choice Test Dialog </title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/MultipleChoiceTest.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <para>You will asked a question and allowed to pick the answer from four choices. At the end of the test a summary will be shown. You also have the option to save the results as an HTML file.</para>
+        <note>
+            <para>Since there are four choices for each question, your deck must have at least 4 cards in it.</para>
+        </note>
+        <note>
+            <para>Flash Card Master can only generate a test if you mark the question and answer fields as such in the <link linkend="CardDesigner">Card Designer</link>.</para>
+        </note>
+        <sect2>
+            <title>Keyboard Shortcuts</title>
+            <para>The following keyboard shortcuts are available in the Multiple Choice Test dialog.</para>
+            <variablelist>
+                <varlistentry>
+                    <term><keycap>Up</keycap>, <keycap>Down</keycap>, <keycap>Left</keycap> or <keycap>Right</keycap></term>
+                    <listitem>
+                        <para>Move between answer choices.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term><keycap>Enter</keycap></term>
+                    <listitem>
+                        <para>Proceed to the next question.</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>
+                        <keycap>Backspace</keycap>
+                    </term>
+                    <listitem>
+                        <para>Return to the previous question.</para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </sect2>
+    </sect1>
+    <sect1 id="PrintingCards">
+        <title>Printing Cards</title>
+        <para>If you want to review your flash cards away from the computer, it is a good idea to print them.</para>
+        <para>Flashcards are usually printed onto index cards, like the 3 in by 5 in or ISO-size A7. You can print on both sides of the card using your printer's duplex feature or flash card master's built-in duplex feature.</para>
+        <para>When duplexing, depending on your printer, you may have to flip the paper around midway through. Please note that some printers will not be able to print to index cards at all.</para>
+        <tip>
+          <para>Some printers set their duplex property to capabele, even though they cannot. You can enable Flash card master's duplex feature to manually print on both sides of the paper. Do do so check the "Manually duplex when priting" option in the Advanced tab of Preferences.</para>
+        </tip>
+        <sect2 id="OtherPrinting">
+			<title>Other methods of printing</title>
+			<para>If you want to print out a list of the cards, save the deck as an XHTML file and use your browser's print function. We recommend Firefox because it produces better output than Internet Explorer.</para>
+			<para>You can also save the deck as a .tex file and convert that to PDF. On Windows you can use <ulink url="http://miktex.org/">MikTeX</ulink> and <ulink url="http://www.toolscenter.org/">TeXnicCenter</ulink>.</para>
+			<para>Finally, if you can write XSL style sheets, you can transform the data to a variety of formats that can suit your needs.</para>
+        </sect2>
+    </sect1>
+    
+</chapter>

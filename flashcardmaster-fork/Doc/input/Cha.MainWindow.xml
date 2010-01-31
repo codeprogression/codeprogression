@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE chapter PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"[    
+  <!ENTITY fcm "Flash Card Master">
+  ]>
+<chapter>
+    <title>Main Window</title>
+    <para>This is the main window of Flash Card Master. You can manage your cards and access other features from here.</para>
+    <para>The check box next to the items will allow you to select an item. Unchecked items will not be shown when <link linkend="TheReviewer">reviewing</link>.</para>
+    <para>You can also search the fields of a deck in this window. Simply enter your query in the textbox at the right side of the toolbar. You can click on the arrow next to the textbox to customize the search. You can limit the search to certain fields or use <ulink url="http://msdn.microsoft.com/library/default.asp?url=/library/en-us/cpguide/html/cpconcomregularexpressions.asp">regular expressions</ulink> in your search. An introductory article on regular expressions is available at &lt;<ulink url="http://www.radsoftware.com.au/articles/regexlearnsyntax.aspx">http://www.radsoftware.com.au/articles/regexlearnsyntax.aspx</ulink>></para>
+    <figure>
+        <title>Flash Card Master Main Window</title>
+        <mediaobject>
+            <imageobject>
+                <imagedata fileref="resource/MainWindow.png"/>
+            </imageobject>
+            <textobject>
+                <phrase>Flash Card Master main window.</phrase>
+            </textobject>
+        </mediaobject>
+    </figure>
+    <sect1>
+        <title>The File menu</title>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/FileMenu.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Flash Card Master File menu.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <variablelist>
+            <varlistentry>
+                <term>New</term>
+                <listitem>
+                    <para>Creates a new flash card deck</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Open...</term>
+                <listitem>
+                    <para>Opens an existing flash card deck.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Open As Design...</term>
+                <listitem>
+                    <para>Opens an existing flash card deck, however none of the actual cards will be loaded.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Recent Files</term>
+                <listitem>
+                    <para>Shows a list of files that were opened recently.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Save</term>
+                <listitem>
+                    <para>Saves the current flash card deck. You will be prompted to enter a filename if necessary.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Save As...</term>
+                <listitem>
+                    <para>Saves the current flash card deck as a new file and switches the current file to that.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Import</term>
+                <listitem>
+                    <para>Opens an existing flash card deck and append the cards to the existing deck. Note: The number of fields must be the same in both files.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Page Setup...</term>
+                <listitem>
+                    <para>Shows a dialog where you can configure print settings.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Print Preview</term>
+                <listitem>
+                    <para>Shows a preview of the cards as they will be printed.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Print...</term>
+                <listitem>
+                    <para><link linkend="PrintingCards">Prints</link> the current deck.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Exit</term>
+                <listitem>
+                    <para>Quits the program.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </sect1>
+    <sect1>
+        <title>The Edit menu</title>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/EditMenu.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Flash Card Master Edit menu.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <variablelist>
+            <varlistentry>
+                <term>Cut</term>
+                <listitem>
+                    <para>Cuts any selected items.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Copy</term>
+                <listitem>
+                    <para>Copies any selected items.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Paste</term>
+                <listitem>
+                    <para>Pastes any items in the clipboard.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Delete</term>
+                <listitem>
+                    <para>Deletes any selected items.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Select All</term>
+                <listitem>
+                    <para>Selects all items in the deck.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>ChecAll/Uncheck All</term>
+                <listitem>
+                    <para>Toggles the check state of all items. Unchecked items will not be shown in Review.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Preferences</term>
+                <listitem>
+                    <para>Shows the Preferences dialog.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </sect1>
+    <sect1>
+        <title>The Tools menu</title>
+        <informalfigure>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/ToolsMenu.png"/>
+                </imageobject>
+                <textobject>
+                    <phrase>Flash Card Master Tools menu.</phrase>
+                </textobject>
+            </mediaobject>
+        </informalfigure>
+        <variablelist>
+            <varlistentry>
+                <term>Edit</term>
+                <listitem>
+                    <para>Shows the card <link linkend="CardEditor">Editor</link> dialog. You can add or edit individual cards here.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Design</term>
+                <listitem>
+                    <para>Shows the card <link linkend="CardDesigner">Designer</link> dialog. You can alter the appearance of cards here.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Batch Add</term>
+                <listitem>
+                    <para>Shows the <link linkend="BatchEntry">Batch add</link> dialog. You can quickly add multiple items here.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Review</term>
+                <listitem>
+                    <para>Shows the card <link linkend="TheReviewer">Review</link> dialog.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Take Test</term>
+                <listitem>
+                    <para>Starts the <link linkend="TakingTests">multiple choice test</link>.</para>
+                </listitem>
+            </varlistentry>
+            <varlistentry>
+                <term>Locale</term>
+                <listitem>
+                    <para>Allows you to change the user interface language.</para>
+                </listitem>
+            </varlistentry>
+        </variablelist>
+    </sect1>
+</chapter>

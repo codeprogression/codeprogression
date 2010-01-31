@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE chapter
+  PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN" "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd"
+  [    
+  <!ENTITY fcm "Flash Card Master">
+  ]
+>
+<chapter id="EditingCards">
+    <title>Editing Cards</title>
+    <sect1 id="CardEditor">
+        <title>Card Editor</title>
+        <para>The Card Editor allows easy editing of cards in a deck. You can access it using <menuchoice>
+                <guimenu>Tools</guimenu>
+                <guimenuitem>Edit</guimenuitem>
+            </menuchoice>
+        </para>
+        <para><inlinegraphic fileref="resource/list-add.png"/> will add a new card to the deck and <inlinegraphic fileref="resource/list-remove.png"/> will delete an existing card.</para>
+        <para>To edit a card, click on the card in the Cards list, then the field you want to edit. You can enter text in the edit area at the top right. If one of the card's field has been marked as Key, then the text shown in the Cards list will the text of that particular field, otherwise all the fields will be shown, separated by a comma (see Card Designer to learn how to set the Type property of a field).</para>
+        <para>You can also edit more than one card at once. To do that select all the card you want to edit (Hold down the <keycap>Ctrl</keycap> key and click on each the list item to select multiple items.) The edit area will say <userinput>[Edit Multiple Items]</userinput>. To change the value of the fields, delete this text and enter your data. Please note that you cannot 'Undo' your changes, so be careful not to overwrite valuable information.</para>
+        <para>A preview of how the text you are entering will appear is shown on the bottom panel.</para>
+        <note>
+            <para>You can change the proportional size of all the UI components in this dialog. For example, to make the edit area larger, place your mouse between the Fields list and the edit area. The cursor will change to the resize cursor. Hold down the left mouse button and move the cursor to the left.</para>
+        </note>
+        <figure>
+            <title>Edit Cards Dialog</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/EditCards.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+        <sect2>
+            <title>Keyboard Shortcuts</title>
+            <para>The following keyboard shortcuts are available in the Card Editor dialog.</para>
+            <variablelist>
+                <varlistentry>
+                    <term><keycap>CTRL</keycap> + <keycap>Up</keycap> or <keycap>Down</keycap> Arrow Keys</term>
+                    <listitem>
+                        <para>Move the selection in the Cards list up and down</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term><keycap>Alt</keycap> + <keycap>Up</keycap> or <keycap>Down</keycap> Arrow Keys</term>
+                    <listitem>
+                        <para>Move the selection in the Fields list up and down</para>
+                    </listitem>
+                </varlistentry>
+                <varlistentry>
+                    <term>
+                        <keycap>Insert</keycap>
+                    </term>
+                    <listitem>
+                        <para>Add a new card to the deck</para>
+                    </listitem>
+                </varlistentry>
+            </variablelist>
+        </sect2>
+    </sect1>
+    <sect1 id="BatchEntry">
+        <title>Batch Entry</title>
+        <para>The Batch Entry dialog allows you to add multiple cards by entering data in a single textbox. The format of the input is the same as that of a <link linkend="csvFileFormat">CSV</link> file. The only difference is that a header is not needed when entering data in a batch.</para>
+        <para>Instruction on how to enter data for a particular deck will be shown on the top. Each field is separated by a comma (<userinput>,</userinput>) character. whitespace at the beginning and the end of a field will be ignored. Data for separate cards must be placed on separate lines. If your input contains a comma character, place double quotes (<userinput>"</userinput>) around the entire text for that field (see <xref linkend="csvFileFormat"/> for more.)</para>
+        <figure id="figBatchAdd">
+            <title>Batch Entry Window</title>
+            <mediaobject>
+                <imageobject>
+                    <imagedata fileref="resource/BatchEntry.png"/>
+                </imageobject>
+            </mediaobject>
+        </figure>
+    </sect1>
+    <sect1 id="FormattingText">
+        <title>Formatting Text</title>
+        <para>Text used in all the fields in &fcm; can easily formatted to achieve desired appearance. &fcm; uses WikiText, a simple syntax used mainly in wiki software to format content. The wiki text grammar used in &fcm; was adapted from the <ulink url="http://trac.edgewall.org/wiki/WikiFormatting">Trac</ulink> wiki.</para>
+        <para>WikiText is shown with formatting when &fcm; is displaying the cards. &fcm; can also convert the WikiText markup into XHTML format when you save a deck as XHTML (You must enable this in preferences).</para>
+        <para>All of the supported formattings are shown below. Please note that formattings cannot be nested (for example, there is no support to format some text as Bold and Underlined).</para>
+
+        <example>
+            <title>All supported wiki formattings in Flash Card Master</title>
+            <programlisting><![CDATA[
+Regular
+'''Bold''' or *Bold*
+''Italic''
+'''''Bold Italic'''''
+__Underline__
+`Monospace`
+~~Strikethru~~
+Super^Script^
+Sub,,Script,,
+]]></programlisting>
+            <para>The above input will produce:</para>
+            <informalfigure>
+                <mediaobject>
+                    <imageobject>
+                        <imagedata fileref="resource/WikiTextRender.png"/>
+                    </imageobject>
+                    <textobject>
+                        <phrase>All possible text styles as rendered by &fcm;</phrase>
+                    </textobject>
+                </mediaobject>
+            </informalfigure>
+        </example>
+
+    </sect1>
+</chapter>

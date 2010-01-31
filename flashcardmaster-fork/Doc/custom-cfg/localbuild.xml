@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project>
+
+  <!--
+  You can add hooks here that perform your custom action at a given point.
+  Please see the manual (or the the file etc/build-output-formats.xml) for all
+  available hooks.
+  
+  Example:
+  
+  <target name="local-pre-init" >
+  </target>
+  -->
+
+</project>

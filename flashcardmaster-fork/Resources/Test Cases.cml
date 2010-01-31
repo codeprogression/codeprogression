@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<CardDeck>
+  <Fields>
+    <Field index="0" name="Name" type="Key" side="Front" position="Center" forecolor="argb(255,0,0,0)" backcolor="argb(0,193,213,144)" />
+    <Field index="1" name="Description" type="Other" side="Front" position="Bottom, HorizontalCenter" forecolor="argb(255,0,0,0)" backcolor="argb(0,255,255,255)" />
+    <Field index="2" name="String" type="Answer" side="Back" position="Center" forecolor="argb(255,215,129,106)" backcolor="argb(0,255,255,255)" />
+  </Fields>
+  <Cards>
+    <Card learned="NotLearned">
+      <CardField name="Name">Long Unformatted string</CardField>
+      <CardField name="Description">Test a very long string with no formattings.</CardField>
+      <CardField name="String">From 1935, Avniel lived in Haifa, and in 1958 he participated in the Venice Biennale. While he is best known as a leading Israeli artist, Avniel was also a prominent lawyer in Haifa and a founding partner of the firm Avniel, Salomon &amp; Co. He was a regular participant in the group exhibitions of the Painters and Sculptors' Association of Israel and, among other achievements, was awarded the following accolades during his lifetime: Herman Struck Prize (1952), Tenth Anniversary Prize for Watercolours, Ramat Gan (1958), Histadrut Prize (1961), and First Prize Haifa Municipality (1977). He represented Israel at the 1962 International Art Seminar at Fairleigh Dickenson University, was a member of the Artists' Colony in Safed, and maintained an active studio on Mount Carmel in the Haifa environs. Avniel's works can be found in museums and private collections in Israel and abroad (see below for a detailed list). He died in 1989.</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Name">Manual Line Feed Test</CardField>
+      <CardField name="Description">Tests manual line feeds. If surface is too small, automatic linefeeds should happen.</CardField>
+      <CardField name="String">'''nemo, nullius, nemini, neminiem, nullo''' or '''nulla''' m. or f.
+'''nemo, nullius, nemini, neminiem, nullo''' or '''nulla''' m. or f.
+'''nemo, nullius, nemini, neminiem, nullo''' or '''nulla''' m. or f.</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Name">Auto Line Feed Test</CardField>
+      <CardField name="Description">Tests automatic line feeds.</CardField>
+      <CardField name="String">'''nemo, nullius, nemini, neminiem, nullo''' or '''nulla''' m. or f.'''nemo, nullius, nemini, neminiem, nullo''' or '''nulla''' m. or f.'''nemo, nullius, nemini, neminiem, nullo''' or '''nulla''' m. or f.</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Name">Wikitext Test</CardField>
+      <CardField name="Description">Tests all supported wikitext formattings.</CardField>
+      <CardField name="String">Regular
+'''Bold'''
+''Italic''
+'''''Bold Italic'''''
+__Underline__
+`Monospace`
+~~Strikethru~~
+Super^Script^
+Sub,,Script,,</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Name">Long formatted string</CardField>
+      <CardField name="Description">'''Broken'''
+This a very long string with some formatting.
+Ideally, it should be rendered with the everyting inline,
+but it is necessary to break the very long string to accomodate this.</CardField>
+      <CardField name="String">'''Mordechai Avniel''' (1900-1989) was an ''Israeli'' painter and ''sculptor'', born in __1900 __in Minsk, present-day [[Belarus]]. He studied at the Art School, Katrinburg, Russia (1913-17), the High School for Art, Katrinburg (1917-19), and the [[Bezalel Academy of Art and Design]], [[Jerusalem]] (1923). Avniel immigrated to [[Eretz Israel]] in 1921 and first worked as a pioneer in citrus plantations near [[Petah Tikva]]. In 1923, at the urging of [[Boris Schatz]], he went to Jerusalem to further his studies at Bezalel. He later taught painting and ''sculpture ''at Bezalel, and served a term as director of the Small Sculpture Section of the Sculpture Department (1924-28).</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Name">Wikitext Test 2</CardField>
+      <CardField name="Description">Description</CardField>
+      <CardField name="String"> \* '''bold''' or *bold*
+ \* ''italic''
+ \* '''''bold italic'''''
+ \* __underline__
+ \* {{{monospace}}} or `monospace`
+ \* ~~strike-through~~
+ \* ^superscript^ 
+ \* ,,subscript,,</CardField>
+    </Card>
+    <Card learned="NotLearned">
+      <CardField name="Name">Multiple Line breaks</CardField>
+      <CardField name="Description">Tests multiple line breaks</CardField>
+      <CardField name="String">Line 1
+
+Line 2
+
+Line 3
+
+Line 4</CardField>
+    </Card>
+  </Cards>
+</CardDeck>

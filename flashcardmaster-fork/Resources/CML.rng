@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0">
+    <start>
+        <choice>
+            <element name="CardDeck">
+                <a:documentation>A card deck.</a:documentation>
+                <ref name="elm.Fields"/>
+                <ref name="elm.Cards"/>
+            </element>
+        </choice>
+    </start>
+
+    <!-- Elements............................................................................-->
+    <define name="elm.Fields">
+        <element name="Fields">
+            <a:documentation>A collection of fields.</a:documentation>
+            <oneOrMore>
+                <ref name="elm.Field"></ref>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="elm.Field">
+        <element name="Field">
+            <a:documentation>Defines the appearance of a card field.</a:documentation>
+            <ref name="att.Field.index" />
+            <ref name="att.Field.name" />
+            <ref name="att.Field.type" />
+            <ref name="att.Field.side" />
+            <ref name="att.Field.position" />
+            <optional>
+                <attribute name="forecolor">
+                    <a:documentation>Foreground color of the field. Format: [a]rgb([0-255],[0-255],[0-255],[0-255]).</a:documentation>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="backcolor">
+                    <a:documentation>Background color of the field. Format: [a]rgb([0-255],[0-255],[0-255],[0-255]).</a:documentation>
+                </attribute>
+            </optional>
+            <empty/>
+        </element>
+    </define>
+    
+    <define name="elm.Cards">
+        <element name="Cards">
+            <a:documentation>A collection of cards.</a:documentation>
+            <zeroOrMore>
+                <ref name="elm.Card" />
+            </zeroOrMore>    
+        </element>
+    </define>
+    <define name="elm.Card">
+        <element name="Card">
+            <a:documentation>A card.</a:documentation>
+            <ref name="att.Card.name" />
+            <oneOrMore>
+                <ref name="elm.CardField" />
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="elm.CardField">
+        <element name="CardField">
+            <a:documentation>A card field.</a:documentation>
+            <ref name="att.CardField.name" />
+            <zeroOrMore>
+                <choice>
+                    <text/>
+                    <ref name="elm.Style" />
+                    <ref name="elm.br" />
+                </choice>
+            </zeroOrMore>
+        </element>
+    </define>
+    <!--.....................................................................................-->
+    
+    <!-- Field Attributes....................................................................-->
+    <define name="att.Field.index">
+        <attribute name="index">
+            <a:documentation>An integer, 0 or greater, representing the ID of the field. Must be unique and increment by one.</a:documentation>
+            <data type="integer"/>
+        </attribute>
+    </define>
+    <define name="att.Field.name">
+        <attribute datatypeLibrary="http://relaxng.org/ns/compatibility/datatypes/1.0" name="name">
+            <a:documentation>Name of a field, must be unique.</a:documentation>
+            <data type="ID"/>
+        </attribute>
+    </define>
+    <define name="att.Field.type" a:defaultValue="Other">
+        <attribute name="type">
+            <a:documentation>Type of a field.</a:documentation>
+            <choice>
+                <value>Key</value>
+                <value>Answer</value>
+                <value>Other</value>
+            </choice>
+        </attribute>
+    </define>
+    <define name="att.Field.side" a:defaultValue="Both">
+        <attribute name="side">
+            <a:documentation>The side on which the field is shown.</a:documentation>
+            <choice>
+                <value>Front</value>
+                <value>Back</value>
+                <value>Both</value>
+            </choice>
+        </attribute>
+    </define>
+    <define name="att.Field.position"  a:defaultValue="Center">
+        <attribute name="position">
+            <a:documentation>The relative position of the field on the card.</a:documentation>
+            <choice>
+                <value>None</value>
+                <value>Top, Left</value>
+                <value>Top, HorizontalCenter</value>
+                <value>Top, Right</value>
+                <value>Left, VerticalCenter</value>
+                <value>Center</value>
+                <value>Right, VerticalCenter</value>
+                <value>Bottom, Left</value>
+                <value>Bottom, HorizontalCenter</value>
+                <value>Bottom, Right</value>
+            </choice>
+        </attribute>
+    </define>
+    <!--.....................................................................................-->
+   
+    <!-- Card Attributes.....................................................................-->
+    <define name="att.Card.name"  a:defaultValue="NotLearned">
+        <attribute name="learned">
+            <a:documentation>The learned status of the card.</a:documentation>
+            <choice>
+                <value>Learned</value>
+                <value>NotLearned</value>
+                <value>MaybeLearned</value>
+            </choice>
+        </attribute>
+    </define>
+    <!--.....................................................................................-->
+    
+    <!-- CardField Attributes................................................................-->
+    <define name="att.CardField.name">
+        <a:documentation>The field associated with this card field.</a:documentation>
+        <attribute datatypeLibrary="http://relaxng.org/ns/compatibility/datatypes/1.0" name="name">
+            <data type="IDREF"/>
+        </attribute>
+    </define>
+    <!--.....................................................................................-->
+    
+    <!-- Text Styles.........................................................................-->
+    <define name="elm.Style">
+        <a:documentation>Style of some text.</a:documentation>
+        <element name="Style">
+            <attribute name="type">
+                <choice>
+                    <value>regular</value>
+                    <value>italic</value>
+                    <value>bold</value>
+                    <value>bolditalic</value>
+                    <value>underline</value>
+                    <value>monospace</value>
+                    <value>strikethru</value>
+                    <value>super</value>
+                    <value>sub</value>
+                    <value>linebreak</value>
+                </choice>
+            </attribute>
+            <text/>
+        </element>
+    </define>
+    
+    <define name="elm.br">
+        <a:documentation>A Line feed.</a:documentation>
+        <element name="br">
+            <empty/>
+        </element>
+    </define>
+    <!--.....................................................................................-->
+    
+</grammar>
