@@ -23,107 +23,99 @@
  *************************************************************************/
 
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
-using LibFlashcard.Utilities;
+using System.Linq;
 
 namespace LibFlashcard.Model
 {
     [Serializable]
-    public class Card: IEnumerable<CardElement>
+    public class Card : IEnumerable<CardElement>
     {
+        private readonly List<CardElement> _elements = new List<CardElement>();
 
-        public Card() { }
+        public Card()
+        {
+            LearnStatus = CardLearningStaus.NotLearned;
+        }
 
         public Card(IEnumerable<CardElementStyle> styles)
-            : this(styles, true) { }
-
-        public Card(IEnumerable<CardElementStyle> styles, bool fillValues) {
-            foreach (CardElementStyle style in styles) {
-                if (fillValues) {
-                    this.Add(style, style.Name);
-                } else {
-                    this.Add(style, string.Empty);
-                }
-            }
+            : this(styles, true)
+        {
         }
 
-        public void Add(CardElementStyle style, params string[] elements) {
-            for (int i = 0; i < elements.Length; i++) {
-                this.elements.Add(new CardElement(elements[i], style));
-            }
+        public Card(IEnumerable<CardElementStyle> styles, bool fillValues)
+        {
+            LearnStatus = CardLearningStaus.NotLearned;
+            foreach (var style in styles)
+                Add(style, fillValues ? style.Name : string.Empty);
+        }
+
+        public int Index { get; set; }
+        public int Count { get { return _elements.Count; } }
+        public CardLearningStaus LearnStatus { get; set; }
+
+        public bool Enabled
+        {
+            get { return LearnStatus > 0; }
+            set { LearnStatus = value ? CardLearningStaus.NotLearned : CardLearningStaus.Learned; }
+        }
+
+        public CardElement this[int index]
+        {
+            get { return _elements[index]; }
+        }
+
+        public CardElement this[CardElementStyle style]
+        {
+            get { return _elements.FirstOrDefault(element => element.Style == style); }
+        }
+
+        public ReadOnlyCollection<CardElement> Elements
+        {
+            get { return _elements.AsReadOnly(); }
+        }
+
+        #region IEnumerable<CardElement> Members
+
+        public IEnumerator<CardElement> GetEnumerator()
+        {
+            return _elements.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return _elements.GetEnumerator();
+        }
+
+        #endregion
+
+        public void Add(CardElementStyle style, params string[] elements)
+        {
+            foreach (var element in elements)
+                _elements.Add(new CardElement(element,style));
             Sort();
         }
 
-        public void Remove(CardElementStyle style) {
-            for (int i = this.elements.Count - 1; i >= 0; i--) {
-                if (this.elements[i].Style == style) {
-                    this.elements.RemoveAt(i);
-                }
-            }
+        public void Remove(CardElementStyle style)
+        {
+            _elements.RemoveAll(x => x.Style == style);
             Sort();
         }
 
-        public void Sort() {
-            this.elements.Sort();
-        }
-
-        int index;
-        List<CardElement> elements = new List<CardElement>();
-        CardLearningStaus learnStatus = CardLearningStaus.NotLearned;
-
-        public int Index {
-            get { return index; }
-            set { index = value; }
-        }
-
-        public int Count {
-            get { return elements.Count; }
-        }
-
-        public CardLearningStaus LearnStatus {
-            get { return learnStatus; }
-            set { learnStatus = value; }
-        }
-
-        public bool Enabled {
-            get {
-                return ((learnStatus == CardLearningStaus.NotLearned) || (learnStatus == CardLearningStaus.MaybeLearned));
-            }
-            set {
-                if (value) {
-                    learnStatus = CardLearningStaus.NotLearned;
-                } else {
-                    learnStatus = CardLearningStaus.Learned;
-                }
-            }
-        }
-
-        public CardElement this[int index] {
-            get { return elements[index]; }
-        }
-
-        public CardElement this[CardElementStyle style] {
-            get {
-                for (int i = 0; i < this.elements.Count; i++) {
-                    if (this.elements[i].Style == style) {
-                        return this.elements[i];
-                    }
-                }
-                return null;
-            }
-        }
-
-        public ReadOnlyCollection<CardElement> Elements {
-            get { return elements.AsReadOnly(); }
+        public void Sort()
+        {
+            _elements.Sort();
         }
 
         /// <summary>
         /// Gets the Key field, if any, of this Card.
         /// </summary>
         /// <returns>The value of the Key field.</returns>
-        public string GetKey() {
+        public string GetKey()
+        {
             return GetType(CardElementType.Key);
         }
 
@@ -131,91 +123,114 @@ namespace LibFlashcard.Model
         /// Gets the Answer field, if any, of this Card.
         /// </summary>
         /// <returns>The value of the Answer field.</returns>
-        public string GetAnswer() {
+        public string GetAnswer()
+        {
             return GetType(CardElementType.Answer);
         }
 
 
-        private string GetType(CardElementType type) {
-            for (int i = 0; i < elements.Count; i++) {
-                if (elements[i].Style.Type == type) {
-                    return elements[i].Text;
-                }
-            }
-            return string.Empty;
+        private string GetType(CardElementType type)
+        {
+            var element = _elements.FirstOrDefault(x => x.Style.Type == type);
+            return element != null ? element.Text : string.Empty;
         }
 
-        public override string ToString() {
-            for (int i = 0; i < this.elements.Count; i++) {
-                if (elements[i].Style.Type == CardElementType.Key) {
-                    return elements[i].Text;
-                }
-            }
-            return ToCSVString(',', false);
+        public override string ToString()
+        {
+            var element = _elements.SingleOrDefault(x => x.Style.Type == CardElementType.Key);
+            return _elements != null ? element.Text : ToCSVString(',', false);
         }
 
-        public string ToCSVString(char seperator, bool preserveLinesInCsv) {
-            StringBuilder sb = new StringBuilder();
-            ToCSVString(sb, seperator, preserveLinesInCsv);
+        public string ToCSVString(char separator, bool preserveLinesInCsv)
+        {
+            var sb = new StringBuilder();
+            ToCSVString(sb, separator, preserveLinesInCsv);
             return sb.ToString();
         }
 
-        public void ToCSVString(StringBuilder sb, char separator, bool preserveLinesInCsv) {
-            for (int i = 0; i < this.elements.Count; i++) {
-                string text = this.elements[i].Text;
-                if (!preserveLinesInCsv) {
+        public void ToCSVString(StringBuilder sb, char separator, bool preserveLinesInCsv)
+        {
+            for (int i = 0; i < _elements.Count; i++)
+            {
+                string text = _elements[i].Text;
+                if (!preserveLinesInCsv)
+                {
                     text = text.Replace(Environment.NewLine, string.Empty);
                 }
-                if (NeedQuote(text, separator)) {
+                if (NeedQuote(text, separator))
+                {
                     sb.AppendFormat("\"{0}\"", text);
-                } else {
+                }
+                else
+                {
                     sb.Append(text);
                 }
-                if (i != this.elements.Count - 1) {
+                if (i != _elements.Count - 1)
+                {
                     sb.Append(separator);
                 }
             }
         }
 
-        private bool NeedQuote(string s, char separator) {
-            if (s.IndexOf(separator) >= 0) {
+        private bool NeedQuote(string s, char separator)
+        {
+            if (s.IndexOf(separator) >= 0)
                 return true;
-            } else if (s.IndexOf(Environment.NewLine) >= 0) {
-                return true;
-            }
-            return false;
+            return s.IndexOf(Environment.NewLine) >= 0;
         }
 
-        public Dictionary<CardElementPositions, List<CardElement>> GroupElementsByPosition(CardElementSides side) {
-            Dictionary<CardElementPositions, List<CardElement>> result = new Dictionary<CardElementPositions, List<CardElement>>();
+        public Dictionary<CardElementPositions, List<CardElement>> GroupElementsByPosition(CardElementSides side)
+        {
+            var result = new Dictionary<CardElementPositions, List<CardElement>>();
 
-            for (int i = 0; i < this.elements.Count; i++) {
-                List<CardElement> list;
-                if (!result.TryGetValue(this.elements[i].Style.Position, out list)) {
-                    // add key
-                    list = new List<CardElement>();
-                    result.Add(this.elements[i].Style.Position, list);
-                }
-                if ((this.Elements[i].Style.Side & side) == side) {
-                    list.Add(this.elements[i]);
-                }
-            }
+            _elements.ForEach(element =>
+            {
+                    List<CardElement> list;
+                    if (!result.TryGetValue(element.Style.Position, out list))
+                    {
+                        list = new List<CardElement>();
+                        result.Add(element.Style.Position, list);
+                    }
+                    if ((element.Style.Side & side) == side)
+                    {
+                        list.Add(element);
+                    }
+            });
 
             return result;
         }
 
 
-
-        #region IEnumerable<CardElement> Members
-
-        public IEnumerator<CardElement> GetEnumerator() {
-            return this.elements.GetEnumerator();
+        private Random _random;
+        public QuizQuestion CreateQuizQuestion(Card card, List<Card> cards)
+        {
+            return new QuizQuestion(card, GetIncorrectAnswers(card.GetAnswer(), cards));
         }
 
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-            return this.elements.GetEnumerator();
-        }
+        private IEnumerable<string> GetIncorrectAnswers(string answer, IEnumerable<Card> cards)
+        {
+            _random = new Random();
+            var incorrectAnswers =
+                   cards.Where(c => answer != c.GetAnswer())
+                       .Select(x => x.GetAnswer())
+                       .Distinct()
+                       .ToList();
 
-        #endregion
+            var choices = QuizQuestion.PossibleChoices;
+            if (incorrectAnswers.Count() < choices - 1)
+                throw new ArgumentException(
+                    string.Format(
+                        "There are not enough cards in the array. " +
+                        "At least {0} cards with unique answers are necessary.",
+                        choices),
+                    "cards");
+
+            for (var i = 0; i < 3; i++)
+            {
+                var index = _random.Next(incorrectAnswers.Count);
+                yield return incorrectAnswers[index];
+                incorrectAnswers.RemoveAt(index);
+            }
+        }
     }
 }

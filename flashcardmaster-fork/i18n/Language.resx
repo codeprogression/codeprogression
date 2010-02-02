@@ -433,7 +433,7 @@ This program is made possible by the following contributors:
     <value>Contributors</value>
   </data>
   <data name="CSVSeperatorHint" xml:space="preserve">
-    <value>CSV seperator is used by the batch editor to sperate fields and also by 'Export as CSV' method.</value>
+    <value>CSV separator is used by the batch editor to separate fields and also by 'Export as CSV' method.</value>
   </data>
   <data name="QuizDeckInvalid" xml:space="preserve">
     <value>The current deck does not have the 'Key' and 'Answer' fields defined. You can correct this by editing the deck using Card Designer.</value>
@@ -442,7 +442,7 @@ This program is made possible by the following contributors:
     <value>Front</value>
   </data>
   <data name="CSVSeperator" xml:space="preserve">
-    <value>CSV Seperator</value>
+    <value>CSV Separator</value>
   </data>
   <data name="SecondsL" xml:space="preserve">
     <value>seconds</value>

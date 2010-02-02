@@ -38,7 +38,7 @@ namespace FlashCardMaster
         public static void Main(string[] args) {
 #if RELEASE || ERROR_REPORT_TEST
 		  try {
-			 Application.ThreadException += new ThreadExceptionEventHandler(Application_ThreadException);
+			 Application.ThreadException += Application_ThreadException;
 #endif
 
             CsvDriver.PreserveNewLinesInCsv = Settings.AppInstance.PreserveNewLinesInCsv;

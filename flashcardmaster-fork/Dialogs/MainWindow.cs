@@ -220,7 +220,7 @@ namespace FlashCardMaster.Dialogs
 				dlgOpen.Title = i18n.Language.Open;
 				int index;
 				dlgOpen.Filter = AbstractDriver.GetReadersFilter(out index);
-				dlgOpen.FilterIndex = index - 1;
+				dlgOpen.FilterIndex = index+1;
 				if (dlgOpen.ShowDialog(this) == DialogResult.OK) {
 				    Open(dlgOpen.FileName);
 				    return true;
