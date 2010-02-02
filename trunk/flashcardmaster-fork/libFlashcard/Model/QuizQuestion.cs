@@ -24,71 +24,43 @@
 
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using LibFlashcard.Utilities;
 
 namespace LibFlashcard.Model
 {
     public class QuizQuestion
     {
-        private string question;
-        private int answerIndex;
-        private string[] choices;
-        private int resposeIndex = -1;
-
-        public int ResposeIndex {
-            get { return resposeIndex; }
-            set { resposeIndex = value; }
+        public const int PossibleChoices = 4;
+        public int ResposeIndex { get; set; }
+        public string Question { get; private set; }
+        public int AnswerIndex { get; private set; }
+        public string[] Choices { get; private set; }
+        public QuizQuestion()
+        {
+            ResposeIndex = -1;
+            Choices = new string[PossibleChoices];
+            AnswerIndex = Utility.Rnd.Next(0, PossibleChoices);
         }
 
-        public string Question {
-            get { return this.question; }
-            set { this.question = value; }
+        public QuizQuestion(Card card, IEnumerable<string> getIncorrectAnswers)
+            : this()
+        {
+            Question = card.GetKey();
+            Choices[AnswerIndex] = card.GetAnswer();
+            AddIncorrectAnswers(getIncorrectAnswers);
         }
 
-        public int AnswerIndex {
-            get { return this.answerIndex; }
-            set { this.answerIndex = value; }
-        }
-
-        public string[] Choices {
-            get { return this.choices; }
-            set { this.choices = value; }
-        }
-
-        public static QuizQuestion FromCard(Card card, List<Card> cards) {
-            int[] indices = new int[3];
-
-            if (cards.Count <= indices.Length) { throw new ArgumentException("There are not enough cards in the array. At least " + (indices.Length + 1).ToString() + " cards are necessary.", "cards"); }
-
-            // Pick random cards
-            for (int i = 0; i < indices.Length; i++) {
-                do {
-                    int index = Utility.Rnd.Next(0, cards.Count);
-                    if (cards[index] != card) {
-                        for (int j = i - 1; j >= 0; j--) {
-                            if (indices[j] == index) {
-                                // if index is a duplicate, do the while loop again
-                                continue;
-                            }
-                        }
-                        indices[i] = index;
-                        break;
-                    }
-                } while (true);
+        private void AddIncorrectAnswers(IEnumerable<string> incorrectAnswers)
+        {
+            var i = 0;
+            foreach (var incorrectAnswer in incorrectAnswers)
+            {
+                if (i==AnswerIndex) i++;
+                Choices[i] = incorrectAnswer;
+                i++;
             }
-
-            QuizQuestion q = new QuizQuestion();
-            q.Question = card.GetKey();
-            q.Choices = new string[indices.Length + 1];
-            q.answerIndex = Utility.Rnd.Next(0, q.choices.Length);
-            q.choices[q.answerIndex] = card.GetAnswer();
-            int indicesIndex = 0;
-            for (int i = 0; i < q.choices.Length; i++) {
-                if (i == q.answerIndex) { continue; }
-                q.choices[i] = cards[indices[indicesIndex]].GetAnswer();
-                indicesIndex++;
-            }
-            return q;
         }
+        
     }
 }

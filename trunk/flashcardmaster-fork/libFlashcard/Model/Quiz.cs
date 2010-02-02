@@ -22,64 +22,69 @@
  *  Description       :  
  *************************************************************************/
 
+using System.Collections;
 using System.Collections.Generic;
 using LibFlashcard.Utilities;
 
 namespace LibFlashcard.Model
 {
-    public class Quiz: IEnumerable<QuizQuestion>
+    public class Quiz : IEnumerable<QuizQuestion>
     {
-        protected QuizQuestion[] questions;
-
-        protected Quiz() { }
-
-        public Quiz(QuizQuestion[] questions) {
-            this.questions = questions;
+        protected Quiz()
+        {
+            Questions = new List<QuizQuestion>();
+        }
+        public Quiz(IList<QuizQuestion> questions)
+        {
+            Questions = questions;
         }
 
-        public QuizQuestion[] Questions {
-            get { return questions; }
-        }
-
-        public BiDirectionalEnumerator<QuizQuestion> GetEnumerator(LibFlashcard.Utilities.EnumerationOrder order) {
-            return new BiDirectionalEnumerator<QuizQuestion>(new List<QuizQuestion>(questions), order);
-        }
+        public IList<QuizQuestion> Questions { get; private set;}
 
         #region IEnumerable<QuizQuestion> Members
 
-        public IEnumerator<QuizQuestion> GetEnumerator() {
+        public IEnumerator<QuizQuestion> GetEnumerator()
+        {
+            return GetEnumerator(EnumerationOrder.Normal);
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
             return GetEnumerator(EnumerationOrder.Normal);
         }
 
         #endregion
 
-        #region IEnumerable Members
-
-        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator() {
-            return GetEnumerator(EnumerationOrder.Normal);
+        public BiDirectionalEnumerator<QuizQuestion> GetEnumerator(EnumerationOrder order)
+        {
+            return new BiDirectionalEnumerator<QuizQuestion>(new List<QuizQuestion>(Questions), order);
         }
 
-        #endregion
-
-        public static bool IsDeckValid(CardDeck deck) {
+        public static bool IsDeckValid(CardDeck deck)
+        {
             bool hasKey = false, hasAnswer = false;
 
-            foreach (CardElementStyle style in deck.Styles) {
-                if (style.Type == CardElementType.Key) { hasKey = true; }
-                if (style.Type == CardElementType.Answer) { hasAnswer = true; }
+            foreach (var style in deck.Styles)
+            {
+                if (style.Type == CardElementType.Key)
+                {
+                    hasKey = true;
+                }
+                if (style.Type == CardElementType.Answer)
+                {
+                    hasAnswer = true;
+                }
             }
 
             return hasKey && hasAnswer;
         }
     }
 
-    public class MultipleChoiceQuiz: Quiz
+    public class MultipleChoiceQuiz : Quiz
     {
-        public MultipleChoiceQuiz(List<Card> cards) {
-            base.questions = new QuizQuestion[cards.Count];
-            for (int i = 0; i < cards.Count; i++) {
-                questions[i] = QuizQuestion.FromCard(cards[i], cards);
-            }
+        public MultipleChoiceQuiz(List<Card> cards) 
+        {
+            cards.ForEach(card=> Questions.Add(card.CreateQuizQuestion(card, cards)));
         }
     }
 }

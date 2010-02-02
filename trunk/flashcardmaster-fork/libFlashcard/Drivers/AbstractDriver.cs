@@ -27,7 +27,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using LibFlashcard.Model;
-using Mono.Unix;
 
 namespace LibFlashcard.Drivers
 {
@@ -122,7 +121,7 @@ namespace LibFlashcard.Drivers
                 }
             }
             if (current == null) {
-                throw new NotSupportedException(string.Format(Catalog.GetString("No handlers are implemented for type {0}.\nUnable to create handler for '{1}'"), ext, path));
+                throw new NotSupportedException(string.Format("No handlers are implemented for type {0}.\nUnable to create handler for '{1}'", ext, path));
             } else {
                 return current.Create(path);
             }
@@ -144,21 +143,20 @@ namespace LibFlashcard.Drivers
         /// </summary>
         /// <param name="count">Indicates the number of supported file types.</param>
         /// <returns></returns>
-        public static string GetReadersFilter(out int count) {
+        public static string GetReadersFilter(out int count)
+        {
             Init();
-            StringBuilder sb = new StringBuilder();
-            string allExt = string.Empty;
-            count = drivers.Count;
-            for (int i = 0; i < drivers.Count; i++) {
-                if (drivers[i].CanDeserialize) {
-                    sb.AppendFormat("{1} (*{0})|*{0}|", drivers[i].SupportedExtensions.Key, drivers[i].SupportedExtensions.Value);
-                    allExt += string.Format("*{0}", drivers[i].SupportedExtensions.Key);
-                    if (i < drivers.Count - 1) { allExt += ";"; }
-                }
+            var formatList = new List<string>();
+            var extList = new List<string>();
+            foreach (var driver in drivers)
+            {
+                formatList.Add(string.Format("{1} (*{0})|*{0}", driver.SupportedExtensions.Key,
+                                             driver.SupportedExtensions.Value));
+                extList.Add(string.Format("*{0}", driver.SupportedExtensions.Key));
             }
-            //TODO: Localize.
-            sb.AppendFormat(Catalog.GetString("All Supported formats") + "{0}", allExt);
-            return sb.ToString();
+            formatList.Add(string.Format("All Supported formats|" + "{0}", string.Join(";", extList.ToArray())));
+            count = drivers.Count;
+            return string.Join("|", formatList.ToArray());
         }
 
         public static string GetWritersFilter() {
@@ -223,12 +221,12 @@ namespace LibFlashcard.Drivers
         static void Init() {
             if (drivers != null) { return; }
             drivers = new List<DriverAttributes>();
-            drivers.Add(new DriverAttributes(typeof(XmlDriver), new KeyValuePair<string, string>(".cml", Catalog.GetString("Card XML file")), true, true, false, false));
-            drivers.Add(new DriverAttributes(typeof(CardDriver), new KeyValuePair<string, string>(".card", Catalog.GetString("Card file")), true, true, false, false));
-            drivers.Add(new DriverAttributes(typeof(CsvDriver), new KeyValuePair<string, string>(".csv", Catalog.GetString("Comma seperated value file")), true, true, true, false));
-            drivers.Add(new DriverAttributes(typeof(XhtmlDriver), new KeyValuePair<string, string>(".html", Catalog.GetString("XHTML file")), true, false, false, false));
-            drivers.Add(new DriverAttributes(typeof(LaTeXDriver), new KeyValuePair<string, string>(".tex", Catalog.GetString("LaTeX file")), true, false, false, true));
-            drivers.Add(new DriverAttributes(typeof(XfsDriver), new KeyValuePair<string, string>(".xfs", Catalog.GetString("Flash Card Pro file")), true, true, true, true));
+            drivers.Add(new DriverAttributes(typeof(XmlDriver), new KeyValuePair<string, string>(".cml", "Card XML file"), true, true, false, false));
+            drivers.Add(new DriverAttributes(typeof(CardDriver), new KeyValuePair<string, string>(".card", "Card file"), true, true, false, false));
+            drivers.Add(new DriverAttributes(typeof(CsvDriver), new KeyValuePair<string, string>(".csv", "Comma seperated value file"), true, true, true, false));
+            drivers.Add(new DriverAttributes(typeof(XhtmlDriver), new KeyValuePair<string, string>(".html", "XHTML file"), true, false, false, false));
+            drivers.Add(new DriverAttributes(typeof(LaTeXDriver), new KeyValuePair<string, string>(".tex", "LaTeX file"), true, false, false, true));
+            drivers.Add(new DriverAttributes(typeof(XfsDriver), new KeyValuePair<string, string>(".xfs", "Flash Card Pro file"), true, true, true, true));
         }
 
         /// <summary>
