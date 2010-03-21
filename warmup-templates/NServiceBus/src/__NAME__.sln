@@ -1,6 +1,6 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "__NAME__.Messages", "Messages\__NAME__.Messages.csproj", "{07CE5DF3-65D7-4CC2-BE91-1D498AEC3765}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "__NAME__.Core", "Core\__NAME__.Core.csproj", "{07CE5DF3-65D7-4CC2-BE91-1D498AEC3765}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "__NAME__.Client", "Client\__NAME__.Client.csproj", "{343AA055-3AB5-4932-8B20-B6D6842933FA}"
 EndProject
