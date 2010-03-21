@@ -64,6 +64,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Messages\__NAME__.Messages.csproj">
+      <Project>{07CE5DF3-65D7-4CC2-BE91-1D498AEC3765}</Project>
+      <Name>__NAME__.Messages</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
