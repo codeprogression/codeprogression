@@ -1,0 +1,20 @@
+NServiceBus Links
+http://www.nservicebus.com
+http://gurustop.net/blog/2008/04/20/enterprise-service-bus-messaging-using-nservicebus/
+http://elegantcode.com/2009/10/09/exploring-nservicebus/
+http://sourceforge.net/apps/mediawiki/nservicebus/index.php?title=Tutorials
+http://blog.zoolutions.se/post/2010/02/08/Conquering-NServiceBus-part-1-e28093-Getting-Started.aspx
+http://blog.zoolutions.se/post/2010/02/09/Conquering-NServiceBus-part-2-e28093-Initial-configuration.aspx
+
+MassTransit Links
+http://masstransit.pbworks.com
+http://masstransit.pbworks.com/A-First-Look-at-Mass-Transit
+http://blogs.dovetailsoftware.com/blogs/kmiller/archive/2009/08/26/producing-and-consuming-messages-using-masstransit-and-structuremap.aspx
+http://rhysc.blogspot.com/2009/05/getting-started-with-masstransit.html
+
+TopShelf Links
+http://blogs.dovetailsoftware.com/blogs/kmiller/archive/2010/01/20/configuring-topshelf-using-a-structuremap-container.aspx
+http://blogs.dovetailsoftware.com/blogs/kmiller/archive/2010/01/20/controlling-application-lifetime-in-topshelf.aspx
+
+Misc
+http://www.enterpriseintegrationpatterns.com/ramblings/18_starbucks.html

@@ -1,0 +1,21 @@
+public class Endpoint:IConfigureThisEndpoint, AsA_Client, IWantToRunAtStartup
+{
+	public void Run()
+	{
+		Console.Title = "Email Client";
+	}
+
+	public void Stop()
+	{
+	}
+}
+
+public class PasswordUpdateCompleteHandler:IHandleMessages<PasswordUpdateComplete>
+{
+	public void Handle(PasswordUpdateComplete message)
+	{
+		Console.WriteLine("Emailed password update complete for request:\n\t{0}\n\t{1}"
+						, message.CorrelationId
+						, DateTime.Now);
+	}
+}
