@@ -1,0 +1,24 @@
+public class Endpoint:IConfigureThisEndpoint, AsA_Publisher, IWantToRunAtStartup
+{
+	public void Run()
+	{
+		Console.Title = "Server";
+	}
+	public void Stop(){}
+}
+
+public class PasswordUpdateRequestHandler: IHandleMessages<PasswordUpdateRequest>
+{
+	public IBus Bus { get; set; }
+
+	public void Handle(PasswordUpdateRequest message)
+	{
+		Console.WriteLine("Received message "+ message.CorrelationId);
+		Thread.Sleep(1000);
+		var passwordUpdateComplete = new PasswordUpdateComplete(message.CorrelationId);
+		Bus.Reply(passwordUpdateComplete);
+		Console.WriteLine("Returned password update complete message to client\n\t{0}", DateTime.Now);
+		Bus.Publish(passwordUpdateComplete);
+		Console.WriteLine("Published password update complete message\n\t{0}", DateTime.Now);
+	}
+}

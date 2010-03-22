@@ -1,0 +1,21 @@
+1. Warm-up solution
+2. Build
+3. References
+	- NServiceBus
+	- NServiceBus.Core
+	- NServiceBus.Host
+	- log4net
+
+Add password update request and complete messages
+
+Configure server 
+	Endpoint
+	Handler
+	
+Configure client
+	Endpoint
+	
+Add and Configure Email Client
+
+
+

@@ -1,0 +1,39 @@
+    public class Endpoint:IConfigureThisEndpoint, AsA_Client, IWantToRunAtStartup
+    {
+        public IBus Bus { get; set; }
+
+        public void Run()
+        {
+            Console.Title = "Client";
+            while (true)
+            {
+                Console.WriteLine("What would you like to set your password to?");
+                var newPassword = Console.ReadLine();
+                var passwordUpdateRequest = new PasswordUpdateRequest(newPassword);
+                Bus.Send(passwordUpdateRequest)
+                    .Register(UpdateRequestCallback, passwordUpdateRequest);
+
+                Console.WriteLine("Sent password update request.\n\tWaiting For Reply\n\t{0}", DateTime.Now);
+                Console.WriteLine("Press [Enter] to restart client.");
+                Console.ReadLine();
+                Console.Clear();
+            }
+        }
+
+        private static void UpdateRequestCallback(IAsyncResult ar)
+        {
+            var result = ar.AsyncState as CompletionResult;
+            if (result==null) return;
+            if (result.Messages==null) return;
+            if (result.Messages.Length==0) return;
+            if (result.State==null) return;
+
+            Console.WriteLine(result.Messages[0] is PasswordUpdateComplete
+                                  ? "Password update completed"
+                                  : "Password update failed");
+        }
+
+        public void Stop()
+        {
+        }
+    }
