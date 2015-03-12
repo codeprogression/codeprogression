@@ -1,0 +1,40 @@
+﻿<sqlMap
+    namespace="Employee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:noNamespaceSchemaLocation="../SqlMap.xsd" xmlns="http://ibatis.apache.org/mapping">
+  <alias>
+    <typeAlias alias="Employee" type="AdventureMVC.Core.Model.Employee" />
+  </alias>
+  <parameterMaps>
+  <parameterMap id="SelectEmployeesPagedParams" class="AdventureMVC.Data.IBatis.PagingParameter">
+    <parameter property="PageSize" direction="Input" column="PageSize" />
+    <parameter property="Page" direction="Input" column="PageNumber" />
+  </parameterMap>
+  </parameterMaps>
+  <resultMaps>
+  <resultMap id="SelectEmployees" class="Employee">
+    <result property="EmployeeID" column="EmployeeID" />
+    <result property="Title" column="Title" />
+    <result property="BirthDate" column="BirthDate" />
+    <result property="VacationHours" column="VacationHours" />
+    <result property="SickLeaveHours" column="SickLeaveHours" />
+    <result property="ContactID" column="ContactID" />
+    <result property="FirstName" column="FirstName" />
+    <result property="LastName" column="LastName" />
+    <result property="EmailAddress" column="EmailAddress" />
+    <result property="Phone" column="Phone" />
+  </resultMap>
+  </resultMaps>
+  <statements>
+<!--  <select id="SelectEmployees" resultMap="SelectEmployees"  parameterMap="SelectEmployeesPagedParams">-->
+  <select id="SelectEmployees" resultMap="SelectEmployees"  >
+    SELECT
+    *
+    FROM HumanResources.Employee e
+    INNER JOIN Person.Contact c ON e.ContactID = c.ContactID
+  </select>
+    <procedure id="SelectEmployeesPaged"  resultMap="SelectEmployees" parameterMap="SelectEmployeesPagedParams">
+      uspGetEmployeesPaged
+    </procedure>
+  </statements>
+</sqlMap>

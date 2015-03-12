@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project name="AdventureMVC" xmlns="http://nant.sf.net/release/0.86-beta1/nant.xsd" default="default">
+
+  <property name="teamcity.build.checkoutDir" value="." unless="${property::exists('teamcity.build.checkoutDir')}"/>
+  <property name="data-project" value="FluentNHibernate"/>
+
+  <!-- DIRECTORY PROPERTIES -->
+  <property name="dir.src" value="${teamcity.build.checkoutDir}\src"/>
+  <property name="dir.lib" value="${teamcity.build.checkoutDir}\lib"/>
+  <property name="dir.website" value="${dir.src}\web"/>
+  <property name="dir.compiled.website" value="${dir.src}\PrecompiledWeb\Web"/>
+  <property name="dir.results" value="${teamcity.build.checkoutDir}\Results"/>
+  <property name="dir.package" value="c:\projects\Sites\AdventureMVC.${data-project}\oldsites"/>
+  <property name="dir.publish" value="c:\projects\Sites\AdventureMVC.${data-project}"/>
+
+  <!-- SOLUTION PROPERTIES -->
+  <property name="nant.settings.currentframework" value="net-3.5"/>
+  <property name="framework.aspnet" value="C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727"/>
+  <property name="solution.file" value="${dir.src}\AdventureMVC.sln"/>
+
+  <!-- BUILD PROPERTIES -->
+  <property name="project.config" value="debug"/>
+  <property name="publish.website" value="true"/>
+  <property name="errors.customerror" value="Off"/>
+  <loadtasks assembly="${dir.lib}\NCoverExplorer.Extras\bin\NCoverExplorer.NAntTasks.dll"/>
+
+  <!-- DEFAULT DATA ASSEMBLY -->
+  <property name="data-assembly" value="AdventureMVC.Data.${data-project}"/>
+
+  <target name="deploy" depends="compile,update.data.provider"/>
+  <target name="init" description="Initializes build properties">
+    <tstamp>
+      <formatter property="datetime.buildtime" pattern="yyyy-MM-dd, HH:mm:ss"/>
+    </tstamp>
+    <echo message="Current Directory: ${project::get-base-directory()}"/>
+    <delete dir="results"/>
+  </target>
+
+  <target name="default" depends="init,compile,unit.tests,create.artifacts" />
+  <target name="compile" depends="init">
+
+    <!-- The following section is necessary for website projects.
+         Secondary references do not get copied into the bin folder
+         of the compiled project  by MSBuild.  Since this is an
+         web application, we don't need to do the copy.
+     -->
+    <!--<copy todir="${dir.website}\bin" flatten='true'>
+      <fileset basedir="${dir.lib}" >
+        <include name="structuremap\*"/>
+      </fileset>
+    </copy>-->
+    <exec program="${framework::get-framework-directory(framework::get-target-framework())}\msbuild.exe"
+          commandline="${solution.file} /t:Clean /t:Rebuild /p:Configuration=${project.config} /v:q"
+          workingdir="."/>
+    <!-- The following can be commented out if building a web site instead of a web application.
+          The msbuild process will automatically create the precompiled web for a web site. 
+
+          <exec program="${framework.aspnet}\aspnet_compiler.exe"
+                commandline="-p ${dir.build}\AdventureMVC -v aspprecompile ${dir.compiled.website}" />
+
+          Can also create a post build event to mimic this behavior: C:\Windows\Microsoft.NET\Framework\v2.0.50727\aspnet_compiler -v / -f -u -p "$(ProjectDir)\" "$(SolutionDir)PrecompiledWeb\Web"
+     -->
+  </target>
+
+  <target name="create.artifacts" depends="init">
+    <zip zipfile="${dir.results}\Artifacts.zip">
+      <fileset basedir="${dir.compiled.website}">
+        <include name="**\*"/>
+      </fileset>
+    </zip>
+    <!-- to use in TeamCity unzip dependency: Artifacts.zip!**-->
+  </target>
+
+  <target name="update.data.provider" depends="init">
+    <xmlpoke file="${dir.compiled.website}\Web.config"
+             xpath="/configuration/appSettings/add[@key = 'data-assembly']/@value" value="${data-assembly}"/>
+    <xmlpoke file="${dir.compiled.website}\Web.config" xpath="/configuration/system.web/customErrors/@mode"
+             value="${errors.customerror}"/>
+  </target>
+
+  <target name="publish" if="${property::get-value('publish.website')=='true'}" depends="init">
+    <echo message="Zipping up old site (does not include videos)"/>
+    <zip zipfile="${dir.package}\${project::get-name()}.Replaced.With.${build.number}.zip" failonerror="false">
+      <fileset basedir="${dir.publish}">
+        <include name="**"/>
+        <exclude name="oldsites"/>
+      </fileset>
+    </zip>
+    <delete>
+      <fileset>
+        <include name="${dir.publish}\**\*"/>
+      </fileset>
+    </delete>
+    <copy todir="${dir.publish}" includeemptydirs="false" overwrite="true">
+      <fileset basedir="${dir.compiled.website}">
+        <include name="**\*"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target name="unit.tests" depends="compile">
+    <copy todir="${dir.lib}\nunit">
+      <fileset basedir="${dir.lib}\rhinomocks">
+        <include name="*"/>
+      </fileset>
+    </copy>
+    <if test="${property::exists('teamcity.dotnet.nunitaddin')}">
+      <copy todir="${dir.lib}\nunit\addins">
+        <fileset>
+          <include name="${teamcity.dotnet.nunitaddin}-2.4.8.*"/>
+        </fileset>
+      </copy>
+    </if>
+
+    <delete dir="${dir.results}" failonerror="false"/>
+    <mkdir dir="${dir.results}"/>
+    <property name="coverageAssemblies"
+              value="AdventureMVC.Tests;AdventureMVC.Core;AdventureMVC;AdventureMVC.Data;AdventureMVC.Data.FluentNHibernate.Tests"/>
+    <ncover
+            registerProfiler="false"
+            program="${dir.lib}\ncover\NCover.Console.exe"
+            commandLineExe="${dir.lib}\nunit\nunit-console-x86.exe"
+            commandLineArgs="${dir.src}/AdventureMVC.Tests/bin/${project.config}/AdventureMVC.Tests.dll"
+            coverageFile="${dir.results}\Tests-CoverageResults.xml"
+            assemblyList="${coverageAssemblies}"
+            verbose="true"
+            >
+    </ncover>
+
+    <ncover
+            registerProfiler="false"
+            program="${dir.lib}\ncover\NCover.Console.exe"
+            commandLineExe="${dir.lib}\nunit\nunit-console-x86.exe"
+            commandLineArgs="${dir.src}/AdventureMVC.Data.FluentNHibernate.Tests/bin/${project.config}/AdventureMVC.Data.FluentNHibernate.Tests.dll"
+            coverageFile="${dir.results}\FluentNHibernateTests-CoverageResults.xml"
+            assemblyList="${coverageAssemblies}"
+            verbose="true"
+            >
+    </ncover>
+    <ncoverexplorer program="${dir.lib}\ncover\NCoverExplorer.Console.exe"
+                    projectName="AdventureMVC"
+                    outputDir="${dir.results}"
+                    satisfactoryCoverage="70"
+                    reportType="4"
+                    htmlReportName="CoverageReport.html">
+      <fileset>
+        <include name="${dir.results}\*-CoverageResults.xml"/>
+      </fileset>
+    </ncoverexplorer>
+  </target>
+
+
+</project>
